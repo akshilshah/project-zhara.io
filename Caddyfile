@@ -1,0 +1,31 @@
+zhara.io, www.zhara.io {
+	root * /home/ubuntu/project-zhara.io
+	encode gzip zstd
+
+	@blocked {
+		path /.git/*
+		path /.git
+		path /.env
+		path /.env.*
+		path /Makefile
+		path /.htaccess
+	}
+	respond @blocked 404
+
+	# Cache static assets for 1 year
+	@static {
+		path *.jpg *.jpeg *.png *.gif *.webp *.svg *.ico
+		path *.css *.js
+		path *.woff *.woff2 *.ttf *.eot
+	}
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	# Cache HTML for 1 hour
+	@html {
+		path *.html
+		path /
+	}
+	header @html Cache-Control "public, max-age=3600"
+
+	file_server
+}
