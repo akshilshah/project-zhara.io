@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zhara Search GIF — Keyword vs Intent</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 800px;
+    height: 720px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #F5F3EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage {
+    width: 760px;
+    height: 680px;
+    display: flex;
+    gap: 14px;
+    padding: 14px;
+    position: relative;
+  }
+
+  /* ── Zhara badge ── */
+  .zhara-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #1a1816, #2c2823);
+    border: 1px solid rgba(232,101,10,0.35);
+    border-radius: 22px;
+    padding: 8px 18px 8px 12px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .zhara-badge.show { opacity: 1; }
+  .zhara-badge .zh-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+  .zhara-badge .zh-icon svg { width: 18px; height: 18px; }
+  .zhara-badge span.zh-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E8650A;
+  }
+
+  /* ── VS divider ── */
+  .vs-divider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: #1A1816;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .vs-divider.show { opacity: 1; }
+
+  /* ── Panel ── */
+  .panel {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #E5E0D6;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+
+  /* ── Topbar (shared) ── */
+  .topbar {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #E5E0D6;
+    gap: 10px;
+    background: #FAFAF8;
+  }
+  .topbar .t-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1816;
+    letter-spacing: 0.01em;
+  }
+  .topbar .t-tag {
+    margin-left: auto;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 5px;
+  }
+  .topbar .t-tag.keyword { color: #9A9387; background: #F2EFE8; }
+  .topbar .t-tag.intent  { color: #E8650A; background: #FFEFE0; }
+  .topbar .t-label.muted { color: #6B645B; }
+
+  /* ── Body ── */
+  .body {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+  }
+
+  /* ── Search bar ── */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 1.5px solid #E5E0D6;
+    border-radius: 12px;
+    background: #FAFAF8;
+  }
+  .search-bar.accent { border-color: #E8650A; background: #FFFCF8; }
+  .search-bar .s-icon { color: #9A9387; flex-shrink: 0; }
+  .search-bar.accent .s-icon { color: #E8650A; }
+  .search-bar .s-text {
+    flex: 1;
+    font-size: 16px;
+    color: #1A1816;
+    font-weight: 400;
+  }
+  .search-bar .s-cursor {
+    width: 2px; height: 20px;
+    background: #1A1816;
+    animation: blink 1s steps(1) infinite;
+  }
+  .search-bar.accent .s-cursor { background: #E8650A; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ── Meta ── */
+  .meta {
+    font-size: 13.5px;
+    color: #9A9387;
+    padding: 0 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .meta.show { opacity: 1; }
+  .meta strong { color: #6B645B; font-weight: 600; }
+
+  /* ── Intent row ── */
+  .intent-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .intent-row.show { opacity: 1; }
+  .intent-label {
+    font-size: 13px;
+    color: #9A9387;
+    font-weight: 500;
+  }
+  .intent-label strong { color: #E8650A; font-weight: 700; }
+  .intent-tag {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 99px;
+    background: #FFEFE0;
+    color: #C0500A;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .intent-tag.show { opacity: 1; transform: scale(1); }
+
+  /* ── Results ── */
+  .results { display: flex; flex-direction: column; gap: 8px; }
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1.5px solid #E5E0D6;
+    border-radius: 12px;
+    background: #FAFAF8;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .row.show { opacity: 1; transform: none; }
+  .row.bad  { border-left: 4px solid #D9534F; }
+  .row.good { border-left: 4px solid #2D7A4F; }
+
+  .row .r-icon {
+    font-size: 22px;
+    width: 38px; height: 38px;
+    background: #F2EFE8;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .row .r-info { flex: 1; min-width: 0; }
+  .row .r-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1816;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row .r-desc {
+    font-size: 12.5px;
+    color: #9A9387;
+    margin-top: 2px;
+  }
+  .row .r-match {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .row .r-match span {
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(45,122,79,0.1);
+    color: #2D7A4F;
+  }
+  .row .r-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A1816;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .row .r-price small {
+    display: block;
+    font-size: 12px;
+    color: #E8650A;
+    font-weight: 500;
+  }
+  .row .r-price-muted {
+    font-size: 14px;
+    font-weight: 600;
+    color: #9A9387;
+    white-space: nowrap;
+  }
+
+  /* ── Verdict labels ── */
+  .verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    width: max-content;
+  }
+  .verdict.show { opacity: 1; }
+  .verdict svg { width: 15px; height: 15px; }
+  .verdict.fail {
+    color: #D9534F;
+    background: rgba(217,83,79,0.08);
+    border: 1px solid rgba(217,83,79,0.15);
+  }
+  .verdict.pass {
+    color: #2D7A4F;
+    background: rgba(45,122,79,0.08);
+    border: 1px solid rgba(45,122,79,0.15);
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <!-- Zhara Badge -->
+  <div class="zhara-badge" id="zharaBadge">
+    <div class="zh-icon">
+      <svg viewBox="0 0 100 100" fill="none"><path d="M30 75L50 25L70 75" stroke="#E8650A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="20" r="5" fill="#E8650A"/></svg>
+    </div>
+    <span class="zh-text">Zhara Search</span>
+  </div>
+
+  <!-- VS Divider -->
+  <div class="vs-divider" id="vsDivider">VS</div>
+
+  <!-- ═══ Traditional Search (Left) ═══ -->
+  <div class="panel">
+    <div class="topbar">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#9A9387" stroke-width="1.5"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="#9A9387" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="t-label muted">Traditional Search</span>
+      <span class="t-tag keyword">Keyword Match</span>
+    </div>
+    <div class="body">
+      <div class="search-bar">
+        <svg class="s-icon" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="s-text" id="tradQuery"></span>
+        <span class="s-cursor"></span>
+      </div>
+      <div class="meta" id="tradMeta"><strong>1,247 results</strong> for "good phone for parents"</div>
+      <div class="results">
+        <div class="row bad" id="tradR1">
+          <div class="r-icon">📱</div>
+          <div class="r-info">
+            <div class="r-name">Phone Case "Good Vibes"</div>
+            <div class="r-desc">Silicone case · Fits iPhone 15</div>
+          </div>
+          <div class="r-price-muted">$14.99</div>
+        </div>
+        <div class="row bad" id="tradR2">
+          <div class="r-icon">📖</div>
+          <div class="r-info">
+            <div class="r-name">Good Phone Habits for Parents</div>
+            <div class="r-desc">Parenting guide · Paperback</div>
+          </div>
+          <div class="r-price-muted">$12.99</div>
+        </div>
+        <div class="row bad" id="tradR3">
+          <div class="r-icon">🔌</div>
+          <div class="r-info">
+            <div class="r-name">Phone Stand for Parents' Desk</div>
+            <div class="r-desc">Wooden desk mount · Adjustable</div>
+          </div>
+          <div class="r-price-muted">$24.99</div>
+        </div>
+      </div>
+      <div class="verdict fail" id="tradVerdict">
+        <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 10.5L10.5 5.5M5.5 5.5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        0 of 3 match buyer intent
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Zhara Search (Right) ═══ -->
+  <div class="panel">
+    <div class="topbar">
+      <svg width="18" height="18" viewBox="0 0 100 100" fill="none"><path d="M30 75L50 25L70 75" stroke="#E8650A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="20" r="6" fill="#E8650A"/></svg>
+      <span class="t-label">Zhara Search</span>
+      <span class="t-tag intent">Intent Match</span>
+    </div>
+    <div class="body">
+      <div class="search-bar accent">
+        <svg class="s-icon" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="s-text" id="zharaQuery"></span>
+        <span class="s-cursor"></span>
+      </div>
+
+      <div class="intent-row" id="intentRow">
+        <span class="intent-label"><strong>Intent:</strong></span>
+        <span class="intent-tag" id="tag1">Large display</span>
+        <span class="intent-tag" id="tag2">Simple UI</span>
+        <span class="intent-tag" id="tag3">Long battery</span>
+        <span class="intent-tag" id="tag4">Good camera</span>
+      </div>
+
+      <div class="results">
+        <div class="row good" id="zharaR1">
+          <div class="r-icon">📱</div>
+          <div class="r-info">
+            <div class="r-name">Samsung Galaxy A15</div>
+            <div class="r-desc">6.5" · Simple Mode · 5,000 mAh</div>
+            <div class="r-match">
+              <span>Large display</span>
+              <span>Simple UI</span>
+              <span>Long battery</span>
+            </div>
+          </div>
+          <div class="r-price">$139<small>★ 4.4</small></div>
+        </div>
+        <div class="row good" id="zharaR2">
+          <div class="r-icon">📱</div>
+          <div class="r-info">
+            <div class="r-name">Redmi Note 13</div>
+            <div class="r-desc">6.67" AMOLED · Easy mode · 108MP</div>
+            <div class="r-match">
+              <span>Large display</span>
+              <span>Good camera</span>
+              <span>Long battery</span>
+            </div>
+          </div>
+          <div class="r-price">$179<small>★ 4.3</small></div>
+        </div>
+        <div class="row good" id="zharaR3">
+          <div class="r-icon">📱</div>
+          <div class="r-info">
+            <div class="r-name">Motorola Moto G54</div>
+            <div class="r-desc">6.5" IPS · Clean UI · 6,000 mAh</div>
+            <div class="r-match">
+              <span>Large display</span>
+              <span>Simple UI</span>
+              <span>Long battery</span>
+            </div>
+          </div>
+          <div class="r-price">$149<small>★ 4.2</small></div>
+        </div>
+      </div>
+      <div class="verdict pass" id="zharaVerdict">
+        <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 8.2l2 2 4-4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        3 of 3 match buyer intent
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const QUERY = "good phone for parents";
+  let _timers = [];
+  let _intervals = [];
+
+  function typeText(el, text, speed, cb) {
+    let i = 0;
+    const interval = setInterval(() => {
+      el.textContent = text.slice(0, ++i);
+      if (i >= text.length) { clearInterval(interval); if (cb) cb(); }
+    }, speed);
+    _intervals.push(interval);
+  }
+
+  function run() {
+    _timers.push(setTimeout(() => {
+      typeText(document.getElementById('tradQuery'), QUERY, 45);
+      typeText(document.getElementById('zharaQuery'), QUERY, 45);
+    }, 300));
+
+    _timers.push(setTimeout(() => { document.getElementById('tradMeta').classList.add('show'); }, 1600));
+    _timers.push(setTimeout(() => { document.getElementById('intentRow').classList.add('show'); }, 1800));
+
+    _timers.push(setTimeout(() => { document.getElementById('tag1').classList.add('show'); }, 2000));
+    _timers.push(setTimeout(() => { document.getElementById('tag2').classList.add('show'); }, 2200));
+    _timers.push(setTimeout(() => { document.getElementById('tag3').classList.add('show'); }, 2400));
+    _timers.push(setTimeout(() => { document.getElementById('tag4').classList.add('show'); }, 2600));
+
+    _timers.push(setTimeout(() => { document.getElementById('tradR1').classList.add('show'); }, 2800));
+    _timers.push(setTimeout(() => { document.getElementById('tradR2').classList.add('show'); }, 3100));
+    _timers.push(setTimeout(() => { document.getElementById('tradR3').classList.add('show'); }, 3400));
+
+    _timers.push(setTimeout(() => { document.getElementById('zharaR1').classList.add('show'); }, 3200));
+    _timers.push(setTimeout(() => { document.getElementById('zharaR2').classList.add('show'); }, 3500));
+    _timers.push(setTimeout(() => { document.getElementById('zharaR3').classList.add('show'); }, 3800));
+
+    _timers.push(setTimeout(() => { document.getElementById('vsDivider').classList.add('show'); }, 4200));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('tradVerdict').classList.add('show');
+      document.getElementById('zharaVerdict').classList.add('show');
+    }, 4600));
+
+    _timers.push(setTimeout(() => { document.getElementById('zharaBadge').classList.add('show'); }, 5200));
+
+    if (!window.__captureMode) {
+      _timers.push(setTimeout(() => { reset(); run(); }, 8500));
+    }
+  }
+
+  function reset() {
+    _timers.forEach(t => clearTimeout(t)); _timers = [];
+    _intervals.forEach(i => clearInterval(i)); _intervals = [];
+    document.querySelectorAll('.show').forEach(el => el.classList.remove('show'));
+    ['tradQuery', 'zharaQuery'].forEach(id => { document.getElementById(id).textContent = ''; });
+  }
+
+  window.reset = reset;
+  window.run = run;
+  if (!window.__captureMode) run();
+</script>
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zhara Listings GIF — ACP + UCP</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 800px;
+    height: 720px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage {
+    width: 760px;
+    height: 680px;
+    display: flex;
+    gap: 14px;
+    padding: 14px;
+    position: relative;
+  }
+
+  /* ── Zhara badge ── */
+  .zhara-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #1a1816, #2c2823);
+    border: 1px solid rgba(232,101,10,0.35);
+    border-radius: 22px;
+    padding: 8px 18px 8px 12px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .zhara-badge.show { opacity: 1; }
+  .zhara-badge .zh-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+  .zhara-badge .zh-icon svg { width: 18px; height: 18px; }
+  .zhara-badge span.zh-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E8650A;
+  }
+
+  /* ── Connector ── */
+  .connector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 0;
+    background: linear-gradient(to bottom, transparent, rgba(232,101,10,0.5), transparent);
+    transition: height 0.8s ease;
+    z-index: 50;
+  }
+  .connector.show { height: 200px; }
+
+  /* ── Panel ── */
+  .panel {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* ── Protocol label ── */
+  .protocol-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  .protocol-label.show { opacity: 1; }
+
+  /* ═══════════════════════════════════════
+     ChatGPT Panel (Left)
+     ═══════════════════════════════════════ */
+  .chatgpt {
+    background: #212121;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .chatgpt .protocol-label {
+    background: rgba(16,163,127,0.15);
+    color: #10a37f;
+    border: 1px solid rgba(16,163,127,0.25);
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    gap: 10px;
+  }
+  .topbar .logo {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .topbar .logo svg { color: white; }
+  .topbar .logo.gpt { background: #10a37f; }
+  .topbar .logo.gpt svg { width: 15px; height: 15px; }
+  .topbar .logo.gem { background: transparent; }
+  .topbar .logo.gem svg { width: 22px; height: 22px; }
+  .topbar .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+  }
+  .topbar .subtitle {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ── Chat area ── */
+  .chat {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  .msg {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .msg.show { opacity: 1; transform: none; }
+
+  .avatar {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+  }
+  .avatar.user { background: #5b4dc7; color: white; }
+  .avatar.ai-gpt { background: #10a37f; color: white; }
+  .avatar.ai-gpt svg { width: 15px; height: 15px; }
+  .avatar.ai-gem { background: transparent; }
+  .avatar.ai-gem svg { width: 22px; height: 22px; }
+
+  .bubble {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.88);
+    max-width: 100%;
+  }
+
+  /* ── Typing indicator ── */
+  .typing-dots {
+    display: flex; gap: 5px; padding: 8px 0;
+  }
+  .typing-dots span {
+    width: 7px; height: 7px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: dotPulse 1.2s ease infinite;
+  }
+  .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes dotPulse {
+    0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+    40% { opacity: 1; transform: scale(1); }
+  }
+
+  /* Gemini typing */
+  .gem-typing span:nth-child(1) { background: #4285f4; }
+  .gem-typing span:nth-child(2) { background: #ea4335; animation-delay: 0.2s; }
+  .gem-typing span:nth-child(3) { background: #fbbc04; animation-delay: 0.4s; }
+
+  /* ── Powered pill ── */
+  .powered {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    padding: 4px 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 99px;
+    margin-bottom: 8px;
+    width: max-content;
+  }
+  .powered .dot { width: 6px; height: 6px; border-radius: 50%; background: #E8650A; }
+
+  /* ── Response text ── */
+  .resp-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 8px;
+  }
+
+  /* ── Product cards ── */
+  .products { display: flex; flex-direction: column; gap: 8px; }
+  .product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .product.show { opacity: 1; transform: none; }
+
+  .product .p-icon {
+    font-size: 22px;
+    width: 38px; height: 38px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .product .p-info { flex: 1; min-width: 0; }
+  .product .p-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .product .p-meta {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+  .product .p-buy {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 14px;
+    white-space: nowrap;
+    cursor: default;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product .p-buy.gpt-btn { background: #10a37f; }
+  .product .p-buy.gem-btn { background: #4285f4; }
+  .product .p-buy.pulse {
+    background: #E8650A !important;
+    box-shadow: 0 0 14px rgba(232,101,10,0.4);
+  }
+
+  /* ── Checkout overlay ── */
+  .checkout {
+    position: absolute;
+    bottom: 34px;
+    left: 14px;
+    right: 14px;
+    border-radius: 14px;
+    padding: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 5;
+  }
+  .checkout.show { opacity: 1; transform: none; }
+  .checkout.gpt-co {
+    background: #2b2b2b;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .checkout.gem-co {
+    background: #232340;
+    border: 1px solid rgba(66,133,244,0.2);
+  }
+
+  .co-header {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 12px;
+  }
+  .co-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+    letter-spacing: 0.06em;
+  }
+  .co-badge.stripe { color: #635bff; background: rgba(99,91,255,0.12); }
+  .co-badge.gpay { color: #4285f4; background: rgba(66,133,244,0.12); }
+  .co-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .co-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .co-item-name {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+  }
+  .co-item-price {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .co-total {
+    display: flex; justify-content: space-between;
+    padding-top: 10px;
+  }
+  .co-total span:first-child {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .co-total span:last-child {
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .co-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 11px;
+    background: #E8650A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: default;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+
+  /* ═══════════════════════════════════════
+     Gemini Panel (Right)
+     ═══════════════════════════════════════ */
+  .gemini {
+    background: #1a1a2e;
+    border: 1px solid rgba(138,133,255,0.12);
+  }
+  .gemini .protocol-label {
+    background: rgba(66,133,244,0.12);
+    color: #4285f4;
+    border: 1px solid rgba(66,133,244,0.2);
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <!-- Zhara Badge -->
+  <div class="zhara-badge" id="zharaBadge">
+    <div class="zh-icon">
+      <svg viewBox="0 0 100 100" fill="none"><path d="M30 75L50 25L70 75" stroke="#E8650A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="20" r="5" fill="#E8650A"/></svg>
+    </div>
+    <span class="zh-text">Powered by Zhara</span>
+  </div>
+
+  <!-- Connector -->
+  <div class="connector" id="connector"></div>
+
+  <!-- ═══ ChatGPT Panel ═══ -->
+  <div class="panel chatgpt">
+    <div class="topbar">
+      <div class="logo gpt">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.51 2.9A5.98 5.98 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 5.99 5.99 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z"/></svg>
+      </div>
+      <span class="title">ChatGPT</span>
+      <span class="subtitle">ACP · Instant Checkout</span>
+    </div>
+    <div class="chat">
+      <div class="msg" id="gptUser">
+        <div class="avatar user">A</div>
+        <div class="bubble" id="gptUserText"></div>
+      </div>
+      <div class="msg" id="gptTyping" style="display:none">
+        <div class="avatar ai-gpt"><svg viewBox="0 0 24 24" fill="white"><path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.51 2.9A5.98 5.98 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 5.99 5.99 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z"/></svg></div>
+        <div class="bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>
+      </div>
+      <div class="msg" id="gptResponse" style="display:none">
+        <div class="avatar ai-gpt"><svg viewBox="0 0 24 24" fill="white"><path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.51 2.9A5.98 5.98 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 5.99 5.99 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z"/></svg></div>
+        <div class="bubble">
+          <div class="powered"><span class="dot"></span> Powered by Zhara</div>
+          <p class="resp-text" id="gptRespText"></p>
+          <div class="products">
+            <div class="product" id="gptP1">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Sony WH-1000XM5</div>
+                <div class="p-meta">★ 4.6 · 30hr · Best ANC</div>
+              </div>
+              <button class="p-buy gpt-btn" id="gptBuy1">Buy · $299</button>
+            </div>
+            <div class="product" id="gptP2">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Bose QC Ultra</div>
+                <div class="p-meta">★ 4.5 · 24hr · Spatial</div>
+              </div>
+              <button class="p-buy gpt-btn">Buy · $279</button>
+            </div>
+            <div class="product" id="gptP3">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Sennheiser Momentum 4</div>
+                <div class="p-meta">★ 4.4 · 60hr · Audiophile</div>
+              </div>
+              <button class="p-buy gpt-btn">Buy · $249</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkout gpt-co" id="gptCheckout">
+      <div class="co-header">
+        <span class="co-badge stripe">STRIPE</span>
+        <span class="co-title">Instant Checkout</span>
+      </div>
+      <div class="co-item">
+        <span class="co-item-name">Sony WH-1000XM5</span>
+        <span class="co-item-price">$299.00</span>
+      </div>
+      <div class="co-total"><span>Total</span><span>$299.00</span></div>
+      <button class="co-btn">🔒 Pay with Stripe</button>
+    </div>
+    <div class="protocol-label" id="gptLabel">Agentic Commerce Protocol</div>
+  </div>
+
+  <!-- ═══ Gemini Panel ═══ -->
+  <div class="panel gemini">
+    <div class="topbar">
+      <div class="logo gem">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="url(#gG)"/>
+          <defs><linearGradient id="gG" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#4285f4"/><stop offset="50%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#d96570"/></linearGradient></defs>
+        </svg>
+      </div>
+      <span class="title">Gemini</span>
+      <span class="subtitle">UCP · Native Checkout</span>
+    </div>
+    <div class="chat">
+      <div class="msg" id="gemUser">
+        <div class="avatar user">A</div>
+        <div class="bubble" id="gemUserText"></div>
+      </div>
+      <div class="msg" id="gemTyping" style="display:none">
+        <div class="avatar ai-gem">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="url(#gG2)"/><defs><linearGradient id="gG2" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#4285f4"/><stop offset="50%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#d96570"/></linearGradient></defs></svg>
+        </div>
+        <div class="bubble"><div class="typing-dots gem-typing"><span></span><span></span><span></span></div></div>
+      </div>
+      <div class="msg" id="gemResponse" style="display:none">
+        <div class="avatar ai-gem">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="url(#gG3)"/><defs><linearGradient id="gG3" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#4285f4"/><stop offset="50%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#d96570"/></linearGradient></defs></svg>
+        </div>
+        <div class="bubble">
+          <div class="powered"><span class="dot"></span> Powered by Zhara</div>
+          <p class="resp-text" id="gemRespText"></p>
+          <div class="products">
+            <div class="product" id="gemP1">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Sony WH-1000XM5</div>
+                <div class="p-meta">★ 4.6 · 30hr · Best ANC</div>
+              </div>
+              <button class="p-buy gem-btn" id="gemBuy1">Buy · $299</button>
+            </div>
+            <div class="product" id="gemP2">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Bose QC Ultra</div>
+                <div class="p-meta">★ 4.5 · 24hr · Spatial</div>
+              </div>
+              <button class="p-buy gem-btn">Buy · $279</button>
+            </div>
+            <div class="product" id="gemP3">
+              <div class="p-icon">🎧</div>
+              <div class="p-info">
+                <div class="p-name">Sennheiser Momentum 4</div>
+                <div class="p-meta">★ 4.4 · 60hr · Audiophile</div>
+              </div>
+              <button class="p-buy gem-btn">Buy · $249</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkout gem-co" id="gemCheckout">
+      <div class="co-header">
+        <span class="co-badge gpay"><span style="font-weight:800;color:#4285f4">G</span><span style="font-size:10px;color:rgba(255,255,255,0.6)">Pay</span></span>
+        <span class="co-title">Review your order</span>
+      </div>
+      <div class="co-item">
+        <span class="co-item-name">Sony WH-1000XM5</span>
+        <span class="co-item-price">$299.00</span>
+      </div>
+      <div class="co-total"><span>Total</span><span>$299.00</span></div>
+      <button class="co-btn">🔒 Pay with Google Pay</button>
+    </div>
+    <div class="protocol-label" id="gemLabel">Universal Commerce Protocol</div>
+  </div>
+</div>
+
+<script>
+  const QUERY = "Best noise-cancelling headphones under $300?";
+  const GPT_RESP = "Top picks based on expert reviews:";
+  const GEM_RESP = "Here are the best options for you:";
+
+  let _timers = [];
+  let _intervals = [];
+
+  function typeText(el, text, speed, cb) {
+    let i = 0;
+    const interval = setInterval(() => {
+      el.textContent = text.slice(0, ++i);
+      if (i >= text.length) { clearInterval(interval); if (cb) cb(); }
+    }, speed);
+    _intervals.push(interval);
+  }
+
+  function run() {
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptUser').classList.add('show');
+      document.getElementById('gemUser').classList.add('show');
+      typeText(document.getElementById('gptUserText'), QUERY, 35);
+      typeText(document.getElementById('gemUserText'), QUERY, 35);
+    }, 300));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptTyping').style.display = '';
+      document.getElementById('gptTyping').classList.add('show');
+      document.getElementById('gemTyping').style.display = '';
+      document.getElementById('gemTyping').classList.add('show');
+    }, 2000));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptTyping').style.display = 'none';
+      document.getElementById('gemTyping').style.display = 'none';
+      document.getElementById('gptResponse').style.display = '';
+      document.getElementById('gptResponse').classList.add('show');
+      document.getElementById('gemResponse').style.display = '';
+      document.getElementById('gemResponse').classList.add('show');
+      typeText(document.getElementById('gptRespText'), GPT_RESP, 25);
+      typeText(document.getElementById('gemRespText'), GEM_RESP, 25);
+    }, 3200));
+
+    _timers.push(setTimeout(() => { document.getElementById('gptP1').classList.add('show'); document.getElementById('gemP1').classList.add('show'); }, 4000));
+    _timers.push(setTimeout(() => { document.getElementById('gptP2').classList.add('show'); document.getElementById('gemP2').classList.add('show'); }, 4250));
+    _timers.push(setTimeout(() => { document.getElementById('gptP3').classList.add('show'); document.getElementById('gemP3').classList.add('show'); }, 4500));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptBuy1').classList.add('pulse');
+      document.getElementById('gemBuy1').classList.add('pulse');
+    }, 5200));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptCheckout').classList.add('show');
+      document.getElementById('gemCheckout').classList.add('show');
+    }, 6000));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('gptLabel').classList.add('show');
+      document.getElementById('gemLabel').classList.add('show');
+    }, 6500));
+
+    _timers.push(setTimeout(() => {
+      document.getElementById('zharaBadge').classList.add('show');
+      document.getElementById('connector').classList.add('show');
+    }, 7000));
+
+    if (!window.__captureMode) {
+      _timers.push(setTimeout(() => { reset(); run(); }, 10000));
+    }
+  }
+
+  function reset() {
+    _timers.forEach(t => clearTimeout(t)); _timers = [];
+    _intervals.forEach(i => clearInterval(i)); _intervals = [];
+    document.querySelectorAll('.show').forEach(el => el.classList.remove('show'));
+    document.querySelectorAll('.pulse').forEach(el => el.classList.remove('pulse'));
+    ['gptTyping','gemTyping','gptResponse','gemResponse'].forEach(id => {
+      document.getElementById(id).style.display = 'none';
+    });
+    ['gptUserText','gemUserText','gptRespText','gemRespText'].forEach(id => {
+      document.getElementById(id).textContent = '';
+    });
+  }
+
+  window.reset = reset;
+  window.run = run;
+  if (!window.__captureMode) run();
+</script>
+</body>
+</html>
