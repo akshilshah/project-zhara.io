@@ -5,22 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zhara — AI that sells your products</title>
   <meta name="description" content="Zhara helps electronics brands get discovered in AI, power smarter site search, and close every sale with a conversational AI agent." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://zhara.io/" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWNTYSQV7Q"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ZHARA — Conversational Commerce" />
+  <meta property="og:description" content="ZHARA helps buyers move from question to purchase in one conversation." />
+  <meta property="og:url" content="https://zhara.io/" />
+  <meta property="og:site_name" content="ZHARA" />
+  <meta property="og:image" content="https://zhara.io/assets/logo/v2/full-white-1520.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZHARA — Conversational Commerce" />
+  <meta name="twitter:description" content="ZHARA helps buyers move from question to purchase in one conversation." />
+  <meta name="twitter:image" content="https://zhara.io/assets/logo/v2/full-white-1520.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://zhara.io/#organization",
+          "name": "ZHARA",
+          "url": "https://zhara.io/",
+          "description": "ZHARA is an AI sales company building Conversational Commerce, where buyers move from question to purchase in one conversation.",
+          "logo": "https://zhara.io/assets/logo/v2/zhara-logo-full-white.svg",
+          "email": "hello@zhara.io",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dubai Internet City",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://zhara.io/#website",
+          "url": "https://zhara.io/",
+          "name": "ZHARA",
+          "publisher": {
+            "@id": "https://zhara.io/#organization"
+          }
+        }
+      ]
+    }
+  </script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    // Delay analytics boot until after load/idle so it doesn't compete with LCP rendering.
+    (function () {
+      function initAnalytics() {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-CWNTYSQV7Q');
+      }
 
-    gtag('config', 'G-CWNTYSQV7Q');
+      function loadAnalytics() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-CWNTYSQV7Q';
+        s.onload = initAnalytics;
+        document.head.appendChild(s);
+      }
+
+      window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadAnalytics, { timeout: 2500 });
+        } else {
+          setTimeout(loadAnalytics, 1200);
+        }
+      });
+    })();
   </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo/v2/zhara-favicon.svg" />
   <link rel="apple-touch-icon" href="assets/logo/v2/apple-touch-icon.png" />
 
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
+  </noscript>
 
   <style>
     /* ==========================================================
@@ -1579,6 +1643,55 @@
     }
 
     /* ==========================================================
+       FAQ
+       ========================================================== */
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .faq-item {
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #FFFFFF;
+      overflow: clip;
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+      padding: 20px 24px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      transition: transform var(--t) var(--ease);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-item p {
+      margin: 0;
+      padding: 0 24px 22px;
+      color: var(--mute);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+
+    /* ==========================================================
        Footer CTA
        ========================================================== */
     .cta-band {
@@ -1836,7 +1949,7 @@
         <span></span><span></span><span></span>
       </div>
 
-      <h1 class="reveal h1 hero-title" data-d="1">
+      <h1 class="h1 hero-title">
         Stop losing buyers<br />
         at the <span class="em-italic">product&nbsp;page.</span>
       </h1>
@@ -2032,7 +2145,7 @@
           </div>
           <picture class="listings-demo-pic">
             <source srcset="assets/listings-demo.webp" type="image/webp" />
-            <img src="assets/listings-demo.gif" alt="Split-screen demo: ChatGPT using ACP and Gemini using UCP both showing Zhara-powered product listings with inline checkout" width="800" height="720" loading="lazy" />
+            <img src="assets/listings-demo.gif" alt="Split-screen demo: ChatGPT using ACP and Gemini using UCP both showing Zhara-powered product listings with inline checkout" width="800" height="720" loading="lazy" decoding="async" fetchpriority="low" />
           </picture>
         </div>
       </div>
@@ -2093,7 +2206,7 @@
           </div>
           <picture class="search-demo-pic">
             <source srcset="assets/search-demo.webp" type="image/webp" />
-            <img src="assets/search-demo.gif" alt="Split-screen comparison: Traditional keyword search returning irrelevant results vs Zhara Search understanding intent and returning perfectly matched products" width="800" height="720" loading="lazy" />
+            <img src="assets/search-demo.gif" alt="Split-screen comparison: Traditional keyword search returning irrelevant results vs Zhara Search understanding intent and returning perfectly matched products" width="800" height="720" loading="lazy" decoding="async" fetchpriority="low" />
           </picture>
         </div>
       </div>
@@ -2377,6 +2490,40 @@
     </div>
   </section>
 
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="surface-2">
+    <div class="container container--narrow">
+      <div class="reveal section-head">
+        <div class="left">
+          <span class="overline">FAQ</span>
+          <h2 class="h2">
+            Common questions about<br />
+            <span class="em-italic">Conversational Commerce.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <details class="reveal faq-item" data-d="1">
+          <summary>What is Conversational Commerce?</summary>
+          <p>Conversational Commerce lets buyers move from question to purchase in one conversation. Instead of jumping between search pages, product tabs, and checkout steps, they can ask, compare, and buy in a guided AI flow.</p>
+        </details>
+        <details class="reveal faq-item" data-d="2">
+          <summary>How does ZHARA work with existing ecommerce stacks?</summary>
+          <p>ZHARA layers onto your current store, catalog, and channels. It uses your product data and brand context to answer buyers accurately, then connects those answers to actionable purchase paths without requiring a full replatform.</p>
+        </details>
+        <details class="reveal faq-item" data-d="3">
+          <summary>Which channels does ZHARA support?</summary>
+          <p>ZHARA supports your owned site experience and external AI discovery channels where buyers already ask product questions. The platform keeps responses and product details aligned across those touchpoints.</p>
+        </details>
+        <details class="reveal faq-item" data-d="4">
+          <summary>Can ZHARA improve conversion and reduce drop-off?</summary>
+          <p>Yes. ZHARA focuses on high-intent moments where buyers usually abandon: comparison, confusion, and checkout hesitation. By answering in context and guiding next actions, it increases conversion and reduces decision friction.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== CTA ===================== -->
   <section id="cta" class="cta-band">
     <div class="container container--narrow">
@@ -2403,8 +2550,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo/v2/zhara-logo-full.svg" alt="Zhara" />
+          <img src="assets/logo/v2/zhara-logo-full.svg" alt="Zhara" loading="lazy" decoding="async" />
           <p class="footer-tag">AI sales for the brands buyers don't have time to read about.</p>
+          <p class="small" style="margin-top:14px;">ZHARA Technologies FZ-LLC, Dubai Internet City, Dubai, UAE</p>
         </div>
         <div class="footer-col">
           <h5>Product</h5>
@@ -2421,7 +2569,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Customers</a></li>
             <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="mailto:hello@zhara.io">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -2438,13 +2586,54 @@
       <div class="footer-bot">
         <div>© 2026 Zhara, Inc. All rights reserved.</div>
         <div class="footer-bot-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
           <a href="#">Security</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Conversational Commerce?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conversational Commerce lets buyers move from question to purchase in one conversation. Instead of jumping between search pages, product tabs, and checkout steps, they can ask, compare, and buy in a guided AI flow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does ZHARA work with existing ecommerce stacks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ZHARA layers onto your current store, catalog, and channels. It uses your product data and brand context to answer buyers accurately, then connects those answers to actionable purchase paths without requiring a full replatform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which channels does ZHARA support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ZHARA supports your owned site experience and external AI discovery channels where buyers already ask product questions. The platform keeps responses and product details aligned across those touchpoints."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ZHARA improve conversion and reduce drop-off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ZHARA focuses on high-intent moments where buyers usually abandon: comparison, confusion, and checkout hesitation. By answering in context and guiding next actions, it increases conversion and reduces decision friction."
+          }
+        }
+      ]
+    }
+  </script>
 
   <script>
     // ===================== Scroll reveal =====================
