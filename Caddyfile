@@ -2,9 +2,9 @@ zhara.io, www.zhara.io {
 	root * /home/ubuntu/project-zhara.io
 	encode gzip zstd
 
-	# Allowlist: only the page and its assets, 404 everything else
+	# Allowlist: page, assets, and production meta files — 404 everything else
 	@denied {
-		not path / /index.html /assets/*
+		not path / /index.html /assets/* /robots.txt /sitemap.xml /llms.txt /favicon.ico /site.webmanifest
 	}
 	respond @denied 404
 

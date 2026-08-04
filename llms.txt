@@ -1,0 +1,22 @@
+# Zhara
+
+> Zhara is an AI Discovery & Search app for Shopify stores. It replaces default storefront search with intent-aware search that understands typos, synonyms, and natural-language queries, and ties every search to revenue.
+
+Zhara combines fast keyword search (typo-tolerant, ~50ms responses) with semantic AI search as a fallback, so shoppers find products even when their words don't match the catalog. Merchants keep full control with merchandising rules and see exactly how search converts to sales.
+
+## What Zhara does
+
+- Intent-aware search: understands typos, regional synonyms (e.g. "chaddi" → boxers), and natural-language queries like "something warm for winter"
+- Instant results: typo-tolerant keyword search in ~50ms, with semantic AI fallback when keywords miss
+- Merchant controls: pin, bury, hide, or redirect any product for any query — merchandising rules stay in the merchant's hands
+- Zero-state and recommendations: helpful results even for empty or failed searches
+- Search-to-sale analytics: a full search → click → add-to-cart → purchase funnel with revenue attribution per query
+
+## Who it's for
+
+Shopify merchants who want storefront search that converts — especially stores with large catalogs, diverse customer vocabulary, or international shoppers.
+
+## Links
+
+- Website: https://zhara.io/
+- Contact: hello@zhara.app
