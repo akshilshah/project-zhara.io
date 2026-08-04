@@ -36,10 +36,10 @@ mark + thin, wide-tracked uppercase "ZHARA" wordmark in deep navy.
 - **Editorial accent: Newsreader Italic** (500) for one emphasized word in major headlines.
 - Headlines: 600 weight, tight tracking, compact line-height, generous surrounding space.
 - Primary content is inset from the 1200px structural rules; text must never begin directly on a rule.
+- Structural vertical rules are desktop-only and are removed on mobile layouts.
 - Body: 400–500 with a 1.65–1.72 line-height and a practical 640px reading measure.
 - Small labels stay at 12–13px; avoid excessive tracking and low-contrast uppercase text.
-- Never render "ZHARA" as text in primary brand contexts — use the logo image. The large
-  hero watermark is intentionally decorative and low contrast.
+- Never render "ZHARA" as decorative background text; use the logo image only in brand contexts.
 
 ## Components
 
@@ -49,6 +49,8 @@ mark + thin, wide-tracked uppercase "ZHARA" wordmark in deep navy.
 - Trust: product truths, transparent illustrative-data labels, and no invented social proof.
 - Section rhythm: white structural canvas with aligned vertical rules → navy analytics → white CTA.
 - Merchandising is summarized in three simple capabilities separated by structural rules.
+- Numbering is reserved for genuinely sequential setup steps; section labels and feature summaries remain unnumbered.
+- Sequential setup cards stack vertically on mobile to preserve readable line lengths.
 - Reveal-on-scroll uses a soft 18px rise and respects `prefers-reduced-motion`.
 
 ## Rules

@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zhara — AI Search That Understands Shoppers</title>
-  <meta name="description" content="Zhara gives Shopify stores intent-aware search, merchant controls, recommendations, and search-to-sale analytics in one elegant app.">
+  <title>Zhara AI Discovery &amp; Search — Turn shopper intent into revenue</title>
+  <meta name="description" content="Zhara AI Discovery &amp; Search gives Shopify stores intent-aware search, merchant controls, recommendations, and search-to-sale analytics in one elegant app.">
+  <meta name="application-name" content="Zhara AI Discovery &amp; Search">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Zhara — Turn shopper intent into revenue">
+  <meta property="og:site_name" content="Zhara AI Discovery &amp; Search">
+  <meta property="og:title" content="Zhara AI Discovery &amp; Search — Turn shopper intent into revenue">
   <meta property="og:description" content="AI search and discovery for Shopify stores that care about relevance, control, and measurable revenue.">
   <meta property="og:image" content="https://zhara.app/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Zhara — Turn shopper intent into revenue">
+  <meta name="twitter:title" content="Zhara AI Discovery &amp; Search — Turn shopper intent into revenue">
   <meta name="twitter:description" content="AI search and discovery for Shopify.">
   <meta name="twitter:image" content="https://zhara.app/assets/og.png">
   <link rel="icon" href="assets/logo/favicon-32.png" type="image/png">
@@ -130,20 +132,7 @@
       background-repeat: no-repeat;
     }
     .hero::before { display: none; }
-    .hero::after {
-      content: "ZHARA";
-      position: absolute;
-      left: 50%;
-      bottom: -102px;
-      transform: translateX(-50%);
-      font-size: clamp(160px, 24vw, 350px);
-      font-weight: 700;
-      letter-spacing: -.08em;
-      line-height: .72;
-      color: rgba(17,21,45,.035);
-      white-space: nowrap;
-      pointer-events: none;
-    }
+    .hero::after { display: none; }
     .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(420px, .88fr); gap: 52px; align-items: center; }
     .eyebrow {
       display: inline-flex;
@@ -253,8 +242,7 @@
     .query-chip:hover { transform: translateX(5px); border-color: var(--orange); background: var(--orange-pale); }
     .query-chip small { margin-left: auto; color: var(--muted); font-size: 11px; font-weight: 600; }
     .meaning-list { border-top: 1px solid var(--line); }
-    .meaning { display: grid; grid-template-columns: 58px 1fr; gap: 20px; padding: 33px 0; border-bottom: 1px solid var(--line); }
-    .meaning-num { width: 40px; height: 40px; border: 1px solid var(--line-strong); border-radius: 50%; display: grid; place-items: center; color: var(--muted); font-size: 12px; font-weight: 700; }
+    .meaning { padding: 33px 0; border-bottom: 1px solid var(--line); }
     .meaning h3 { font-size: 22px; line-height: 1.25; letter-spacing: -.025em; }
     .meaning p { margin-top: 9px; color: var(--muted); font-size: 15px; max-width: 560px; }
     .meaning-tag { display: inline-flex; margin-top: 16px; padding: 6px 10px; border-radius: 999px; background: var(--orange-pale); color: var(--orange-deep); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -263,8 +251,7 @@
     .simple-feature-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--line); }
     .simple-feature { min-height: 210px; padding: 26px 28px 30px; }
     .simple-feature + .simple-feature { border-left: 1px solid var(--line); }
-    .simple-feature span { color: var(--orange-deep); font-size: 12px; font-weight: 700; }
-    .simple-feature h3 { margin-top: 22px; font-size: 23px; line-height: 1.2; letter-spacing: -.03em; }
+    .simple-feature h3 { margin-top: 0; font-size: 23px; line-height: 1.2; letter-spacing: -.03em; }
     .simple-feature p { max-width: 310px; margin-top: 12px; color: var(--muted); font-size: 14px; }
 
     .analytics { background: var(--ink); background-image: none; color: white; position: relative; overflow: hidden; }
@@ -297,8 +284,7 @@
     .trust-grid { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
     .trust-card { padding: 35px 34px 10px 0; }
     .trust-card + .trust-card { padding-left: 34px; border-left: 1px solid var(--line); }
-    .trust-icon { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: var(--orange-pale); color: var(--orange-deep); font-weight: 700; }
-    .trust-card h3 { margin-top: 24px; font-size: 20px; letter-spacing: -.02em; }
+    .trust-card h3 { margin-top: 0; font-size: 20px; letter-spacing: -.02em; }
     .trust-card p { margin-top: 10px; color: var(--muted); font-size: 14px; }
     .honesty { margin-top: 68px; padding: 34px; border-radius: 18px; background: #fff; border: 1px solid var(--line); display: grid; grid-template-columns: .8fr 1.2fr; gap: 45px; align-items: center; }
     .honesty strong { font-size: 22px; line-height: 1.3; letter-spacing: -.025em; }
@@ -351,7 +337,7 @@
       .simple-feature-grid { grid-template-columns: 1fr; }
       .simple-feature { min-height: auto; padding: 24px 0; }
       .simple-feature + .simple-feature { border-left: 0; border-top: 1px solid var(--line); }
-      .simple-feature h3 { margin-top: 16px; }
+      .simple-feature h3 { margin-top: 0; }
       .metric-grid { grid-template-columns: repeat(2, 1fr); }
       .dash-lower { grid-template-columns: 1fr; }
       .trust-grid { grid-template-columns: 1fr; }
@@ -361,6 +347,7 @@
 
     @media (max-width: 700px) {
       .wrap { width: min(calc(100% - 56px), var(--max)); }
+      .hero, .proof-strip, section { background-image: none; }
       .announcement span { display: none; }
       .nav-inner { height: 66px; }
       .brand img { width: 132px; }
@@ -386,17 +373,17 @@
       .section-copy { font-size: 16px; }
       .story-grid, .simple-feature-grid, .trust-grid, .steps-grid { margin-top: 42px; }
       .queries { grid-template-columns: 1fr; }
-      .meaning { grid-template-columns: 42px 1fr; gap: 12px; padding: 26px 0; }
-      .meaning-num { width: 34px; height: 34px; }
+      .meaning { padding: 26px 0; }
       .dash { padding: 16px; border-radius: 21px; }
       .metric-grid { grid-template-columns: 1fr 1fr; }
       .metric { padding: 17px 14px; }
       .metric strong { font-size: 23px; }
       .funnel, .insight-card { padding: 18px; }
       .funnel-row { grid-template-columns: 74px 1fr 40px; gap: 8px; font-size: 9px; }
-      .step { min-height: 235px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 12px; }
+      .step { min-height: auto; padding: 24px; }
       .step::after { display: none; }
-      .step h3 { margin-top: 35px; }
+      .step h3 { margin-top: 18px; }
       .cta { padding-bottom: 82px; }
       .cta-box { padding: 56px 25px; }
       .cta-mark { right: -30px; width: 160px; }
@@ -484,7 +471,7 @@
     <section class="story" id="product">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="section-kicker">01 <span>/ Understand</span></div>
+          <div class="section-kicker">Understand</div>
           <h2>Search behavior rarely matches catalog structure.</h2>
           <p class="section-copy">Customers search by requirement, occasion, and product attribute. Zhara interprets that context and returns the most relevant products.</p>
         </div>
@@ -496,15 +483,12 @@
           </div>
           <div class="meaning-list reveal">
             <article class="meaning">
-              <div class="meaning-num">01</div>
               <div><h3>Interpret product requirements.</h3><p>Combine material, function, fit, and category signals to rank products that satisfy the complete request.</p><span class="meaning-tag">Multi-attribute search</span></div>
             </article>
             <article class="meaning">
-              <div class="meaning-num">02</div>
               <div><h3>Resolve terminology variations.</h3><p>Connect customer language such as “office backpack” with catalog terms including laptop bags and commuter backpacks.</p><span class="meaning-tag">Terminology mapping</span></div>
             </article>
             <article class="meaning">
-              <div class="meaning-num">03</div>
               <div><h3>Rank results by contextual relevance.</h3><p>An occasion-based query can surface coordinated apparel and accessories even when the exact phrase is absent from product titles.</p><span class="meaning-tag">Semantic relevance</span></div>
             </article>
           </div>
@@ -515,14 +499,14 @@
     <section class="suite" id="features">
       <div class="wrap">
         <div class="section-head center reveal">
-          <div class="section-kicker">02 <span>/ Merchandising</span></div>
+          <div class="section-kicker">Merchandising</div>
           <h2>Control what shoppers see.</h2>
           <p class="section-copy">Set priorities and guide product discovery without changing code.</p>
         </div>
         <div class="simple-feature-grid reveal">
-          <article class="simple-feature"><span>01</span><h3>Promote key products</h3><p>Move priority products and collections higher in relevant search results.</p></article>
-          <article class="simple-feature"><span>02</span><h3>Refine specific searches</h3><p>Add synonyms, hide unsuitable results, or redirect selected queries.</p></article>
-          <article class="simple-feature"><span>03</span><h3>Recover missed searches</h3><p>Show relevant alternatives when an exact product match is unavailable.</p></article>
+          <article class="simple-feature"><h3>Promote key products</h3><p>Move priority products and collections higher in relevant search results.</p></article>
+          <article class="simple-feature"><h3>Refine specific searches</h3><p>Add synonyms, hide unsuitable results, or redirect selected queries.</p></article>
+          <article class="simple-feature"><h3>Recover missed searches</h3><p>Show relevant alternatives when an exact product match is unavailable.</p></article>
         </div>
       </div>
     </section>
@@ -530,7 +514,7 @@
     <section class="analytics" id="analytics">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="section-kicker">03 <span>/ Improve</span></div>
+          <div class="section-kicker">Measure</div>
           <h2>See what search contributes—not just what it receives.</h2>
           <p class="section-copy">Follow the journey from query to product click, cart, and order. Then use plain-language opportunities to improve the next search.</p>
         </div>
@@ -564,14 +548,14 @@
     <section class="trust-section" id="trust">
       <div class="wrap">
         <div class="section-head center reveal">
-          <div class="section-kicker">04 <span>/ Trust</span></div>
+          <div class="section-kicker">Trust</div>
           <h2>Fast to install. Easy to understand. Always in your control.</h2>
           <p class="section-copy">The strongest search product is the one your team can operate with confidence.</p>
         </div>
         <div class="trust-grid reveal">
-          <article class="trust-card"><div class="trust-icon">01</div><h3>Your theme stays yours</h3><p>Zhara is designed to inherit your storefront’s look, so smarter search doesn’t mean a disconnected customer experience.</p></article>
-          <article class="trust-card"><div class="trust-icon">02</div><h3>Your team keeps control</h3><p>Preview merchandising changes before they go live, and choose exactly what gets promoted, hidden, or redirected.</p></article>
-          <article class="trust-card"><div class="trust-icon">03</div><h3>Your results stay measurable</h3><p>Track how discovery influences product clicks, carts, and orders instead of relying on surface-level search counts.</p></article>
+          <article class="trust-card"><h3>Your theme stays yours</h3><p>Zhara is designed to inherit your storefront’s look, so smarter search doesn’t mean a disconnected customer experience.</p></article>
+          <article class="trust-card"><h3>Your team keeps control</h3><p>Preview merchandising changes before they go live, and choose exactly what gets promoted, hidden, or redirected.</p></article>
+          <article class="trust-card"><h3>Your results stay measurable</h3><p>Track how discovery influences product clicks, carts, and orders instead of relying on surface-level search counts.</p></article>
         </div>
         <div class="honesty reveal">
           <strong>Evaluate Zhara using your own catalog and query data.</strong>
@@ -583,7 +567,7 @@
     <section id="how">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="section-kicker">05 <span>/ Go live</span></div>
+          <div class="section-kicker">Go live</div>
           <h2>From installation to production in minutes.</h2>
           <p class="section-copy">No code changes or external implementation project. Connect the store, index the catalog, and activate the experience.</p>
         </div>
