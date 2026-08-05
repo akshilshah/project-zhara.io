@@ -1,7 +1,7 @@
 {
-  "name": "Zhara AI Discovery & Search",
+  "name": "Zhara AI Search & Discovery",
   "short_name": "Zhara",
-  "description": "AI search and discovery for Shopify stores — intent-aware search, merchant controls, and search-to-sale analytics.",
+  "description": "AI product search, predictive suggestions, trending discovery, recommendations, and analytics for Shopify stores.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#ffffff",
