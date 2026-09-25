@@ -1,19 +1,21 @@
 # Zhara Marketing Page — Design System
 
-## Logo (FINAL — provided by Akshil, 2026-08-04)
+## Logo (v2 — provided by Akshil, 2026-09-25)
 
-The final logo is a **fixed image asset**, not a generated design: an orange monoline Z-loop
-mark + thin, wide-tracked uppercase "ZHARA" wordmark in deep navy.
+Orange split-stroke Z mark (`#FE6317`) + thin, wide-tracked uppercase "ZHARA" wordmark in
+deep navy (`#091A41`). Fixed image asset, not a generated design.
 
 - Source of truth: `assets/logo/zhara-logo-source.png` (original file, do not edit).
-- Derived assets (regenerate from source with ImageMagick if needed):
-  - `zhara-logo-full.png` / `zhara-logo-full-760.png` — transparent lockup (light backgrounds)
-  - `zhara-logo-full-white.png` / `-760` — wordmark recolored white (dark backgrounds)
-  - `zhara-mark.png` — orange mark only (CTA, watermarks)
-  - `favicon-16/32/48.png` — mark on transparent
-  - `android-chrome-192/512.png`, `apple-touch-icon.png` — mark on navy `#141A3C` rounded tile
-- All previous generated logo experiments were deleted (2026-08-04). Pre-rebrand v1 backup
-  remains in `assets/logo/_old-v1/`.
+- Everything else is derived by `tools/build_logo.py` (Pillow + numpy + potrace). Re-run it
+  after replacing the source; do not hand-edit derived files.
+- Derived assets in `assets/logo/`:
+  - `zhara-logo.svg` / `.png` / `-380|760|1520.png` — full lockup, light backgrounds
+  - `zhara-logo-on-dark.*` — orange mark + white wordmark, dark backgrounds (site footer)
+  - `zhara-logo-white.*` — all-white lockup; `zhara-logo-mono.*` — all-navy lockup
+  - `zhara-mark.svg` / `-256|512|1024.png` — orange mark only; `zhara-mark-white.*`
+  - `favicon.svg`, `favicon-16/32/48.png`, `/favicon.ico` — mark on transparent
+  - `apple-touch-icon.png`, `android-chrome-192/512.png`, `maskable-512.png` — mark on white
+- `assets/og.png` (1200×630) — lockup on white with orange base rule; also generated.
 
 ## Palette (premium editorial refresh, 2026-08-04)
 
