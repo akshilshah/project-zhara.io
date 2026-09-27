@@ -6,4 +6,22 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://zhara.io/privacy/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://zhara.io/legal/subprocessors/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://zhara.io/help/store-privacy-policy/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
