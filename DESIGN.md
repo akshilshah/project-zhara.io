@@ -61,3 +61,12 @@ deep navy (`#091A41`). Fixed image asset, not a generated design.
 - Orange is an accent for actions, status, and small highlights; large page surfaces stay white or navy.
 - Prices in ₹ (fashion demo catalog).
 - Any sample dashboard metrics must be clearly labeled illustrative.
+
+## Product visuals (2026-09-28)
+
+- The hero uses a lightweight native motion walkthrough with real demo-store product photos. Its browser frame is an editorial adaptation of the search UI, labeled as an animated walkthrough.
+- Scenes: discovery before typing → `t sh` autocomplete → `blue t shirt` results. Manual scene selection pauses autoplay; offscreen, hidden-tab, and reduced-motion handling keep animation controlled.
+- Discovery cards use matching miniature product visuals. Merchant controls use the supplied screenshots. Analytics and overview use captures of the real dashboard renderers with a consistent illustrative dataset. Both use WebP, keyboard-accessible tabs, and expanded views.
+- Keep app screenshots and catalog photos local under `assets/demo/`. Source details live in `assets/demo/README.md`. Never include store credentials in site assets.
+- On mobile, show each complete screenshot at the card width without offsets or nested scrolling. Expanded screenshots open in a full-screen viewer, fit to width, with an explicit zoom control and a persistent close button.
+- Analytics examples show 128,400 searches and related values from one consistent dataset. Use the existing footer note and expanded-view titles to identify the sample data; omit the header badge as requested; do not present sample values as customer outcomes.

@@ -1,0 +1,816 @@
+{
+  "data": {
+    "illustrative": true,
+    "days": 30,
+    "hasPrev": true,
+    "pixelConnected": true,
+    "totals": {
+      "searches": 128400,
+      "sessions": 102720,
+      "ctr": 64,
+      "avgResults": 18.4,
+      "semanticRate": 58,
+      "searchToPurchase": 6.25,
+      "zeroRate": 1.5,
+      "currency": "INR"
+    },
+    "deltas": {
+      "searches": 18400,
+      "sessions": 14720,
+      "searchToPurchase": 0.75,
+      "zeroRate": -0.9,
+      "avgResults": 2.1,
+      "semanticRate": 7,
+      "revenuePct": 17
+    },
+    "hero": {
+      "currency": "INR",
+      "revenue": 9360000,
+      "orders": 7800,
+      "revenueShare": 40,
+      "bySurface": [
+        {
+          "key": "search_bar",
+          "label": "Search bar",
+          "orders": 6420,
+          "revenue": 7704000
+        },
+        {
+          "key": "trending_carousel",
+          "label": "Trending products",
+          "orders": 600,
+          "revenue": 720000
+        },
+        {
+          "key": "pdp_reco",
+          "label": "Product recommendations",
+          "orders": 550,
+          "revenue": 660000
+        },
+        {
+          "key": "no_result_recovery",
+          "label": "No-result recovery",
+          "orders": 230,
+          "revenue": 276000
+        }
+      ]
+    },
+    "funnel": [
+      {
+        "label": "Searches",
+        "value": 128400
+      },
+      {
+        "label": "Clicked a result",
+        "value": 82176
+      },
+      {
+        "label": "Added to cart",
+        "value": 20544,
+        "pixel": true
+      },
+      {
+        "label": "Purchased",
+        "value": 6420,
+        "pixel": true
+      }
+    ],
+    "series": {
+      "searches": [
+        {
+          "date": "2026-08-30",
+          "count": 3153
+        },
+        {
+          "date": "2026-08-31",
+          "count": 3395
+        },
+        {
+          "date": "2026-09-01",
+          "count": 3274
+        },
+        {
+          "date": "2026-09-02",
+          "count": 3678
+        },
+        {
+          "date": "2026-09-03",
+          "count": 3476
+        },
+        {
+          "date": "2026-09-04",
+          "count": 2991
+        },
+        {
+          "date": "2026-09-05",
+          "count": 3234
+        },
+        {
+          "date": "2026-09-06",
+          "count": 3638
+        },
+        {
+          "date": "2026-09-07",
+          "count": 4002
+        },
+        {
+          "date": "2026-09-08",
+          "count": 3880
+        },
+        {
+          "date": "2026-09-09",
+          "count": 4244
+        },
+        {
+          "date": "2026-09-10",
+          "count": 4082
+        },
+        {
+          "date": "2026-09-11",
+          "count": 3597
+        },
+        {
+          "date": "2026-09-12",
+          "count": 3840
+        },
+        {
+          "date": "2026-09-13",
+          "count": 4406
+        },
+        {
+          "date": "2026-09-14",
+          "count": 4567
+        },
+        {
+          "date": "2026-09-15",
+          "count": 4324
+        },
+        {
+          "date": "2026-09-16",
+          "count": 4849
+        },
+        {
+          "date": "2026-09-17",
+          "count": 4728
+        },
+        {
+          "date": "2026-09-18",
+          "count": 4162
+        },
+        {
+          "date": "2026-09-19",
+          "count": 4405
+        },
+        {
+          "date": "2026-09-20",
+          "count": 4890
+        },
+        {
+          "date": "2026-09-21",
+          "count": 5132
+        },
+        {
+          "date": "2026-09-22",
+          "count": 4809
+        },
+        {
+          "date": "2026-09-23",
+          "count": 5254
+        },
+        {
+          "date": "2026-09-24",
+          "count": 5092
+        },
+        {
+          "date": "2026-09-25",
+          "count": 4688
+        },
+        {
+          "date": "2026-09-26",
+          "count": 5173
+        },
+        {
+          "date": "2026-09-27",
+          "count": 5577
+        },
+        {
+          "date": "2026-09-28",
+          "count": 5860
+        }
+      ],
+      "sessions": [
+        {
+          "date": "2026-08-30",
+          "count": 2522
+        },
+        {
+          "date": "2026-08-31",
+          "count": 2716
+        },
+        {
+          "date": "2026-09-01",
+          "count": 2619
+        },
+        {
+          "date": "2026-09-02",
+          "count": 2943
+        },
+        {
+          "date": "2026-09-03",
+          "count": 2781
+        },
+        {
+          "date": "2026-09-04",
+          "count": 2393
+        },
+        {
+          "date": "2026-09-05",
+          "count": 2587
+        },
+        {
+          "date": "2026-09-06",
+          "count": 2910
+        },
+        {
+          "date": "2026-09-07",
+          "count": 3201
+        },
+        {
+          "date": "2026-09-08",
+          "count": 3104
+        },
+        {
+          "date": "2026-09-09",
+          "count": 3395
+        },
+        {
+          "date": "2026-09-10",
+          "count": 3266
+        },
+        {
+          "date": "2026-09-11",
+          "count": 2878
+        },
+        {
+          "date": "2026-09-12",
+          "count": 3072
+        },
+        {
+          "date": "2026-09-13",
+          "count": 3525
+        },
+        {
+          "date": "2026-09-14",
+          "count": 3654
+        },
+        {
+          "date": "2026-09-15",
+          "count": 3460
+        },
+        {
+          "date": "2026-09-16",
+          "count": 3880
+        },
+        {
+          "date": "2026-09-17",
+          "count": 3782
+        },
+        {
+          "date": "2026-09-18",
+          "count": 3330
+        },
+        {
+          "date": "2026-09-19",
+          "count": 3524
+        },
+        {
+          "date": "2026-09-20",
+          "count": 3912
+        },
+        {
+          "date": "2026-09-21",
+          "count": 4106
+        },
+        {
+          "date": "2026-09-22",
+          "count": 3847
+        },
+        {
+          "date": "2026-09-23",
+          "count": 4203
+        },
+        {
+          "date": "2026-09-24",
+          "count": 4073
+        },
+        {
+          "date": "2026-09-25",
+          "count": 3750
+        },
+        {
+          "date": "2026-09-26",
+          "count": 4138
+        },
+        {
+          "date": "2026-09-27",
+          "count": 4461
+        },
+        {
+          "date": "2026-09-28",
+          "count": 4688
+        }
+      ],
+      "orders": [
+        {
+          "date": "2026-08-30",
+          "count": 131
+        },
+        {
+          "date": "2026-08-31",
+          "count": 143
+        },
+        {
+          "date": "2026-09-01",
+          "count": 140
+        },
+        {
+          "date": "2026-09-02",
+          "count": 159
+        },
+        {
+          "date": "2026-09-03",
+          "count": 152
+        },
+        {
+          "date": "2026-09-04",
+          "count": 132
+        },
+        {
+          "date": "2026-09-05",
+          "count": 145
+        },
+        {
+          "date": "2026-09-06",
+          "count": 165
+        },
+        {
+          "date": "2026-09-07",
+          "count": 183
+        },
+        {
+          "date": "2026-09-08",
+          "count": 180
+        },
+        {
+          "date": "2026-09-09",
+          "count": 199
+        },
+        {
+          "date": "2026-09-10",
+          "count": 194
+        },
+        {
+          "date": "2026-09-11",
+          "count": 173
+        },
+        {
+          "date": "2026-09-12",
+          "count": 186
+        },
+        {
+          "date": "2026-09-13",
+          "count": 215
+        },
+        {
+          "date": "2026-09-14",
+          "count": 226
+        },
+        {
+          "date": "2026-09-15",
+          "count": 216
+        },
+        {
+          "date": "2026-09-16",
+          "count": 245
+        },
+        {
+          "date": "2026-09-17",
+          "count": 241
+        },
+        {
+          "date": "2026-09-18",
+          "count": 215
+        },
+        {
+          "date": "2026-09-19",
+          "count": 230
+        },
+        {
+          "date": "2026-09-20",
+          "count": 257
+        },
+        {
+          "date": "2026-09-21",
+          "count": 273
+        },
+        {
+          "date": "2026-09-22",
+          "count": 258
+        },
+        {
+          "date": "2026-09-23",
+          "count": 285
+        },
+        {
+          "date": "2026-09-24",
+          "count": 279
+        },
+        {
+          "date": "2026-09-25",
+          "count": 260
+        },
+        {
+          "date": "2026-09-26",
+          "count": 289
+        },
+        {
+          "date": "2026-09-27",
+          "count": 315
+        },
+        {
+          "date": "2026-09-28",
+          "count": 334
+        }
+      ],
+      "searchToPurchase": [
+        {
+          "date": "2026-08-30",
+          "count": 5.194290245836638
+        },
+        {
+          "date": "2026-08-31",
+          "count": 5.265095729013255
+        },
+        {
+          "date": "2026-09-01",
+          "count": 5.345551737304315
+        },
+        {
+          "date": "2026-09-02",
+          "count": 5.402650356778797
+        },
+        {
+          "date": "2026-09-03",
+          "count": 5.465659834591873
+        },
+        {
+          "date": "2026-09-04",
+          "count": 5.516088591725867
+        },
+        {
+          "date": "2026-09-05",
+          "count": 5.604947816003093
+        },
+        {
+          "date": "2026-09-06",
+          "count": 5.670103092783505
+        },
+        {
+          "date": "2026-09-07",
+          "count": 5.716963448922212
+        },
+        {
+          "date": "2026-09-08",
+          "count": 5.798969072164948
+        },
+        {
+          "date": "2026-09-09",
+          "count": 5.861561119293078
+        },
+        {
+          "date": "2026-09-10",
+          "count": 5.939987752602572
+        },
+        {
+          "date": "2026-09-11",
+          "count": 6.011118832522585
+        },
+        {
+          "date": "2026-09-12",
+          "count": 6.0546875
+        },
+        {
+          "date": "2026-09-13",
+          "count": 6.0992907801418434
+        },
+        {
+          "date": "2026-09-14",
+          "count": 6.185002736726874
+        },
+        {
+          "date": "2026-09-15",
+          "count": 6.242774566473988
+        },
+        {
+          "date": "2026-09-16",
+          "count": 6.314432989690721
+        },
+        {
+          "date": "2026-09-17",
+          "count": 6.372289793759915
+        },
+        {
+          "date": "2026-09-18",
+          "count": 6.456456456456457
+        },
+        {
+          "date": "2026-09-19",
+          "count": 6.526674233825198
+        },
+        {
+          "date": "2026-09-20",
+          "count": 6.569529652351738
+        },
+        {
+          "date": "2026-09-21",
+          "count": 6.648806624452021
+        },
+        {
+          "date": "2026-09-22",
+          "count": 6.70652456459579
+        },
+        {
+          "date": "2026-09-23",
+          "count": 6.780870806566738
+        },
+        {
+          "date": "2026-09-24",
+          "count": 6.849987724036337
+        },
+        {
+          "date": "2026-09-25",
+          "count": 6.933333333333333
+        },
+        {
+          "date": "2026-09-26",
+          "count": 6.984050265828904
+        },
+        {
+          "date": "2026-09-27",
+          "count": 7.061197041022192
+        },
+        {
+          "date": "2026-09-28",
+          "count": 7.124573378839591
+        }
+      ],
+      "zeroRate": [
+        {
+          "date": "2026-08-30",
+          "count": 2.0615287028227085
+        },
+        {
+          "date": "2026-08-31",
+          "count": 2.0029455081001473
+        },
+        {
+          "date": "2026-09-01",
+          "count": 1.9853390348197923
+        },
+        {
+          "date": "2026-09-02",
+          "count": 1.957585644371941
+        },
+        {
+          "date": "2026-09-03",
+          "count": 1.89873417721519
+        },
+        {
+          "date": "2026-09-04",
+          "count": 1.8722835172183216
+        },
+        {
+          "date": "2026-09-05",
+          "count": 1.855287569573284
+        },
+        {
+          "date": "2026-09-06",
+          "count": 1.8141836173721826
+        },
+        {
+          "date": "2026-09-07",
+          "count": 1.7741129435282361
+        },
+        {
+          "date": "2026-09-08",
+          "count": 1.7525773195876289
+        },
+        {
+          "date": "2026-09-09",
+          "count": 1.7200754005655041
+        },
+        {
+          "date": "2026-09-10",
+          "count": 1.6658500734933857
+        },
+        {
+          "date": "2026-09-11",
+          "count": 1.6402557686961357
+        },
+        {
+          "date": "2026-09-12",
+          "count": 1.6145833333333335
+        },
+        {
+          "date": "2026-09-13",
+          "count": 1.5660463004993193
+        },
+        {
+          "date": "2026-09-14",
+          "count": 1.5108386249178893
+        },
+        {
+          "date": "2026-09-15",
+          "count": 1.4801110083256246
+        },
+        {
+          "date": "2026-09-16",
+          "count": 1.4435966178593524
+        },
+        {
+          "date": "2026-09-17",
+          "count": 1.4170896785109983
+        },
+        {
+          "date": "2026-09-18",
+          "count": 1.3935607880826526
+        },
+        {
+          "date": "2026-09-19",
+          "count": 1.362088535754824
+        },
+        {
+          "date": "2026-09-20",
+          "count": 1.329243353783231
+        },
+        {
+          "date": "2026-09-21",
+          "count": 1.2860483242400622
+        },
+        {
+          "date": "2026-09-22",
+          "count": 1.2476606363069247
+        },
+        {
+          "date": "2026-09-23",
+          "count": 1.218119527978683
+        },
+        {
+          "date": "2026-09-24",
+          "count": 1.178318931657502
+        },
+        {
+          "date": "2026-09-25",
+          "count": 1.151877133105802
+        },
+        {
+          "date": "2026-09-26",
+          "count": 1.1212062632901605
+        },
+        {
+          "date": "2026-09-27",
+          "count": 1.09377801685494
+        },
+        {
+          "date": "2026-09-28",
+          "count": 1.0580204778156996
+        }
+      ]
+    },
+    "topQueries": [
+      {
+        "query": "blue t shirt",
+        "count": 18420
+      },
+      {
+        "query": "cotton boxers",
+        "count": 14980
+      },
+      {
+        "query": "everyday comfort",
+        "count": 12640
+      },
+      {
+        "query": "t shirt",
+        "count": 10320
+      },
+      {
+        "query": "women t shirt",
+        "count": 8920
+      },
+      {
+        "query": "multi-pack",
+        "count": 7610
+      }
+    ],
+    "zeroQueries": [
+      {
+        "query": "thermal vest",
+        "count": 680
+      },
+      {
+        "query": "bamboo socks",
+        "count": 520
+      },
+      {
+        "query": "oversized hoodie",
+        "count": 426
+      },
+      {
+        "query": "linen shorts",
+        "count": 300
+      }
+    ],
+    "topProducts": [
+      {
+        "title": "Men’s T Shirt – Galaxy",
+        "featuredImage": "/assets/demo/galaxy.webp",
+        "clicks": 12000,
+        "cvr": 8
+      },
+      {
+        "title": "Women’s T Shirt – Dory",
+        "featuredImage": "/assets/demo/dory.webp",
+        "clicks": 10000,
+        "cvr": 7.5
+      },
+      {
+        "title": "Men’s T Shirt – Frostee",
+        "featuredImage": "/assets/demo/frostee.webp",
+        "clicks": 8000,
+        "cvr": 8
+      },
+      {
+        "title": "Men’s T Shirt – Pebble",
+        "featuredImage": "/assets/demo/pebble.webp",
+        "clicks": 6000,
+        "cvr": 7
+      }
+    ],
+    "audience": {
+      "shopperType": [
+        {
+          "label": "Signed in",
+          "value": 35952
+        },
+        {
+          "label": "Guest",
+          "value": 66768
+        }
+      ],
+      "newVsReturning": [
+        {
+          "label": "New shoppers",
+          "value": 63686
+        },
+        {
+          "label": "Returning",
+          "value": 39034
+        }
+      ],
+      "device": [
+        {
+          "label": "Mobile",
+          "value": 71904
+        },
+        {
+          "label": "Desktop",
+          "value": 26707
+        },
+        {
+          "label": "Tablet",
+          "value": 4109
+        }
+      ]
+    }
+  },
+  "health": {
+    "catalog": {
+      "status": "Synced",
+      "ok": true,
+      "indexed": 862,
+      "productCount": 862,
+      "failedToIndex": 0
+    },
+    "search": {
+      "latencyMs": 42,
+      "status": "Operational",
+      "ok": true
+    },
+    "tracking": {
+      "status": "Active · receiving events",
+      "receiving": true,
+      "activated": true
+    }
+  }
+}

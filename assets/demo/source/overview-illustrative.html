@@ -1,0 +1,429 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhara Overview — illustrative data</title><style>
+[hidden]{display:none!important}
+
+.za{
+  --ink:#1a1a1a;
+  --dark:#303030;
+  --body:#454545;
+  --sub:#616161;
+  --mut:#8a8a8a;
+  --line:#e3e3e3;
+  --hair:#efefef;
+  --tile:#f7f7f7;
+  --btn:#c9c9c9;
+  --green:#4a7c59;
+  --green-l:#7fae87;
+  --red:#b5543f;
+  --red-bg:#f7e9e4;
+  --gold:#c2a35a;
+
+  /* ---------------------------------------------------------------------
+     Type. --font is the ONE place the face is declared: every rule below
+     (and every inline style in dashboard.client.js) reads it through
+     var(--font), including inside the font shorthand, so swapping the face
+     is a one-line change here plus the font link in dashboard.page.js.
+     Never hardcode a family again — a shorthand with a literal name also
+     silently drops the fallback stack when the webfont fails to load.
+     --------------------------------------------------------------------- */
+  --font:'Geist','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:var(--ink);
+}
+.za button,.za input,.za select,.za textarea{font-family:var(--font)}
+/* border-box everywhere: a width:100% field with padding and a border is
+   otherwise wider than its container and spills out of the card. */
+.za,.za *,.za *::before,.za *::after{box-sizing:border-box}
+
+/* ---- form controls ----------------------------------------------------- */
+.za-input{width:100%;border:1px solid var(--btn);border-radius:10px;padding:10px 14px;font-size:13.5px;color:var(--ink);background:#fff}
+.za-input::placeholder{color:var(--mut)}
+.za-input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(26,26,26,.09)}
+/* The native colour input, made to look like a swatch: the UA draws a bordered
+   wrapper with its own padding, which is what produced the chunky OS control. */
+.za-swatch{width:34px;height:34px;padding:0;border:1px solid var(--btn);border-radius:9px;background:none;cursor:pointer;overflow:hidden}
+.za-swatch::-webkit-color-swatch-wrapper{padding:0}
+.za-swatch::-webkit-color-swatch{border:none;border-radius:8px}
+.za-swatch::-moz-color-swatch{border:none;border-radius:8px}
+.za-swatch:focus-visible{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(26,26,26,.09)}
+.za-hex{font-size:12.5px;color:var(--sub);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+/* Every number that sits in a column or updates in place uses tabular
+   figures, so digits never jitter between renders or misalign down a table. */
+.za-hero-n b,.za-hero-n i,.za-kpi-n b,.za-kpi-n i,.za-stat .za-v,.za-stat .za-d,
+.za-dstat .za-v,.za-place-stats .za-v,.za-hcell .za-hv,.za-top .za-c,.za-legend-row .za-v,
+.za-fn-v,.za-cell,.za-step span,.za-aud-p{font-variant-numeric:tabular-nums}
+
+/* ---- icons -------------------------------------------------------------
+   One wrapper sizes every icon. The SVGs carry stroke:currentColor and no
+   dimensions of their own (see dashboard.icons.js), so an icon takes the
+   colour of whatever it sits in and a size class is the only knob. */
+.za-ic{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;flex:0 0 auto}
+.za-ic svg{display:block;width:100%;height:100%}
+.za-ic.xs{width:12px;height:12px}
+.za-ic.sm{width:14px;height:14px}
+.za-ic.lg{width:18px;height:18px}
+.za-ic.xl{width:20px;height:20px}
+/* Buttons become flex rows so a leading icon centres on the label's optical
+   middle instead of sitting on the text baseline. */
+.za-btn,.za-btn-pill,.za-btn-dark,.za-link{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.za-link .za-ic{margin-top:1px}
+
+/* ---- icon tiles --------------------------------------------------------
+   The tinted square behind an icon. Tones are shared by insight rows and
+   placement cards so a strategy reads the same colour everywhere it appears. */
+.za-tile{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;flex:0 0 auto;width:28px;height:28px}
+.za-tone-ink{background:#ececea;color:#303030}
+.za-tone-gold{background:#efe7d4;color:#8a6b28}
+.za-tone-green{background:#e4ece6;color:#3d6b52}
+.za-tone-red{background:var(--red-bg);color:var(--red)}
+.za-tone-brown{background:#efe7e0;color:#8a6b4f}
+
+/* ---- shared card chrome ---- */
+.za-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:22px}
+.za-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.za-h3{margin:0;font:700 15px var(--font);color:var(--ink)}
+.za-sub{margin:4px 0 0;font-size:12.5px;color:var(--sub)}
+.za-pill{font:700 10px var(--font);letter-spacing:.12em;background:var(--ink);color:#fff;border-radius:6px;padding:4px 9px}
+.za-link{border:none;background:transparent;cursor:pointer;font:600 12.5px var(--font);color:var(--sub)}
+.za-link:hover{color:var(--ink)}
+.za-btn{border:1px solid var(--btn);background:#fff;color:var(--ink);cursor:pointer;padding:6px 12px;border-radius:8px;font:600 11.5px var(--font)}
+.za-btn:hover{background:var(--tile)}
+.za-btn-pill{border:1px solid var(--btn);background:#fff;color:var(--ink);cursor:pointer;padding:7px 13px;border-radius:999px;font:600 12px var(--font)}
+.za-btn-pill:hover{background:var(--ink);color:#fff}
+.za-btn-pill:disabled{opacity:.55;cursor:default}
+
+/* ---- hero: revenue attributed ---- */
+.za-hero{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:16px;display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.za-hero-l{flex:0 0 auto}
+.za-hero-r{flex:1;min-width:280px}
+.za-hero-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.za-hero-top span:last-child{font-size:12px;color:var(--sub)}
+.za-hero-n{display:flex;align-items:baseline;gap:12px}
+.za-hero-n b{font-size:40px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.za-hero-n i{font-style:normal;font-size:14px;font-weight:700;color:var(--green-l)}
+.za-hero-n i.down{color:var(--red)}
+.za-hero-share{font-size:13px;color:var(--sub);margin-top:6px}
+.za-stack{display:flex;height:14px;border-radius:999px;overflow:hidden;margin-bottom:14px;background:var(--line)}
+.za-stack span{display:block;height:100%}
+.za-legend{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.za-legend-row{display:flex;align-items:center;gap:9px}
+.za-legend-row .za-l{flex:1;font-size:12.5px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-legend-row .za-v{font-size:12.5px;font-weight:700;color:var(--ink)}
+.za-sq{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
+
+/* ---- KPI tiles ---- */
+.za-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px}
+.za-kpi{min-width:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+/* min-height keeps the four values on one baseline when a hint wraps to two
+   lines (the source design lets them drift; this is the one deliberate fix) */
+.za-kpi-l{font-size:12.5px;color:var(--sub);margin-bottom:12px;min-height:62px}
+.za-kpi-l span{display:block;margin-top:2px;font-size:11px;color:var(--mut)}
+.za-kpi-n{display:flex;align-items:baseline;gap:9px}
+.za-kpi-n b{font-size:27px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.za-kpi-n i{font-style:normal;font-size:12.5px;font-weight:700}
+.za-kpi-n i.up{color:var(--green)}
+.za-kpi-n i.down{color:var(--red)}
+.za-kpi-s{margin-top:12px}
+
+/* ---- charts ---- */
+.za-spark{display:block;width:100%}
+.za-chart{display:block;width:100%;margin-top:8px}
+.za-legend-inline{display:flex;gap:16px}
+.za-legend-inline span{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--body)}
+.za-legend-inline i{width:10px;height:10px;border-radius:3px;display:block}
+
+/* ---- layout rows ---- */
+.za-split{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-bottom:22px}
+.za-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+/* Grid items default to min-width:auto, so any fixed-width or nowrap child
+   (a 420px preview card, a 640px table) props the track open and pushes the
+   whole page into a horizontal scroll. Let every track shrink instead. */
+.za-split>*,.za-pair>*,.za-kpis>*,.za-places>*,.za-installs>*,.za-ap>*,.za-health>*,.za-stats>*{min-width:0}
+/* Wide grid tables scroll inside their own card, never the page. */
+.za-scroll{overflow-x:auto}
+
+/* ---- AI insights ---- */
+.za-ins-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column}
+.za-ins-list{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.za-ins{display:flex;gap:12px}
+/* nudged down to sit on the optical centre of the first line of text */
+.za-ins-ico{margin-top:1px}
+.za-ins-t{font-size:13.5px;color:var(--body);line-height:1.5}
+.za-ins .za-btn{margin-top:7px}
+
+/* ---- top searches ---- */
+.za-list{display:flex;flex-direction:column;gap:3px}
+.za-top{display:flex;align-items:center;gap:12px;padding:9px 6px;border-radius:8px}
+.za-top:hover{background:var(--tile)}
+.za-top .za-rank{width:20px;font-size:12.5px;color:var(--mut);font-weight:700}
+.za-top .za-q{flex:1;font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-top .za-track{flex:0 0 120px;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.za-top .za-track span{display:block;height:100%;background:var(--ink)}
+.za-top .za-c{flex:0 0 auto;width:52px;text-align:right;font-size:13px;font-weight:600;color:var(--dark)}
+
+/* ---- needs attention ---- */
+.za-flag{font:700 10px var(--font);letter-spacing:.1em;color:var(--red);background:var(--red-bg);border-radius:999px;padding:4px 9px}
+.za-zero{display:flex;align-items:center;gap:12px;padding:10px 6px;border-radius:8px;border-bottom:1px solid var(--hair)}
+.za-zero:last-child{border-bottom:none}
+.za-zero .za-q{flex:1;font-size:14px;color:var(--ink)}
+.za-zero .za-m{font-size:12px;color:var(--sub);margin-top:2px}
+
+/* ---- system health strip ---- */
+.za-health{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.za-hcell{padding:13px 15px;background:var(--tile);border-radius:11px}
+.za-hcell .za-hl{display:flex;align-items:center;gap:7px;margin-bottom:7px;font-size:11.5px;color:var(--sub)}
+.za-hcell .za-hv{font-size:15px;font-weight:700}
+.za-dot{width:8px;height:8px;border-radius:999px;flex:0 0 auto}
+
+/* ---- empty / muted ---- */
+.za-empty{font-size:13px;color:var(--sub);padding:14px 6px}
+.za-empty-lg{padding:44px;text-align:center;color:var(--sub);font-size:14px}
+
+/* ---- underline tabs ---- */
+.za-tabs{display:flex;gap:6px;margin-bottom:20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.za-tab{border:none;background:transparent;cursor:pointer;padding:10px 4px;margin-right:18px;font:600 14px var(--font);color:var(--sub);border-bottom:2px solid transparent}
+.za-tab.on{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---- pill buttons / filters ---- */
+.za-fpill{border:1px solid var(--line);background:#fff;color:var(--sub);cursor:pointer;padding:7px 14px;border-radius:999px;font:600 12.5px var(--font)}
+.za-fpill.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.za-fpill .za-n{opacity:.65;margin-left:2px}
+.za-btn-dark{border:none;background:var(--ink);color:#fff;cursor:pointer;padding:9px 18px;border-radius:999px;font:600 13px var(--font)}
+.za-btn-dark:hover{background:var(--dark)}
+.za-btn-dark:disabled{opacity:.55;cursor:default}
+.za-btn-sm{padding:5px 11px;font-size:11.5px}
+
+/* ---- generic grid table ---- */
+.za-th{display:grid;padding:0 8px 10px;border-bottom:1px solid var(--line);font:700 11.5px var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.za-tr{display:grid;align-items:center;padding:12px 8px;border-bottom:1px solid var(--hair)}
+.za-tr:last-child{border-bottom:none}
+.za-tr.hoverable:hover{background:var(--tile);border-radius:8px}
+.za-r{text-align:right}
+.za-cell{font-size:13px;color:var(--dark)}
+.za-cell.strong{font-size:13px;font-weight:600;color:var(--ink)}
+.za-cell.name{font-size:13.5px;color:var(--ink)}
+.za-tag{font:700 11px var(--font);letter-spacing:.04em;border-radius:6px;padding:4px 9px;display:inline-block}
+.za-mini{font:700 9.5px var(--font);letter-spacing:.06em;border-radius:999px;padding:2px 7px}
+
+/* ---- switch ---- */
+.za-switch{width:44px;height:25px;border-radius:999px;border:none;cursor:pointer;position:relative;background:#d6d6d6;transition:background .18s;flex:0 0 auto;padding:0}
+.za-switch.on{background:var(--green)}
+.za-switch i{position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:999px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .18s}
+.za-switch.on i{left:22px}
+.za-switch.sm{width:40px;height:23px}
+.za-switch.sm i{width:17px;height:17px}
+.za-switch.sm.on i{left:20px}
+
+/* ---- toggle / stepper rows ---- */
+.za-orow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--hair)}
+.za-orow:last-child{border-bottom:none}
+.za-orow .za-lb{font-size:14px;color:var(--ink)}
+.za-orow .za-hint{font-size:12px;color:var(--sub);margin-top:2px}
+.za-step{display:flex;align-items:center;gap:2px;background:var(--hair);border-radius:999px;padding:3px}
+.za-step button{width:28px;height:28px;border:none;border-radius:999px;background:#fff;cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
+.za-step button:disabled{opacity:.4;cursor:default}
+.za-step span{min-width:34px;text-align:center;font-size:14px;font-weight:700;color:var(--ink)}
+
+/* ---- preset chips ---- */
+.za-presets{display:flex;flex-wrap:wrap;gap:10px}
+.za-preset{border:1.5px solid var(--line);background:#fff;color:var(--sub);cursor:pointer;padding:9px 16px;border-radius:11px;font:600 13px var(--font);text-align:left}
+.za-preset.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.za-preset small{display:block;font-weight:500;font-size:11.5px;opacity:.7;margin-top:2px}
+
+/* ---- funnel (analytics) ---- */
+.za-fn{display:flex;flex-direction:column;gap:12px}
+.za-fn-h{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.za-fn-l{font-size:13.5px;color:var(--ink);font-weight:600}
+.za-fn-v{font-size:13px;color:var(--body)}
+.za-fn-v span{color:var(--mut)}
+.za-fn-t{height:30px;border-radius:8px;background:var(--hair);overflow:hidden}
+.za-fn-t div{height:100%;border-radius:8px}
+.za-fn-d{font-size:11.5px;color:var(--red);margin-top:5px;display:flex;align-items:center;gap:4px}
+
+/* ---- small stat grid (query health) ---- */
+.za-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.za-stat{padding:14px;background:var(--tile);border-radius:12px}
+.za-stat .za-l{font-size:12px;color:var(--sub);margin-bottom:8px}
+.za-stat .za-v{font-size:22px;font-weight:700;color:var(--ink)}
+.za-stat .za-d{font-size:12px;font-weight:600;margin-top:4px}
+
+/* ---- product rows ---- */
+.za-prow{display:flex;align-items:center;gap:12px}
+.za-thumb{flex:0 0 38px;height:46px;border-radius:7px;background:var(--hair);overflow:hidden}
+.za-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.za-prow .za-t{font-size:13.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-prow .za-m{font-size:12px;color:var(--sub);margin-top:2px}
+
+/* ---- placement cards ---- */
+.za-places{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.za-place{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.za-place-h{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+/* the tinted tile itself comes from .za-tile + a .za-tone-* class */
+.za-place-ico{width:42px;height:42px;border-radius:12px}
+.za-place-ico .za-ic{width:20px;height:20px}
+.za-place-n{font:700 15px var(--font);color:var(--ink)}
+.za-place-loc{font-size:12.5px;color:var(--sub);margin-top:2px}
+.za-place p{margin:0 0 14px;font-size:13px;color:var(--body);line-height:1.55}
+.za-place-stats{display:flex;gap:22px;padding:14px 0 4px;border-top:1px solid var(--hair)}
+.za-place-stats .za-l{font-size:11.5px;color:var(--sub);margin-bottom:3px}
+.za-place-stats .za-v{font-size:16px;font-weight:700;color:var(--ink)}
+.za-place-cfg{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;background:var(--tile);border-radius:10px;font-size:13px;color:var(--dark)}
+
+/* ---- setup ---- */
+.za-prog{height:8px;border-radius:999px;background:var(--hair);overflow:hidden;margin-bottom:22px}
+.za-prog div{height:100%;background:var(--ink)}
+.za-srow{display:flex;align-items:center;gap:14px;padding:15px 8px;border-bottom:1px solid var(--hair)}
+.za-srow:last-child{border-bottom:none}
+.za-mark{width:24px;height:24px;border-radius:999px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:#fff;color:var(--mut);border:1.5px solid var(--line)}
+.za-mark.done{background:var(--ink);color:#fff;border-color:var(--ink)}
+.za-srow .za-l{font-size:14px;font-weight:600;color:var(--ink)}
+.za-srow .za-n{font-size:12.5px;color:var(--sub);margin-top:2px}
+
+/* ---- notice strips ---- */
+.za-strip{display:flex;align-items:center;gap:12px;padding:16px 20px;border-radius:14px;flex-wrap:wrap}
+.za-strip.ok{background:#e4ece6;border:1px solid #cfe0d6;color:#2f5744}
+.za-strip.hint{background:var(--tile);border:1px dashed var(--btn)}
+.za-strip .za-t{flex:1;min-width:200px;font-size:13.5px;color:var(--dark)}
+.za-strip.ok .za-t{color:#2f5744}
+.za-pill-round{font:700 10px var(--font);letter-spacing:.12em;background:var(--ink);color:#fff;border-radius:999px;padding:4px 9px}
+
+/* ---- install cards ---- */
+.za-installs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:22px}
+.za-status{font:700 10.5px var(--font);letter-spacing:.06em;border-radius:999px;padding:4px 10px}
+.za-status.on{color:#2f5744;background:#e4ece6}
+.za-status.off{color:var(--red);background:var(--red-bg)}
+.za-status.unk{color:var(--sub);background:var(--tile)}
+
+/* ---- appearance preview (mirrors the storefront widget, scaled down) ---- */
+.za-ap{display:grid;grid-template-columns:360px minmax(0,1fr);gap:20px}
+.za-ap-stage{display:flex;justify-content:center;background:#e9e7e2;border-radius:14px;padding:22px}
+.za-off{opacity:.45}
+.za-pv{width:100%;max-width:880px;background:#fff;color:#1a1a1a;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.14);font-family:var(--font)}
+.za-pv.mobile{max-width:320px}
+.za-pv.mobile .za-pv-body{max-height:560px;overflow-y:auto}
+.za-pv-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #e6e6e6}
+.za-pv-ai{flex:none;display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:var(--pv-accent);color:#fff;font:700 9px var(--font);letter-spacing:.1em;text-transform:uppercase}
+.za-pv-input{flex:1;min-width:0;font-size:13px;color:#8f8f8f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-pv-x{flex:none;width:26px;height:26px;border:1px solid #e0e0e0;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#1a1a1a}
+.za-pv-body{padding:16px 16px 18px}
+.za-pv-zero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;align-items:start}
+.za-pv-zero.single,.za-pv.mobile .za-pv-zero{grid-template-columns:minmax(0,1fr)}
+.za-pv-sec{margin-bottom:16px}
+.za-pv-sec:last-child{margin-bottom:0}
+.za-pv-lab{display:flex;align-items:center;gap:5px;font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;margin-bottom:8px}
+.za-pv-lab b{color:#1a1a1a;display:inline-flex}
+.za-pv-chips{display:flex;flex-wrap:wrap;gap:6px}
+.za-pv-chip{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:500;color:#3a3a3a;background:#fff;border:1px solid #e0e0e0;border-radius:999px;padding:5px 10px}
+.za-pv-chip svg{color:#bdbdbd}
+.za-pv-ask{display:flex;align-items:center;gap:8px;padding:8px 10px;margin-bottom:6px;border:1px solid #e0e0e0;border-radius:8px;font-size:11px;font-weight:500}
+.za-pv-ask span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-pv-ask i,.za-pv-cat i{color:#c4c4c4;display:inline-flex}
+.za-pv-cat{display:flex;align-items:center;justify-content:space-between;padding:8px 1px;border-bottom:1px solid #ededed;font-size:12px;font-weight:500}
+.za-pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px}
+.za-pv-card{min-width:0}
+.za-pv-ph{position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:#efefef}
+.za-pv-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.za-pv-ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.28))}
+.za-pv-badge{position:absolute;z-index:1;top:7px;left:7px;padding:3px 7px;border-radius:999px;background:var(--pv-accent);color:#fff;font-size:7.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.za-pv-pcat{position:absolute;z-index:1;left:7px;right:7px;bottom:7px;font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-pv-t{font-size:11px;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.za-pv-price{display:flex;align-items:baseline;gap:5px;margin-top:2px;font-size:11px}
+.za-pv-price s{font-size:9.5px;color:#9a9a9a}
+.za-pv-empty{padding:30px 0;text-align:center;color:#8f8f8f;font-size:12px}
+
+/* ---- recommendation preview rail ---- */
+.za-rail{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.za-rail-item{flex:0 0 auto;width:124px}
+.za-rail-item img{width:124px;height:156px;object-fit:cover;border-radius:10px;display:block}
+.za-rail-ph{width:124px;height:156px;border-radius:10px;background:var(--hair)}
+
+/* ---- form actions ---- */
+.za-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.za-narrow{max-width:860px}
+
+/* ---- triple card grid (audience) ---- */
+.za-triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.za-triple>*{min-width:0}
+.za-aud{display:flex;flex-direction:column;gap:14px}
+.za-aud-row .za-aud-h{display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;color:var(--dark)}
+.za-aud-p{font-weight:700;color:var(--ink)}
+.za-aud-bar{height:8px;border-radius:999px;background:var(--hair);overflow:hidden}
+.za-aud-bar span{display:block;height:100%;border-radius:999px}
+
+/* ---- advanced ranking weights ---- */
+.za-adv summary{list-style:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.za-adv summary::-webkit-details-marker{display:none}
+.za-adv-c{display:inline-flex;color:var(--sub);transition:transform .18s}
+.za-adv[open] .za-adv-c{transform:rotate(180deg)}
+.za-wbar{height:8px;border-radius:999px;background:var(--hair);overflow:hidden}
+.za-wbar span{display:block;height:100%;background:#8a6b4f}
+
+/* ---- appearance preview modes ---- */
+.za-modes{display:flex;background:var(--line);border-radius:999px;padding:3px}
+.za-mode{border:none;cursor:pointer;padding:6px 14px;border-radius:999px;font:600 12px var(--font);background:transparent;color:var(--sub)}
+.za-mode.on{background:#fff;color:var(--ink)}
+
+/* ---- query detail drawer ---- */
+.za-dv{position:fixed;inset:0;z-index:80;background:rgba(26,22,18,.4)}
+.za-drawer{position:fixed;top:0;right:0;bottom:0;z-index:81;width:440px;max-width:92vw;background:#f1f1f1;box-shadow:-14px 0 44px rgba(40,34,26,.28);overflow-y:auto}
+.za-drawer-hd{position:sticky;top:0;background:#f1f1f1;padding:22px 24px 16px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;z-index:2}
+.za-drawer-k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.za-drawer-q{font:400 22px var(--font);color:var(--ink)}
+.za-drawer-x{width:34px;height:34px;border-radius:999px;border:1px solid var(--btn);background:#fff;cursor:pointer;color:var(--body);flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center}
+.za-drawer-x:hover{background:var(--tile);color:var(--ink)}
+.za-drawer-bd{padding:22px 24px 40px}
+.za-dstats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.za-dstat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.za-dstat .za-l{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.za-dstat .za-v{font-size:20px;font-weight:700;color:var(--ink)}
+
+/* ---- placement wizard modal ---- */
+.za-wz{position:fixed;z-index:81;top:50%;left:50%;transform:translate(-50%,-50%);width:720px;max-width:calc(100vw - 40px);max-height:88vh;overflow:auto;background:#f1f1f1;border-radius:18px;box-shadow:0 30px 80px rgba(40,34,26,.36);display:flex}
+.za-wz-side{flex:0 0 210px;background:var(--tile);padding:24px 20px;border-right:1px solid var(--line);border-radius:18px 0 0 18px}
+.za-wz-step{display:flex;align-items:center;gap:11px;padding:8px 0}
+.za-wz-dot{width:24px;height:24px;border-radius:999px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:700 12px var(--font);background:#e3e3e3;color:var(--sub)}
+.za-wz-dot.on{background:var(--ink);color:#fff}
+.za-wz-dot.done{background:var(--green);color:#fff}
+.za-wz-main{flex:1;min-width:0;padding:26px;display:flex;flex-direction:column}
+.za-wz-opt{text-align:left;display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;padding:14px 16px;border-radius:12px;font:600 14px var(--font);color:var(--ink)}
+.za-wz-opt.on{border-color:var(--ink)}
+.za-wz-radio{width:18px;height:18px;border-radius:999px;flex:0 0 auto;border:2px solid var(--btn)}
+.za-wz-radio.on{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px #fff}
+.za-wz-foot{display:flex;align-items:center;justify-content:space-between;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+
+/* ---- responsive ---- */
+@media (max-width:1000px){
+  .za-triple{grid-template-columns:1fr}
+  .za-wz{flex-direction:column;width:560px}
+  .za-wz-side{flex:0 0 auto;border-right:none;border-bottom:1px solid var(--line);border-radius:18px 18px 0 0}
+  .za-kpis{grid-template-columns:1fr 1fr}
+  .za-split,.za-pair,.za-places,.za-ap{grid-template-columns:1fr}
+  .za-health,.za-installs{grid-template-columns:1fr 1fr}
+}
+/* Wide grid tables scroll inside their card rather than stretching the page. */
+@media (max-width:760px){
+  .za-scroll{overflow-x:auto}
+  .za-scroll .za-th,.za-scroll .za-tr{min-width:640px}
+}
+@media (max-width:560px){
+  .za-kpis,.za-health,.za-installs,.za-stats{grid-template-columns:1fr}
+  .za-place-stats{gap:14px;flex-wrap:wrap}
+  .za-actions{justify-content:stretch}
+  .za-actions button{flex:1}
+  .za-legend{grid-template-columns:1fr}
+  .za-hero{padding:18px 16px}
+  /* the hero's left column is flex:0 0 auto by default, so it would size to
+     max-content and push the page into a horizontal scroll on phones */
+  .za-hero-l{flex:1 1 100%;min-width:0}
+  .za-hero-r{min-width:0}
+  .za-hero-n b{font-size:32px}
+  .za-card,.za-ins-card{padding:18px 16px}
+  .za-top .za-track{display:none}
+}
+
+
+*{box-sizing:border-box}body{position:relative;margin:0;background:#f1f1f1;color:#1a1a1a;font-family:Arial,sans-serif;font-size:14px}button{font-family:inherit} .chrome{height:56px;background:#101010;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 22px}.shopify svg{width:23px;height:27px;vertical-align:middle;margin-right:5px}.shopify{font-size:23px;font-weight:700;font-style:italic;letter-spacing:-1px}.search{width:630px;height:35px;display:flex;align-items:center;padding:0 14px;border:1px solid #454545;border-radius:11px;background:#292929;color:#b6b6b6;font-size:13px}.search span{margin-left:auto}.store{font-size:12px;display:flex;align-items:center;gap:8px}.avatar{border-radius:8px;background:#45e994;color:#175f35;padding:9px 5px;font-size:9px;font-weight:700}.dev{border-radius:8px;padding:3px 6px;color:#9d9d9d;background:#303030}.sidebar{position:absolute;top:56px;left:0;width:240px;bottom:0;min-height:calc(100vh - 56px);background:#ebebeb;padding:15px 12px;color:#494949}.navline{display:flex;align-items:center;gap:10px;height:29px;font-size:12px;font-weight:600;padding:0 8px}.navline svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}.navlabel{font-size:11px;font-weight:600;margin:21px 8px 8px}.appnav{font-size:12px;line-height:29px;padding-left:35px}.appnav.active{background:#fff9;border-radius:8px;font-weight:600}.appname{padding:0 8px;display:flex;gap:9px;align-items:center;font-size:12px;font-weight:600;height:29px}.appname img{width:15px;height:15px}.page-title{height:57px;border-bottom:1px solid #e8e8e8;margin-left:240px;display:flex;align-items:center;padding:0 22px;gap:11px;font-size:18px;font-weight:600}.page-title img{width:22px;height:22px;background:#fff;padding:4px;border-radius:5px}.workspace{margin-left:240px;padding:25px 28px 24px}.surface{max-width:966px;margin:0 auto}.za{--font:Arial,sans-serif}.za-actions{display:flex;gap:12px;justify-content:flex-start}.za-fn{gap:28px}.za-hero-n{min-height:48px}.footer-note{font-size:10px;color:#888;text-align:right;margin-top:15px}.za-prow .za-thumb img{object-position:top}
+</style></head><body><div class="chrome"><span class="shopify"><svg viewBox="0 0 24 28" aria-hidden="true"><path d="M4 7 19 4l4 23L1 25z" fill="#fff"/><path d="M7 7C6-1 16-2 16 6" fill="none" stroke="#fff" stroke-width="2"/><text x="7" y="21" font-family="Arial" font-weight="700" font-size="17" fill="#101010">S</text></svg>shopify</span><div class="search">⌕ Search<span>⌘ K</span></div><div class="store"><span class="avatar">ZHA</span>zhara-demo<span class="dev">dev</span></div></div><aside class="sidebar"><div class="navline"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3z"/><path d="M9 21v-7h6v7"/></svg>Home</div><div class="navline"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 5V3h8v2M8 11h8M8 15h6"/></svg>Orders</div><div class="navline"><svg viewBox="0 0 24 24"><path d="M3 3h9l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1"/></svg>Products</div><div class="navline"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></svg>Customers</div><div class="navline"><svg viewBox="0 0 24 24"><path d="m3 9 15-5v16L3 15zM5 15l2 6"/></svg>Marketing</div><div class="navline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 16 8-8M8 8h.1M16 16h.1"/></svg>Discounts</div><div class="navline"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg>Content</div><div class="navline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a18 18 0 0 0 0 18 18 18 0 0 0 0-18"/></svg>Markets</div><div class="navline"><svg viewBox="0 0 24 24"><path d="M4 21V10M10 21V3M16 21V7M22 21V14"/></svg>Analytics</div><div class="navlabel">Sales channels</div><div class="navline">▣ &nbsp; Online Store</div><div class="navlabel">Apps</div><div class="appname"><img src="/assets/logo/zhara-mark.svg" alt="">Zhara AI Search &amp; Discovery</div><div class="appnav active">Overview</div><div class="appnav ">Analytics</div><div class="appnav ">Recommendations</div><div class="appnav ">Merchandising</div><div class="appnav ">Search</div><div class="appnav ">Appearance</div><div class="appnav ">Storefront</div></aside><div class="page-title"><img src="/assets/logo/zhara-mark.svg" alt="">Overview</div><main class="workspace"><div class="surface"><div class="za"><div class="za-hero"><div class="za-hero-l"><div class="za-hero-top"><span class="za-pill">REVENUE ATTRIBUTED</span><span>Orders that started with AI search · Last 30 days</span></div><div class="za-hero-n"><b>₹93.6L</b><i class="">+17%</i></div><div class="za-hero-share">40% of total store revenue · 7,800 orders · direct + assisted</div></div><div class="za-hero-r"><div class="za-stack"><span style="width:82.3076923076923%;background:#303030" title="Search bar: ₹77,04,000"></span><span style="width:7.6923076923076925%;background:#c2a35a" title="Trending products: ₹7,20,000"></span><span style="width:7.051282051282051%;background:#8a6b4f" title="Product recommendations: ₹6,60,000"></span><span style="width:2.9487179487179485%;background:#7fae87" title="No-result recovery: ₹2,76,000"></span></div><div class="za-legend"><div class="za-legend-row"><span class="za-sq" style="background:#303030"></span><span class="za-l">Search bar</span><span class="za-v">₹77L</span></div><div class="za-legend-row"><span class="za-sq" style="background:#c2a35a"></span><span class="za-l">Trending products</span><span class="za-v">₹7.2L</span></div><div class="za-legend-row"><span class="za-sq" style="background:#8a6b4f"></span><span class="za-l">Product recommendations</span><span class="za-v">₹6.6L</span></div><div class="za-legend-row"><span class="za-sq" style="background:#7fae87"></span><span class="za-l">No-result recovery</span><span class="za-v">₹2.8L</span></div></div></div></div><div class="za-kpis"><div class="za-kpi"><div class="za-kpi-l">Sessions<span>Unique shopper visits that used search</span></div><div class="za-kpi-n"><b>102,720</b><span class="za-delta up">+14,720</span></div><div class="za-kpi-s"><svg class="za-spark" height="34" viewBox="0 0 120 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 28.7 L4.1 26.6 L8.3 27.6 L12.4 24.2 L16.6 25.9 L20.7 30 L24.8 28 L29 24.6 L33.1 21.6 L37.2 22.6 L41.4 19.5 L45.5 20.9 L49.7 24.9 L53.8 22.9 L57.9 18.2 L62.1 16.8 L66.2 18.8 L70.3 14.4 L74.5 15.5 L78.6 20.2 L82.8 18.2 L86.9 14.1 L91 12.1 L95.2 14.8 L99.3 11.1 L103.4 12.4 L107.6 15.8 L111.7 11.8 L115.9 8.4 L120 6 L120 34 L0 34 Z" fill="#1a1a1a" opacity="0.1"></path><path d="M0 28.7 L4.1 26.6 L8.3 27.6 L12.4 24.2 L16.6 25.9 L20.7 30 L24.8 28 L29 24.6 L33.1 21.6 L37.2 22.6 L41.4 19.5 L45.5 20.9 L49.7 24.9 L53.8 22.9 L57.9 18.2 L62.1 16.8 L66.2 18.8 L70.3 14.4 L74.5 15.5 L78.6 20.2 L82.8 18.2 L86.9 14.1 L91 12.1 L95.2 14.8 L99.3 11.1 L103.4 12.4 L107.6 15.8 L111.7 11.8 L115.9 8.4 L120 6" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="za-kpi"><div class="za-kpi-l">Number of searches<span>Total queries · ~1.3 per session</span></div><div class="za-kpi-n"><b>128,400</b><span class="za-delta up">+18,400</span></div><div class="za-kpi-s"><svg class="za-spark" height="34" viewBox="0 0 120 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 28.6 L4.1 26.6 L8.3 27.6 L12.4 24.3 L16.6 25.9 L20.7 30 L24.8 28 L29 24.6 L33.1 21.5 L37.2 22.6 L41.4 19.5 L45.5 20.9 L49.7 24.9 L53.8 22.9 L57.9 18.2 L62.1 16.8 L66.2 18.8 L70.3 14.5 L74.5 15.5 L78.6 20.2 L82.8 18.2 L86.9 14.1 L91 12.1 L95.2 14.8 L99.3 11.1 L103.4 12.4 L107.6 15.8 L111.7 11.7 L115.9 8.4 L120 6 L120 34 L0 34 Z" fill="#1a1a1a" opacity="0.1"></path><path d="M0 28.6 L4.1 26.6 L8.3 27.6 L12.4 24.3 L16.6 25.9 L20.7 30 L24.8 28 L29 24.6 L33.1 21.5 L37.2 22.6 L41.4 19.5 L45.5 20.9 L49.7 24.9 L53.8 22.9 L57.9 18.2 L62.1 16.8 L66.2 18.8 L70.3 14.5 L74.5 15.5 L78.6 20.2 L82.8 18.2 L86.9 14.1 L91 12.1 L95.2 14.8 L99.3 11.1 L103.4 12.4 L107.6 15.8 L111.7 11.7 L115.9 8.4 L120 6" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="za-kpi"><div class="za-kpi-l">Search → purchase<span>Sessions ending in an order</span></div><div class="za-kpi-n"><b>6.25%</b><span class="za-delta up">+0.75pt</span></div><div class="za-kpi-s"><svg class="za-spark" height="34" viewBox="0 0 120 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 L4.1 29.1 L8.3 28.1 L12.4 27.4 L16.6 26.6 L20.7 26 L24.8 24.9 L29 24.1 L33.1 23.5 L37.2 22.5 L41.4 21.7 L45.5 20.7 L49.7 19.8 L53.8 19.3 L57.9 18.7 L62.1 17.7 L66.2 17 L70.3 16.1 L74.5 15.4 L78.6 14.3 L82.8 13.4 L86.9 12.9 L91 11.9 L95.2 11.2 L99.3 10.3 L103.4 9.4 L107.6 8.4 L111.7 7.7 L115.9 6.8 L120 6 L120 34 L0 34 Z" fill="#4a7c59" opacity="0.1"></path><path d="M0 30 L4.1 29.1 L8.3 28.1 L12.4 27.4 L16.6 26.6 L20.7 26 L24.8 24.9 L29 24.1 L33.1 23.5 L37.2 22.5 L41.4 21.7 L45.5 20.7 L49.7 19.8 L53.8 19.3 L57.9 18.7 L62.1 17.7 L66.2 17 L70.3 16.1 L74.5 15.4 L78.6 14.3 L82.8 13.4 L86.9 12.9 L91 11.9 L95.2 11.2 L99.3 10.3 L103.4 9.4 L107.6 8.4 L111.7 7.7 L115.9 6.8 L120 6" fill="none" stroke="#4a7c59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="za-kpi"><div class="za-kpi-l">Zero-result rate<span>Searches returning nothing</span></div><div class="za-kpi-n"><b>1.5%</b><span class="za-delta up">-0.9pt</span></div><div class="za-kpi-s"><svg class="za-spark" height="34" viewBox="0 0 120 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 6 L4.1 7.4 L8.3 7.8 L12.4 8.5 L16.6 9.9 L20.7 10.5 L24.8 10.9 L29 11.9 L33.1 12.9 L37.2 13.4 L41.4 14.2 L45.5 15.5 L49.7 16.1 L53.8 16.7 L57.9 17.9 L62.1 19.2 L66.2 19.9 L70.3 20.8 L74.5 21.4 L78.6 22 L82.8 22.7 L86.9 23.5 L91 24.5 L95.2 25.5 L99.3 26.2 L103.4 27.1 L107.6 27.8 L111.7 28.5 L115.9 29.1 L120 30 L120 34 L0 34 Z" fill="#b5543f" opacity="0.1"></path><path d="M0 6 L4.1 7.4 L8.3 7.8 L12.4 8.5 L16.6 9.9 L20.7 10.5 L24.8 10.9 L29 11.9 L33.1 12.9 L37.2 13.4 L41.4 14.2 L45.5 15.5 L49.7 16.1 L53.8 16.7 L57.9 17.9 L62.1 19.2 L66.2 19.9 L70.3 20.8 L74.5 21.4 L78.6 22 L82.8 22.7 L86.9 23.5 L91 24.5 L95.2 25.5 L99.3 26.2 L103.4 27.1 L107.6 27.8 L111.7 28.5 L115.9 29.1 L120 30" fill="none" stroke="#b5543f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div><div class="za-split"><div class="za-card" style="margin-bottom:0"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><h3 class="za-h3">Search activity</h3><p class="za-sub">Searches vs. search-driven orders · Last 30 days</p></div><div class="za-legend-inline"><span><i style="background:#1a1a1a"></i>Searches</span><span><i style="background:#c2a35a"></i>Orders</span></div></div><svg class="za-chart" viewBox="0 0 560 200" role="img" aria-label="Searches and search-driven orders per day"><rect x="29" y="89.3" width="10.8" height="80.7" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-08-30: 3153 searches</title></rect><rect x="46" y="83.1" width="10.8" height="86.9" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-08-31: 3395 searches</title></rect><rect x="62.9" y="86.2" width="10.8" height="83.8" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-01: 3274 searches</title></rect><rect x="79.8" y="75.9" width="10.8" height="94.1" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-02: 3678 searches</title></rect><rect x="96.8" y="81" width="10.8" height="89" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-03: 3476 searches</title></rect><rect x="113.7" y="93.4" width="10.8" height="76.6" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-04: 2991 searches</title></rect><rect x="130.6" y="87.2" width="10.8" height="82.8" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-05: 3234 searches</title></rect><rect x="147.6" y="76.9" width="10.8" height="93.1" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-06: 3638 searches</title></rect><rect x="164.5" y="67.6" width="10.8" height="102.4" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-07: 4002 searches</title></rect><rect x="181.4" y="70.7" width="10.8" height="99.3" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-08: 3880 searches</title></rect><rect x="198.4" y="61.4" width="10.8" height="108.6" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-09: 4244 searches</title></rect><rect x="215.3" y="65.5" width="10.8" height="104.5" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-10: 4082 searches</title></rect><rect x="232.2" y="77.9" width="10.8" height="92.1" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-11: 3597 searches</title></rect><rect x="249.2" y="71.7" width="10.8" height="98.3" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-12: 3840 searches</title></rect><rect x="266.1" y="57.2" width="10.8" height="112.8" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-13: 4406 searches</title></rect><rect x="283" y="53.1" width="10.8" height="116.9" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-14: 4567 searches</title></rect><rect x="300" y="59.3" width="10.8" height="110.7" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-15: 4324 searches</title></rect><rect x="316.9" y="45.9" width="10.8" height="124.1" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-16: 4849 searches</title></rect><rect x="333.8" y="49" width="10.8" height="121" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-17: 4728 searches</title></rect><rect x="350.8" y="63.5" width="10.8" height="106.5" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-18: 4162 searches</title></rect><rect x="367.7" y="57.2" width="10.8" height="112.8" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-19: 4405 searches</title></rect><rect x="384.6" y="44.8" width="10.8" height="125.2" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-20: 4890 searches</title></rect><rect x="401.6" y="38.6" width="10.8" height="131.4" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-21: 5132 searches</title></rect><rect x="418.5" y="46.9" width="10.8" height="123.1" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-22: 4809 searches</title></rect><rect x="435.4" y="35.5" width="10.8" height="134.5" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-23: 5254 searches</title></rect><rect x="452.4" y="39.7" width="10.8" height="130.3" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-24: 5092 searches</title></rect><rect x="469.3" y="50" width="10.8" height="120" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-25: 4688 searches</title></rect><rect x="486.2" y="37.6" width="10.8" height="132.4" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-26: 5173 searches</title></rect><rect x="503.2" y="27.2" width="10.8" height="142.8" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-27: 5577 searches</title></rect><rect x="520.1" y="20" width="10.8" height="150" rx="3" fill="#1a1a1a" opacity="0.9"><title>2026-09-28: 5860 searches</title></rect><path d="M34.5 115.1 L51.4 110.1 L68.3 111.3 L85.3 103.4 L102.2 106.3 L119.1 114.7 L136.1 109.2 L153 100.8 L169.9 93.3 L186.9 94.6 L203.8 86.6 L220.7 88.7 L237.7 97.5 L254.6 92 L271.5 79.9 L288.5 75.3 L305.4 79.5 L322.3 67.3 L339.3 69 L356.2 79.9 L373.1 73.6 L390.1 62.3 L407 55.6 L423.9 61.9 L440.9 50.5 L457.8 53.1 L474.7 61 L491.7 48.9 L508.6 38 L525.5 30" fill="none" stroke="#c2a35a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="34.5" cy="115.1" r="3" fill="#c2a35a"><title>2026-08-30: 131 orders</title></circle><circle cx="51.4" cy="110.1" r="3" fill="#c2a35a"><title>2026-08-31: 143 orders</title></circle><circle cx="68.3" cy="111.3" r="3" fill="#c2a35a"><title>2026-09-01: 140 orders</title></circle><circle cx="85.3" cy="103.4" r="3" fill="#c2a35a"><title>2026-09-02: 159 orders</title></circle><circle cx="102.2" cy="106.3" r="3" fill="#c2a35a"><title>2026-09-03: 152 orders</title></circle><circle cx="119.1" cy="114.7" r="3" fill="#c2a35a"><title>2026-09-04: 132 orders</title></circle><circle cx="136.1" cy="109.2" r="3" fill="#c2a35a"><title>2026-09-05: 145 orders</title></circle><circle cx="153" cy="100.8" r="3" fill="#c2a35a"><title>2026-09-06: 165 orders</title></circle><circle cx="169.9" cy="93.3" r="3" fill="#c2a35a"><title>2026-09-07: 183 orders</title></circle><circle cx="186.9" cy="94.6" r="3" fill="#c2a35a"><title>2026-09-08: 180 orders</title></circle><circle cx="203.8" cy="86.6" r="3" fill="#c2a35a"><title>2026-09-09: 199 orders</title></circle><circle cx="220.7" cy="88.7" r="3" fill="#c2a35a"><title>2026-09-10: 194 orders</title></circle><circle cx="237.7" cy="97.5" r="3" fill="#c2a35a"><title>2026-09-11: 173 orders</title></circle><circle cx="254.6" cy="92" r="3" fill="#c2a35a"><title>2026-09-12: 186 orders</title></circle><circle cx="271.5" cy="79.9" r="3" fill="#c2a35a"><title>2026-09-13: 215 orders</title></circle><circle cx="288.5" cy="75.3" r="3" fill="#c2a35a"><title>2026-09-14: 226 orders</title></circle><circle cx="305.4" cy="79.5" r="3" fill="#c2a35a"><title>2026-09-15: 216 orders</title></circle><circle cx="322.3" cy="67.3" r="3" fill="#c2a35a"><title>2026-09-16: 245 orders</title></circle><circle cx="339.3" cy="69" r="3" fill="#c2a35a"><title>2026-09-17: 241 orders</title></circle><circle cx="356.2" cy="79.9" r="3" fill="#c2a35a"><title>2026-09-18: 215 orders</title></circle><circle cx="373.1" cy="73.6" r="3" fill="#c2a35a"><title>2026-09-19: 230 orders</title></circle><circle cx="390.1" cy="62.3" r="3" fill="#c2a35a"><title>2026-09-20: 257 orders</title></circle><circle cx="407" cy="55.6" r="3" fill="#c2a35a"><title>2026-09-21: 273 orders</title></circle><circle cx="423.9" cy="61.9" r="3" fill="#c2a35a"><title>2026-09-22: 258 orders</title></circle><circle cx="440.9" cy="50.5" r="3" fill="#c2a35a"><title>2026-09-23: 285 orders</title></circle><circle cx="457.8" cy="53.1" r="3" fill="#c2a35a"><title>2026-09-24: 279 orders</title></circle><circle cx="474.7" cy="61" r="3" fill="#c2a35a"><title>2026-09-25: 260 orders</title></circle><circle cx="491.7" cy="48.9" r="3" fill="#c2a35a"><title>2026-09-26: 289 orders</title></circle><circle cx="508.6" cy="38" r="3" fill="#c2a35a"><title>2026-09-27: 315 orders</title></circle><circle cx="525.5" cy="30" r="3" fill="#c2a35a"><title>2026-09-28: 334 orders</title></circle><text x="34.5" y="190" text-anchor="middle" font-size="11" fill="#8a8a8a">Aug 30</text><text x="288.5" y="190" text-anchor="middle" font-size="11" fill="#8a8a8a">Sep 14</text><text x="525.5" y="190" text-anchor="middle" font-size="11" fill="#8a8a8a">Sep 28</text></svg></div><div class="za-ins-card"><div style="display:flex;align-items:center;gap:8px"><span class="za-pill">AI INSIGHTS</span></div><div class="za-ins-list"><div class="za-ins"><span class="za-tile za-tone-red za-ins-ico" aria-hidden="true"><span class="za-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4"/><path d="M12 17.2h.01"/></svg></span></span><div><div class="za-ins-t">“thermal vest” returns 0 results but has 680 searches. Add a synonym to recover demand.</div><button class="za-btn" data-view-link="search">Fix now</button></div></div><div class="za-ins"><span class="za-tile za-tone-ink za-ins-ico" aria-hidden="true"><span class="za-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M22 7l-8.5 8.5L8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg></span></span><div><div class="za-ins-t">“blue t shirt” is your most searched term (18420 searches) — consider pinning your bestseller.</div><button class="za-btn" data-view-link="merchandising">Create pin rule</button></div></div><div class="za-ins"><span class="za-tile za-tone-gold za-ins-ico" aria-hidden="true"><span class="za-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M11 3l1.7 4.3L17 9l-4.3 1.7L11 15l-1.7-4.3L5 9l4.3-1.7L11 3Z"/><path d="M18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z"/></svg></span></span><div><div class="za-ins-t">58% of searches were answered by AI matching rather than exact keywords — your synonyms and taxonomy are pulling weight.</div></div></div></div></div></div><div class="za-pair"><div class="za-card" style="margin-bottom:0"><div class="za-head"><h3 class="za-h3">Top searches</h3><button class="za-link" data-view-link="analytics">View all<span class="za-ic xs" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h13.5"/><path d="M12 5.5 18.5 12 12 18.5"/></svg></span></button></div><div class="za-list"><div class="za-top"><span class="za-rank">1</span><span class="za-q">blue t shirt</span><span class="za-track"><span style="width:100%"></span></span><span class="za-c">18,420</span></div><div class="za-top"><span class="za-rank">2</span><span class="za-q">cotton boxers</span><span class="za-track"><span style="width:81%"></span></span><span class="za-c">14,980</span></div><div class="za-top"><span class="za-rank">3</span><span class="za-q">everyday comfort</span><span class="za-track"><span style="width:69%"></span></span><span class="za-c">12,640</span></div><div class="za-top"><span class="za-rank">4</span><span class="za-q">t shirt</span><span class="za-track"><span style="width:56%"></span></span><span class="za-c">10,320</span></div><div class="za-top"><span class="za-rank">5</span><span class="za-q">women t shirt</span><span class="za-track"><span style="width:48%"></span></span><span class="za-c">8,920</span></div><div class="za-top"><span class="za-rank">6</span><span class="za-q">multi-pack</span><span class="za-track"><span style="width:41%"></span></span><span class="za-c">7,610</span></div></div></div><div class="za-card" style="margin-bottom:0"><div class="za-head"><h3 class="za-h3">Needs attention</h3><span class="za-flag">4 ZERO-RESULT</span></div><div class="za-list"><div class="za-zero"><div style="flex:1"><div class="za-q">thermal vest</div><div class="za-m">680 searches · no results</div></div><button class="za-btn-pill" data-view-link="merchandising">Add rule</button></div><div class="za-zero"><div style="flex:1"><div class="za-q">bamboo socks</div><div class="za-m">520 searches · no results</div></div><button class="za-btn-pill" data-view-link="merchandising">Add rule</button></div><div class="za-zero"><div style="flex:1"><div class="za-q">oversized hoodie</div><div class="za-m">426 searches · no results</div></div><button class="za-btn-pill" data-view-link="merchandising">Add rule</button></div><div class="za-zero"><div style="flex:1"><div class="za-q">linen shorts</div><div class="za-m">300 searches · no results</div></div><button class="za-btn-pill" data-view-link="merchandising">Add rule</button></div></div></div></div><div class="za-card" style="padding:20px 22px;margin-bottom:0"><div class="za-head" style="margin-bottom:16px"><h3 class="za-h3">System health</h3><div style="display:flex;gap:10px"><button class="za-btn-pill" id="resyncBtn"><span class="za-ic sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M21 12a9 9 0 1 1-3.1-6.8"/><path d="M21 3.5V9h-5.5"/></svg></span>Re-sync catalog</button><button class="za-link" data-view-link="setup">Installation<span class="za-ic xs" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h13.5"/><path d="M12 5.5 18.5 12 12 18.5"/></svg></span></button></div></div><div class="za-health"><div class="za-hcell"><div class="za-hl"><span class="za-dot" style="background:#4a7c59"></span>Catalog</div><div class="za-hv" style="color:#1a1a1a">Synced</div></div><div class="za-hcell"><div class="za-hl"><span class="za-dot" style="background:#4a7c59"></span>Indexed</div><div class="za-hv" style="color:#1a1a1a">862 / 862</div></div><div class="za-hcell"><div class="za-hl"><span class="za-dot" style="background:#4a7c59"></span>Search API</div><div class="za-hv" style="color:#1a1a1a">42 ms</div></div><div class="za-hcell"><div class="za-hl"><span class="za-dot" style="background:#4a7c59"></span>Event tracking</div><div class="za-hv" style="color:#1a1a1a">Active · receiving events</div></div></div></div></div><div class="footer-note">Illustrative 30-day dataset · Aug 30 – Sep 28, 2026</div></div></main></body></html>
