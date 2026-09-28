@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help &amp; Support — Zhara AI Search &amp; Discovery</title>
+  <meta name="description" content="Get help with Zhara AI Search &amp; Discovery. Send us your details and question and our team will get back to you.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://zhara.io/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhara.io/help/">
+  <meta property="og:site_name" content="Zhara AI Search &amp; Discovery">
+  <meta property="og:title" content="Help &amp; Support — Zhara AI Search &amp; Discovery">
+  <meta property="og:description" content="Get help with Zhara AI Search &amp; Discovery. Send us your details and question and our team will get back to you.">
+  <meta property="og:image" content="https://zhara.io/assets/og.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/legal.css">
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand" aria-label="Zhara home"><img src="/assets/logo/zhara-logo.svg" alt="Zhara" width="1302" height="209"></a>
+      <div class="nav-links">
+        <a href="/#product">Search</a>
+        <a href="/#discovery">Discovery</a>
+        <a href="/#features">Merchandising</a>
+        <a href="/#analytics">Analytics</a>
+      </div>
+      <div class="nav-actions">
+        <a href="mailto:hello@zhara.app" class="btn btn-light">Talk to us</a>
+        <a href="/#get-started" class="btn btn-dark">Get Zhara <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="doc-head">
+    <div class="wrap">
+      <span class="eyebrow">Help &amp; support</span>
+      <h1>How can we <em>help?</em></h1>
+      <p class="lede">Tell us who you are and what you need. Our team usually replies within one business day.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="doc">
+      <aside class="toc" aria-label="Other ways to reach us">
+        <b>Other ways to reach us</b>
+        <ol>
+          <li><a href="mailto:support@zhara.io">support@zhara.io</a></li>
+          <li><a href="/help/store-privacy-policy/">Store privacy wording</a></li>
+          <li><a href="/terms/">Terms of service</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+        </ol>
+      </aside>
+      <div class="prose">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-phone">Phone</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" pattern="[+()\d\s\-]{7,20}" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-store">Store URL <span class="optional">(optional)</span></label>
+              <input id="cf-store" name="store" type="text" placeholder="your-store.myshopify.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-details">Details</label>
+            <textarea id="cf-details" name="details" rows="6" placeholder="What do you need help with?" required></textarea>
+          </div>
+          <p class="form-error" id="cf-error" role="alert" hidden></p>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-dark">Send message <span class="arrow">→</span></button>
+            <span class="form-hint">Opens your email app with your message filled in.</span>
+          </div>
+        </form>
+        <p class="note">By sending this form you share your details with Zhara Labs so we can reply. See our <a href="/privacy/">privacy policy</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand"><img src="/assets/logo/zhara-logo-on-dark.svg" alt="Zhara" width="1302" height="209"><p>AI search and discovery for Shopify stores that care about relevance, control, and measurable revenue.</p></div>
+        <div class="footer-col"><b>PRODUCT</b><a href="/#product">AI product search</a><a href="/#discovery">Recommendations</a><a href="/#features">Merchandising</a><a href="/#analytics">Search analytics</a></div>
+        <div class="footer-col"><b>COMPANY</b><a href="mailto:hello@zhara.app">Contact</a><a href="/help/">Help &amp; support</a><a href="/#get-started">Request access</a></div>
+        <div class="footer-col"><b>LEGAL</b><a href="/terms/">Terms of service</a><a href="/privacy/">Privacy policy</a><a href="/legal/dpa/">Data processing addendum</a><a href="/legal/subprocessors/">Subprocessors</a><a href="/help/store-privacy-policy/">Store privacy wording</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Zhara Labs. All rights reserved.</span><span>Built for better discovery.</span></div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var error = document.getElementById('cf-error');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var invalid = Array.prototype.find.call(form.elements, function (el) { return el.willValidate && !el.checkValidity(); });
+        if (invalid) {
+          var label = form.querySelector('label[for="' + invalid.id + '"]').firstChild.textContent.trim();
+          error.textContent = 'Please enter a valid ' + label.toLowerCase() + '.';
+          error.hidden = false;
+          invalid.focus();
+          return;
+        }
+        error.hidden = true;
+        var v = function (n) { return form.elements[n].value.trim(); };
+        var body = 'Name: ' + v('name') + '\nPhone: ' + v('phone') + '\nEmail: ' + v('email') +
+          (v('store') ? '\nStore: ' + v('store') : '') + '\n\n' + v('details');
+        window.location.href = 'mailto:support@zhara.io?subject=' + encodeURIComponent('Help request from ' + v('name')) +
+          '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>

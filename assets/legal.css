@@ -104,6 +104,27 @@ nav {
 .snippet-body mark { padding: 0 4px; border-radius: 4px; background: var(--orange-pale); color: var(--orange-deep); font-weight: 700; }
 .copy-btn { min-height: 34px; padding: 0 14px; font-size: 13px; }
 
+/* Contact form (help page) */
+.contact-form { display: grid; gap: 20px; padding: 28px; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--paper-2); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: grid; gap: 6px; }
+.field label { color: var(--ink); font-size: 14px; font-weight: 700; }
+.field .optional { color: var(--muted); font-weight: 500; }
+.field input, .field textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1px solid var(--line-strong); border-radius: 12px;
+  background: var(--paper); color: var(--ink);
+  font: inherit; font-size: 15px; line-height: 1.5;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.field textarea { resize: vertical; min-height: 140px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); opacity: .7; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-pale); }
+.form-error { margin: 0; color: var(--orange-deep); font-size: 14px; font-weight: 600; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.form-hint { color: var(--muted); font-size: 13px; }
+.prose .contact-form + .note { margin-top: 20px; }
+
 /* Footer — same as the homepage */
 footer { padding: 58px 0 32px; background: var(--ink); color: white; }
 .footer-top { display: grid; grid-template-columns: 1.3fr repeat(3, .7fr); gap: 50px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.12); }
@@ -125,6 +146,8 @@ footer { padding: 58px 0 32px; background: var(--ink); color: white; }
   .brand img { width: 132px; }
   .doc-head { padding: 48px 0 32px; }
   .prose h2 { margin-top: 40px; font-size: 21px; }
+  .field-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 20px; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; }

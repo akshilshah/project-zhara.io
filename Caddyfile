@@ -4,7 +4,7 @@ zhara.io, www.zhara.io {
 
 	# Allowlist: page, assets, and production meta files — 404 everything else
 	@denied {
-		not path / /index.html /assets/* /robots.txt /sitemap.xml /llms.txt /favicon.ico /site.webmanifest /privacy /privacy/* /legal/* /help/*
+		not path / /index.html /assets/* /robots.txt /sitemap.xml /llms.txt /favicon.ico /site.webmanifest /privacy /privacy/* /terms /terms/* /legal/* /help /help/*
 	}
 	respond @denied 404
 
@@ -12,7 +12,7 @@ zhara.io, www.zhara.io {
 	header /assets/* Cache-Control "public, max-age=86400"
 
 	@html {
-		path / /index.html /privacy/* /legal/* /help/*
+		path / /index.html /privacy/* /terms/* /legal/* /help /help/*
 	}
 	header @html Cache-Control "public, max-age=3600"
 
