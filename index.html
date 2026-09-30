@@ -55,10 +55,16 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    /* Self-hosted fonts (latin subset from Google Fonts). The "Fallback" faces are
+       local fonts resized to Manrope/Newsreader metrics so the swap doesn't shift layout. */
+    @font-face { font-family: "Manrope"; font-style: normal; font-weight: 200 800; font-display: swap; src: url(/assets/fonts/manrope-latin.woff2) format("woff2"); }
+    @font-face { font-family: "Newsreader"; font-style: italic; font-weight: 500; font-display: swap; src: url(/assets/fonts/newsreader-italic-latin.woff2) format("woff2"); }
+    @font-face { font-family: "Manrope Fallback"; font-weight: 100 500; src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Arimo"); size-adjust: 103.3%; ascent-override: 103.2%; descent-override: 29%; line-gap-override: 0%; }
+    @font-face { font-family: "Manrope Fallback"; font-weight: 600 900; src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold"); size-adjust: 99%; ascent-override: 107.7%; descent-override: 30.3%; line-gap-override: 0%; }
+    @font-face { font-family: "Newsreader Fallback"; font-style: italic; src: local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT"), local("Liberation Serif Italic"), local("Tinos Italic"); size-adjust: 96%; ascent-override: 76.6%; descent-override: 27.6%; line-gap-override: 0%; }
+
     :root {
       --ink: #11152d;
       --ink-2: #34394f;
@@ -72,8 +78,8 @@
       --orange-deep: #d94b0b;
       --orange-pale: #ffe5d6;
       --green: #1c8a58;
-      --font: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --serif: "Newsreader", Georgia, serif;
+      --font: "Manrope", "Manrope Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: "Newsreader", "Newsreader Fallback", Georgia, serif;
       --max: 1080px;
       --radius: 24px;
       --shadow: 0 30px 80px rgba(17, 21, 45, .13), 0 2px 8px rgba(17, 21, 45, .06);
@@ -353,8 +359,131 @@
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .reveal { opacity: 1; transform: none; }
     }
+
+    /* Product demo (inlined to avoid a render-blocking request) */
+    /* Product motion follows the existing Manrope / Newsreader and navy / orange system. */
+    .hero { padding: 86px 0 76px; min-height: 760px; }
+    .hero-grid { grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); gap: 48px; }
+    .hero h1 { font-size: clamp(54px, 5.2vw, 72px); }
+    .hero-copy { max-width: 460px; }
+    .product-stage { position: relative; min-width: 0; isolation: isolate; margin: 0; }
+    .product-stage::before { content: ''; position: absolute; inset: 3% -32px 4%; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse, #ffe2d1 0, #faf5ef 45%, #fff0 70%); }
+    .demo-stage-label { display: flex; align-items: center; gap: 9px; margin: 0 0 17px 7px; font-size: 11px; font-weight: 600; color: var(--muted); }
+    .live-dot { display: inline-block; width: 6px; height: 6px; flex: none; background: var(--green); border-radius: 50%; box-shadow: 0 0 0 3px #1c8a5810; }
+    .ui-label { display: block; font-size: 8px; line-height: 1.5; font-weight: 600; letter-spacing: .1em; color: #777875; text-transform: uppercase; margin-bottom: 13px; }
+    .ui-label > span { color: var(--ink); margin-left: 3px; }
+    .demo-video-frame { position: relative; border: 1px solid #d8d8db; border-radius: 17px; overflow: hidden; background: #f4f3f0; aspect-ratio: 1; box-shadow: 0 30px 60px -22px #20243c3b, 0 3px 10px #20243c05; }
+    .demo-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .demo-video-frame #demo-play { position: absolute; right: 14px; bottom: 14px; box-shadow: 0 4px 12px #20243c14; }
+    #demo-play { background: #fff; border: 1px solid var(--line); border-radius: 50%; width: 33px; height: 33px; cursor: pointer; display: grid; place-items: center; color: var(--ink); flex: none; }
+    #demo-play svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; }
+    .demo-caption { margin-top: 12px; color: #858792; font-size: 9px; text-align: center; }
+    /* Quiet motion and tactile product evidence through the rest of the page. */
+    #discovery .simple-feature-grid { border: 0; gap: 22px; }
+    #discovery .simple-feature { padding: 0; border: 0; }
+    #discovery .simple-feature h3 { font-size: 22px; margin-top: 25px; }
+    #discovery .simple-feature p { max-width: none; }
+    .feature-visual { height: 225px; border: 1px solid var(--line); border-radius: 15px; padding: 23px; background: #f7f7f5; overflow: hidden; }
+    .feature-visual .ui-label { font-size: 9px; }
+    .mini-prompt { display: flex; background: #fff; border: 1px solid #e5e4df; border-radius: 9px; font-size: 12px; padding: 11px; margin-top: 9px; transition: transform .25s; }
+    .mini-prompt span { margin-left: auto; color: var(--orange); }
+    .simple-feature:hover .mini-prompt:first-of-type { transform: translateX(4px); }
+    .mini-tags { display: flex; gap: 8px; margin-top: 15px; }
+    .mini-tags span { font-size: 9px; padding: 4px 9px; background: #eaeae5; border-radius: 99px; }
+    .mini-search { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #d9d9d4; border-radius: 8px; padding: 9px 12px; font-size: 12px; margin-bottom: 12px; }
+    .mini-search .search-ico { width: 11px; height: 11px; color: #8a8b84; }
+    .mini-caret { width: 1px; height: 13px; background: var(--orange); margin-left: -10px; }
+    .mini-result { display: flex; align-items: center; gap: 10px; font-size: 9px; margin-top: 9px; }
+    .mini-result img { width: 35px; height: 43px; border-radius: 5px; object-fit: cover; object-position: top; }
+    .mini-result small { display: block; font-size: 9px; color: var(--muted); margin-top: 2px; }
+    .mini-result > span:last-child { margin-left: auto; color: #999; }
+    .mini-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+    .mini-products img { width: 100%; height: 124px; object-fit: cover; object-position: top; border-radius: 7px; transition: transform .3s ease; }
+    .simple-feature:hover .mini-products img:nth-child(2) { transform: translateY(-5px); }
+    .mini-caption { display: block; margin-top: 12px; font-size: 9px; color: var(--muted); }
+    .app-tour { margin-top: 48px; min-width: 0; }
+    .tour-tabs { display: flex; justify-content: center; gap: 6px; margin-bottom: 25px; }
+    .tour-tabs button { background: transparent; color: var(--muted); border: 1px solid transparent; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 99px; cursor: pointer; transition: color .2s, background .2s; }
+    .tour-tabs button:hover { color: var(--ink); background: var(--paper-2); }
+    .tour-tabs button[aria-selected="true"] { color: var(--ink); background: #fff; border-color: var(--line); box-shadow: 0 3px 9px #11152d08; }
+    .tour-panel { border: 1px solid var(--line); background: #f7f7f5; padding: 25px 25px 0; border-radius: 18px; overflow: hidden; }
+    .tour-panel[hidden] { display: none; }
+    .tour-summary { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 3px 5px 24px; }
+    .tour-summary h3 { font-size: 18px; font-weight: 600; letter-spacing: -.03em; }
+    .tour-summary p { color: var(--muted); font-size: 12px; margin-top: 5px; max-width: 650px; }
+    .expand-shot { border: 0; background: none; white-space: nowrap; color: var(--ink); font-size: 11px; font-weight: 700; cursor: pointer; padding: 10px 0 10px 12px; }
+    .expand-shot span { margin-left: 7px; color: var(--orange); }
+    .screenshot-viewport { max-height: 530px; overflow: auto; border-radius: 11px 11px 0 0; border: 1px solid #0000000d; border-bottom: 0; scrollbar-width: thin; scrollbar-color: #c9c9c6 #f2f2f0; }
+    .screenshot-viewport img { width: 100%; height: auto; }
+    .analytics .tour-tabs button { color: #ffffffa3; }
+    .analytics .tour-tabs button:hover { background: #ffffff12; color: #fff; }
+    .analytics .tour-tabs button[aria-selected="true"] { background: #ffffff14; border-color: #ffffff36; color: #fff; }
+    .analytics .tour-panel { background: #ffffff08; border-color: #ffffff24; }
+    .analytics .tour-summary p { color: #ffffff99; }
+    .analytics .expand-shot { color: #fff; }
+    .analytics .screenshot-viewport { max-height: 545px; }
+    .screenshot-dialog { position: fixed; inset: 0; margin: auto; width: min(1300px, 94vw); height: min(90vh, 1100px); max-width: none; max-height: none; border: 1px solid #ffffff33; border-radius: 15px; background: #f1f1f1; color: var(--ink); box-shadow: 0 30px 100px #0005; padding: 0; }
+    .screenshot-dialog::backdrop { background: #0b1026b3; backdrop-filter: blur(7px); }
+    .dialog-toolbar { height: 57px; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; background: #fff; border-bottom: 1px solid var(--line); }
+    .dialog-toolbar strong { font-size: 14px; }
+    .dialog-toolbar button { border: 0; background: #f5f5f3; border-radius: 50%; width: 32px; height: 32px; font-size: 23px; cursor: pointer; }
+    .dialog-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .dialog-toolbar .dialog-zoom { display: none; }
+    .dialog-image { height: calc(100% - 57px); overflow: auto; }
+    .dialog-image img { width: 100%; max-width: none; height: auto; }
+    body:has(.screenshot-dialog[open]) { overflow: hidden; }
+    button:focus-visible, a:focus-visible, .screenshot-viewport:focus-visible { outline: 2px solid var(--orange); outline-offset: 5px; }
+    section[id], #product-demo { scroll-margin-top: 100px; }
+    @media (max-width: 1000px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+      .hero-content { max-width: 660px; }
+      .hero-copy { max-width: 610px; }
+      .product-stage { width: min(100%, 570px); margin-inline: auto; }
+      #discovery .simple-feature-grid { grid-template-columns: repeat(3, 1fr); gap: 17px; }
+      .feature-visual { padding: 16px; }
+      #discovery .simple-feature h3 { font-size: 19px; }
+      .mini-result { font-size: 8px; }
+      .mini-result > span:last-child { display: none; }
+    }
+    @media (max-width: 700px) {
+      .hero { padding: 57px 0 55px; }
+      .hero h1 { font-size: clamp(46px, 11.8vw, 66px); }
+      .hero-grid { gap: 47px; }
+      .product-stage::before { inset-inline: -20px; }
+      .demo-stage-label { font-size: 10px; }
+      .ui-label { font-size: 7px; letter-spacing: .06em; }
+      .demo-caption { font-size: 8px; }
+      #discovery .simple-feature-grid { grid-template-columns: 1fr; gap: 32px; }
+      .feature-visual { padding: 23px; height: 225px; }
+      #discovery .simple-feature h3 { font-size: 23px; margin-top: 19px; }
+      .mini-result { font-size: 10px; }
+      .mini-products img { height: 126px; }
+      .tour-tabs { gap: 2px; }
+      .tour-tabs button { font-size: 11px; padding: 9px 10px; min-height: 44px; }
+      .tour-panel { padding: 16px 12px 12px; border-radius: 13px; }
+      .tour-summary { display: block; padding: 0 2px 14px; }
+      .tour-summary h3 { font-size: 17px; }
+      .tour-summary p { font-size: 11px; }
+      .expand-shot { min-height: 44px; padding: 10px 0; margin-top: 4px; }
+      .screenshot-viewport, .analytics .screenshot-viewport { max-height: none; overflow: hidden; border-radius: 8px; border-bottom: 1px solid #0000000d; }
+      .screenshot-viewport img { width: 100%; max-width: 100%; height: auto; margin: 0; }
+      .screenshot-dialog { width: 100%; height: 100%; height: 100dvh; border: 0; border-radius: 0; }
+      .screenshot-dialog[open] { display: flex; flex-direction: column; }
+      .dialog-toolbar { height: auto; min-height: 64px; flex-shrink: 0; gap: 12px; padding: 10px 14px; padding-top: max(10px, env(safe-area-inset-top)); }
+      .dialog-toolbar strong { min-width: 0; font-size: 12px; line-height: 1.5; }
+      .dialog-toolbar button { width: 44px; height: 44px; }
+      .dialog-toolbar .dialog-zoom { display: block; width: auto; padding: 0 13px; border-radius: 9px; font-size: 12px; font-weight: 600; }
+      .dialog-image { height: auto; flex: 1; min-height: 0; overscroll-behavior: contain; }
+      .dialog-image img { width: 100%; }
+      .screenshot-dialog.is-zoomed .dialog-image img { width: 1200px; }
+    }
+    #demo-play[hidden] { display: none; }
+    @media (max-width: 380px) {
+      .nav-inner { gap: 12px; }
+      .brand img { width: 115px; }
+      .nav-actions .btn { white-space: nowrap; padding-inline: 12px; }
+    }
   </style>
-  <link rel="stylesheet" href="assets/product-demo.css">
 </head>
 <body>
   <div class="announcement">AI product search, predictive suggestions &amp; recommendations for Shopify<span>, with relevant results before shoppers finish typing.</span></div>
