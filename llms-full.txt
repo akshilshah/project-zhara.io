@@ -1,0 +1,1148 @@
+# Zhara AI Search & Discovery: full site text
+
+> Every public page on https://zhara.io as plain Markdown, for AI agents and crawlers. Generated 30 September 2026. The summary index is https://zhara.io/llms.txt.
+
+---
+
+Source: https://zhara.io/
+
+Title: Zhara AI Search & Discovery — Turn shopper intent into revenue
+
+AI search, discovery & recommendations for Shopify
+
+# Turn shopper intent into revenue.
+
+Help shoppers find what they mean. Bring AI search, relevant recommendations, and measurable discovery to your Shopify store.
+
+[Request access →](https://zhara.io/#get-started) [See the product](https://zhara.io/#product)
+
+*✓* No code *✓* Matches your theme *✓* Live in minutes
+
+A little intent. A lot of discovery.
+
+Recorded on the live demo store · Real queries, real results
+
+Built to earn a place in your storefront.
+
+**Predictive & semantic search** Autocomplete, typo tolerance and natural-language relevance.
+
+**Recommendations everywhere** Trending and personalized products across search, home and product pages.
+
+**Search-to-sale analytics** Top queries, no-result searches, conversion and attributed revenue.
+
+Understand
+
+## Search behavior rarely matches catalog structure.
+
+Customers search by need, occasion, and product attributes. They often use typos and their own words. Zhara understands this context through natural language processing, typo tolerance, and synonyms, then returns the most relevant products.
+
+waterproof office backpack use case
+
+linen dress for summer wedding occasion
+
+lightweight winter jacket attributes
+
+### Interpret product requirements.
+
+Combine material, function, fit, and category signals to rank products that satisfy the full request.
+
+Multi-attribute search
+
+### Handle typos and synonyms.
+
+Typo tolerance and synonym groups connect shopper language such as “office backpack” with catalog terms such as laptop bags and commuter backpacks.
+
+Typo tolerance & synonyms
+
+### Rank results by contextual relevance.
+
+A query for a specific occasion can surface coordinated apparel and accessories, even when the exact phrase does not appear in product titles.
+
+Semantic relevance
+
+Discover
+
+## Guide discovery before, during, and after the search.
+
+Help shoppers find the right products before they finish typing. Then continue recommending relevant products across the store.
+
+ASK IN YOUR OWN WORDS
+
+✦   best comfort ↗
+
+✦   everyday use ↗
+
+boxersmulti-pack
+
+### Search before they type
+
+Show trending searches, popular products, and suggested prompts in the search dropdown the moment it opens. Zero-character discovery that sparks the next click.
+
+t sh
+
+Men’s T Shirt – Pebble₹899↗
+
+Women’s T Shirt – Galaxy₹799↗
+
+### Predictive autocomplete
+
+Instant, search-as-you-type suggestions and live product results, with typo tolerance and synonyms so every query lands on relevant items.
+
+MORE TO DISCOVER
+
+A relevant next step, on every page.
+
+### Personalized recommendations
+
+AI product recommendations for related, similar, and “also viewed” products on the home page, product pages, and no-result searches, personalized for returning shoppers.
+
+Merchandising
+
+## Control what shoppers see.
+
+Set priorities and guide product discovery without changing code.
+
+### Make it feel like your store.
+
+Match your theme, choose prompts, and preview the search experience before publishing.
+
+### Your catalog. Your rules.
+
+Choose ranking presets, manage synonyms, and personalize results for returning shoppers.
+
+### One place to bring it all together.
+
+Manage your search widget, recommendation blocks, catalog sync, and event tracking.
+
+### Boost & pin products
+
+Promote or demote products and collections with product boosts, custom ranking, and relevance rules.
+
+### Synonyms, redirects & exclusions
+
+Manage synonym groups, add search redirects, and hide or exclude results for specific queries.
+
+### Recover missed searches
+
+Turn no-result searches into relevant alternatives and recommendations when an exact match is unavailable.
+
+Measure
+
+## See how search contributes to revenue, not just how often shoppers use it.
+
+Track the complete journey from search query to product click, cart addition, and purchase. See top search terms, popular categories, searches with no results, conversion rates, and revenue attributed to search and recommendations. Clear recommendations then show you how to improve future search performance.
+
+### Follow the journey from query to purchase.
+
+Explore your search funnel, query health, and shopper behavior in one view.
+
+### See the opportunities in every search.
+
+Review top queries, searches that need attention, and revenue attribution.
+
+Trust
+
+## Fast to install. Easy to understand. Always in your control.
+
+The strongest search product is the one your team can operate with confidence.
+
+### Your theme stays yours
+
+Zhara is designed to inherit your storefront’s look, so smarter search doesn’t mean a disconnected customer experience.
+
+### Your team keeps control
+
+Preview merchandising changes before they go live, and choose exactly what gets promoted, hidden, or redirected.
+
+### Your results stay measurable
+
+Track how discovery influences product clicks, cart additions, and orders instead of relying on surface-level search counts.
+
+**Evaluate Zhara using your own catalog and query data.**
+
+Measure the product against the searches your current experience does not resolve, then compare result relevance, engagement, and attributed revenue.
+
+Go live
+
+## From installation to production in minutes.
+
+You do not need to change code or manage an external implementation project. Connect your store, index the catalog, and activate the experience.
+
+STEP 01
+
+### Install the app
+
+Connect your Shopify store with one click and start the catalog sync.
+
+STEP 02
+
+### Index your catalog
+
+Zhara indexes products, variants, collections, and inventory so it can match products to shopper intent.
+
+STEP 03
+
+### Activate
+
+Enable search and recommendations in your theme, then manage performance from one workspace.
+
+## Make your search bar the shortest path to purchase.
+
+Show us the searches your store gets wrong. We will show you how AI-powered search can turn missed searches into sales.
+
+[Request access →](mailto:hello@zhara.app?subject=I%27d%20like%20to%20try%20Zhara) [Book a demo](mailto:hello@zhara.app?subject=Zhara%20product%20demo)
+
+---
+
+Source: https://zhara.io/faq/
+
+Title: FAQ — Zhara AI Search & Discovery
+
+## Getting started
+
+### What does Zhara do?
+
+Zhara replaces your theme's search with AI search. Before shoppers type, it shows example prompts, popular searches, category shortcuts and trending products. As they type, it suggests searches and products, corrects typos and understands plain language such as *boxer shorts under 500 rupees*. In your Shopify admin you can pin, bury, hide or redirect results, add synonyms and see which searches lead to sales.
+
+### How much does it cost?
+
+Zhara is free. There is no plan to choose and no charge to approve. If we introduce paid plans in future, we'll give you at least 30 days' notice, and nothing will be charged unless you approve it in Shopify.
+
+### Which themes work with Zhara?
+
+Any Online Store 2.0 theme, which includes every theme released by Shopify in recent years, such as Horizon and Dawn, and most themes in the Shopify Theme Store. Zhara adds itself through your theme's **App embeds**, so it never touches your theme's code. Older vintage themes that don't support App embeds aren't supported.
+
+### How long does setup take?
+
+About ten minutes. Install the app, let it sync your catalog, switch on **Zhara Search** in the theme editor, and activate tracking. The setup guide walks through each step with screenshots.
+
+### Do I need a developer?
+
+No. Everything is done from the Zhara app and the Shopify theme editor. Zhara never edits your theme's code, and uninstalling leaves your theme exactly as it was.
+
+### Will it change how my store looks?
+
+Zhara matches your theme's colours and font automatically. The **Appearance** page has a live preview, so you can see exactly how search will look on desktop and mobile before you publish.
+
+## Search
+
+### Why isn't Zhara search showing on my store?
+
+Check three things in order:
+
+1.  In the Zhara app, open **Setup** and confirm the catalog sync has finished.
+2.  In the theme editor, open **App embeds** and confirm **Zhara Search** is switched on, with **Replace theme search** on, and that you clicked **Save**.
+3.  Make sure you saved the live theme, not a draft or a copy. The **Storefront** page in Zhara shows **Search widget: Enabled** when it's live.
+
+If all three are fine, email <support@zhara.io> with your store address.
+
+### A product is missing from search results. Why?
+
+The usual reasons are:
+
+- The product is out of stock. **Hide out-of-stock products** is on by default. Switch it off on the **Search** page if you want sold-out products to appear.
+- The product isn't published to the Online Store sales channel in Shopify. Zhara only indexes products that are visible on your store.
+- The product was added a few minutes ago and hasn't synced yet. Click **Re-sync** on the **Setup** page.
+- A **Hide** rule on the **Merchandising** page is removing it for that search.
+
+### I added or changed products. When does search update?
+
+Zhara picks up changes automatically. If you want them live straight away, click **Re-sync** on the **Setup** page. A full sync of a few hundred products takes about two minutes.
+
+### How many letters before suggestions appear?
+
+Three by default. You can change this in the theme editor under **Zhara Search** settings, using **Minimum characters before suggestions**.
+
+### Can shoppers search in plain language?
+
+Yes. Searches like *something warm for winter* or *boxer shorts under 500 rupees* return matching products, marked with a **Smart match** label. Zhara understands the meaning of the words rather than only matching them exactly.
+
+### What happens when a shopper makes a typo?
+
+Zhara corrects it and shows the products they meant. For example, *Garfeild* finds Garfield products.
+
+### What if a search finds nothing?
+
+Zhara shows related searches and products the shopper might like, so they can keep browsing instead of hitting a dead end. Because Zhara understands meaning, this is rare. The **Queries** tab in **Analytics** has a **Zero-result** filter so you can see which searches found nothing and fix them with a synonym or redirect.
+
+### How do I control the order of results?
+
+The **Search** page has four ranking presets: **Balanced**, **Relevance**, **Best sellers** and **New arrivals**. For control over a specific search, use Merchandising rules to pin a product to a position, bury it at the bottom, hide it, or redirect the search to a page.
+
+### What are synonyms and when should I add them?
+
+Synonyms tell Zhara that different words mean the same thing, so a search for any of them finds the same products. Zhara's AI already understands many related words. Add synonyms for your own slang, brand names or spellings it might not know, such as *kicks* for *sneakers*.
+
+### What are category chips?
+
+The collection shortcuts shoppers see in the search box before they type. By default Zhara picks them from your product types. On the **Search** page you can choose exactly which collections appear.
+
+### Does Zhara work in languages other than English?
+
+Not yet. Zhara currently supports English only, both in the admin and on your storefront.
+
+## Merchandising rules
+
+### What's the difference between Pin, Bury, Hide and Redirect?
+
+- **Pin** puts a product at a fixed position in the results, for example your best selling jeans always first for the search *jeans*.
+- **Bury** pushes a product to the bottom without hiding it, useful for low stock or clearance.
+- **Hide** removes a product from results for that search entirely. The product stays live in your store.
+- **Redirect** sends a search straight to a page instead of showing results, for example the search *returns* opens your returns policy.
+
+### How quickly do rules take effect?
+
+Within a minute on your storefront.
+
+### Can a rule apply to every search?
+
+Yes. Leave the **When shoppers search for** box empty and the rule applies to all searches.
+
+### Do rules change my products in Shopify?
+
+No. Rules only affect Zhara search results. Your products, collections and theme are untouched.
+
+## Analytics
+
+### What does Zhara track?
+
+Searches, which suggestions and products shoppers click, and, once tracking is on, add to carts and orders that started with a search. You see totals, the most searched terms, searches that found nothing, the search to purchase funnel, and revenue attributed to search.
+
+### Why are revenue and conversion empty?
+
+Cart and revenue tracking isn't active yet, or no shopper has added to cart since it was activated. Open **Setup** and click **Activate** next to **Turn on cart & revenue tracking**. The **Storefront** page shows the status.
+
+### What do direct and assisted revenue mean?
+
+**Direct revenue** is from orders where the shopper bought a product they clicked in search. **Assisted revenue** is from orders where the shopper used search during their visit but reached the product they bought another way.
+
+### How soon do reports update?
+
+Searches appear in Analytics within a few minutes. Orders appear after Shopify processes them.
+
+### Can I export the data?
+
+Yes. Click **Export CSV** on the **Analytics** page to download the query report as a spreadsheet.
+
+## Privacy and data
+
+### What data does Zhara collect about my shoppers?
+
+Search terms, clicks on suggestions and products, add to carts and purchases, along with device type and approximate country. Zhara does not collect names, email addresses, phone numbers or postal addresses. The full detail is in the [privacy policy](https://zhara.io/privacy/).
+
+### Does Zhara respect cookie consent?
+
+Yes. Zhara reads the choices shoppers make in your store's cookie banner through Shopify's consent tools. If a shopper declines, Zhara doesn't record their activity or personalise their results, and search still works for them.
+
+### Is my store's data used to train AI?
+
+No. Zhara never uses your store's data to train AI models that serve other merchants or anyone else, and our AI provider is not allowed to train on it either.
+
+### What happens when a customer asks for their data?
+
+Shopify forwards the request to Zhara automatically. Open **Privacy** in the Zhara app, find the request and click **Download** to get the file. Send it to the customer within 30 days. Deletion requests are handled automatically within 30 days.
+
+### Is there a data processing agreement?
+
+Yes. Our [data processing addendum](https://zhara.io/legal/dpa/) applies automatically when you install the app.
+
+## Account
+
+### How do I turn Zhara off without uninstalling?
+
+In the theme editor, open **App embeds** and switch off **Zhara Search**. Your theme's own search takes over immediately. Switch it back on whenever you like.
+
+### How do I uninstall?
+
+In Shopify admin, go to **Settings**, then **Apps and sales channels**, find Zhara and click **Uninstall**. Your theme is left untouched. All of your store's data is deleted from Zhara within 30 days.
+
+### How do I get help?
+
+Email <support@zhara.io> or use the [help form](https://zhara.io/help/). Support is available Monday to Friday, 9 am to 7 pm India Standard Time. Include your store address and a short description of the problem, with a screenshot if you can.
+
+---
+
+Source: https://zhara.io/help/
+
+Title: Help & Support — Zhara AI Search & Discovery
+
+By sending this form you share your details with Zhara Labs so we can reply. See our [privacy policy](https://zhara.io/privacy/).
+
+---
+
+Source: https://zhara.io/help/store-privacy-policy/
+
+Title: Store Privacy Policy Wording — Zhara AI Search & Discovery
+
+## Suggested wording
+
+Replace the highlighted part with your own details. This is a starting point, not legal advice. Check it against your store’s other practices and the laws that apply to you.
+
+Paste into your privacy policy
+
+**Search and product recommendations**
+
+Our store uses Zhara AI Search & Discovery, provided by Zhara Labs, to power product search and recommendations. When you search our store or see recommended products, Zhara processes the following information on our behalf: the search terms you enter, the products you click, add to cart and buy, your device type (mobile, tablet or desktop), and a random identifier stored in your browser. If you are signed in to your account and have given consent, Zhara also receives your customer ID so that recommendations work across your devices. Zhara does not collect your name, email address, phone number, postal address or payment details.
+
+Zhara uses this information only to provide search, recommendations and analytics to us. It does not sell your information or use it for advertising. To understand what you are searching for, search terms and product details are processed by Microsoft’s Azure OpenAI Service. Analytics and personalization run only if you allow them through our cookie banner.
+
+Zhara keeps search and interaction data for up to 13 months, and order attribution records for up to 25 months. If we stop using Zhara, it deletes our store’s data within 30 days. To access or delete your information, contact us at \[your store’s contact email\], and we will work with Zhara to respond. You can read Zhara’s privacy policy at https://zhara.io/privacy/.
+
+## Add it to your store
+
+1.  In your Shopify admin, go to **Settings → Policies**.
+2.  Open **Privacy policy** and paste the text into a new section.
+3.  Replace the highlighted contact email with your own, then click **Save**.
+
+## Turn on the cookie banner
+
+Zhara reads your shoppers’ choices through Shopify’s Customer Privacy API, so analytics and personalization only run when they are allowed. Where the law requires consent, turn on Shopify’s built-in banner in **Settings → Customer privacy**.
+
+Questions about this wording? Email <support@zhara.io>.
+
+---
+
+Source: https://zhara.io/terms/
+
+Title: Terms of Service — Zhara AI Search & Discovery
+
+## 1. About these Terms
+
+**1.1** These Terms of Service (the “Terms”) are an agreement between **Zhara Labs**, a partnership firm based in India, with its communication address at C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India (“Zhara”, “we”, “us”), and the business that installs Zhara AI Search & Discovery on its Shopify store (“you”, the “Merchant”).
+
+**1.2** You accept these Terms by installing the App, approving a plan in Shopify, or using the App. If you accept on behalf of a business, you confirm that you have authority to bind it. If you do not agree, do not install or use the App.
+
+**1.3** The App is for business use only. It is not offered to consumers.
+
+**1.4** These Terms are an electronic record under India's Information Technology Act, 2000 and do not need a physical or digital signature.
+
+**1.5** These Terms include our Privacy Policy at [https://www.zhara.io/privacy](https://zhara.io/privacy/) and our Data Processing Addendum (the “DPA”) at [https://www.zhara.io/legal/dpa](https://zhara.io/legal/dpa/), which are part of this agreement.
+
+## 2. Definitions
+
+**2.1 “App”** means Zhara AI Search & Discovery, including its storefront components (app embed, app blocks and Shopify web pixel), its Shopify admin interface, its documentation and the services that support them.
+
+**2.2 “Store”** means the Shopify store on which you install the App.
+
+**2.3 “Merchant Data”** means data from your Store that the App accesses or receives, including your product catalog, inventory, order data, App settings, and the search and interaction data the App collects from your Store's visitors.
+
+**2.4 “Shopper”** means a visitor to your Store, including a signed-in customer.
+
+**2.5 “Output”** means results the App generates automatically, including search rankings, suggestions, spelling corrections, product recommendations, analytics and suggested improvements.
+
+**2.6 “Plan”** means the free or paid plan you choose for the App, as described in the App's Shopify App Store listing or inside the App.
+
+## 3. Relationship with Shopify
+
+**3.1** Zhara is an independent developer. We are not Shopify, and Shopify is not a party to these Terms. Your use of Shopify is governed by Shopify's own terms.
+
+**3.2** The App depends on Shopify's platform, APIs and billing system. Changes Shopify makes to them may affect how the App works. We will make reasonable efforts to adapt, but we are not responsible for changes or outages that Shopify controls.
+
+## 4. Your account and store access
+
+**4.1** When you install the App, Shopify asks you to approve the permissions the App needs. We use those permissions only to provide the App to you.
+
+**4.2** You are responsible for everyone you allow to use the App through your Store, including staff and collaborators, and for keeping your Shopify login details secure. Tell us promptly at <support@zhara.io> if you suspect unauthorised use.
+
+## 5. Your licence and acceptable use
+
+**5.1** Subject to these Terms and your Plan, we grant you a limited, non-exclusive, non-transferable licence to use the App on your Store for your internal business purposes while it is installed.
+
+**5.2** You must not, and must not allow anyone else to:
+
+- copy, modify, reverse engineer, decompile or try to extract the source code or models of the App, except where the law expressly allows it;
+- resell, sublicense or provide the App to anyone else, or use it for stores other than yours;
+- scrape, crawl or automatically extract data from the App, or overload or disrupt it;
+- use the App to build a competing product, or to benchmark it for publication without our written consent;
+- bypass security measures, usage limits or billing;
+- introduce malicious code, or use the App for anything unlawful, deceptive or harmful; or
+- use the App to collect special categories of personal data, payment card data or data from children that requires parental consent.
+
+## 6. Plans, fees and billing
+
+**6.1 Free plan.** The App offers a free plan with the features and usage limits shown in the App Store listing and inside the App. We may change the free plan's features or limits by giving you at least 30 days' notice.
+
+**6.2 Paid plans.** Paid plans are billed through Shopify's billing system and appear on your Shopify invoice. You approve each charge in Shopify before it applies. Paid plans renew automatically every 30 days, or every year if you choose annual billing, until you change plan or uninstall the App. Paid plans include a free trial of 14 days. You will be charged when the trial ends unless you downgrade or uninstall before then.
+
+**6.3 Usage limits.** Plans may include usage limits, such as the number of products indexed and the number of monthly searches. If you reach a limit, we will tell you and you can upgrade. We will never apply a new or higher charge without your approval in Shopify.
+
+**6.4 Price changes.** We will give you at least 30 days' notice of any price increase. Where Shopify requires it, the new price applies only after you approve it in Shopify. If you do not accept it, you can downgrade to the free plan or uninstall the App.
+
+**6.5 Taxes.** Prices do not include taxes. Shopify may add applicable taxes, such as GST or VAT, to your invoice.
+
+**6.6 No refunds.** Fees are non-refundable, including for partial billing periods, downgrades and unused features, except (a) where the law requires a refund, (b) as stated in section 6.4 of the DPA, or (c) if we discontinue the App under section 18.4. Uninstalling the App cancels your subscription and stops future charges.
+
+**6.7 Failed payments.** If Shopify cannot collect a charge, we may move your Store to the free plan or suspend paid features after giving you at least 15 days' notice.
+
+## 7. Your data
+
+**7.1 You own your data.** As between you and Zhara, you own Merchant Data. Nothing in these Terms transfers ownership of Merchant Data to us.
+
+**7.2 Our licence to use it.** You grant us a limited licence to host, copy, process, index, analyse and display Merchant Data only to provide, secure and support the App for you, as described in the Privacy Policy and the DPA.
+
+**7.3 Personal data.** For personal data about Shoppers, you are the controller and we are your processor. The DPA sets out how we handle it.
+
+**7.4 Our commitments.** We do not sell Merchant Data. We do not combine it with data from other merchants' stores. We do not use it to train or improve AI models that serve other merchants or third parties, and our AI providers are not allowed to use it to train their models.
+
+**7.5 Operational metrics.** We may use information about the App's own performance, such as response times, error rates and how often features are used, to keep the App reliable. This information does not include Merchant Data and does not identify you, your Store or any Shopper.
+
+**7.6 Your responsibilities.** You are responsible for: having a store privacy policy that tells Shoppers you use the App; collecting Shopper consent through Shopify's consent tools where the law requires it; having a lawful basis for the processing; and the accuracy and legality of your Store's content, products and prices.
+
+**7.7 Export and deletion.** While the App is installed, you can ask us for a copy of your Merchant Data by emailing <support@zhara.io>. Please do so before uninstalling. We delete Merchant Data within 30 days after you uninstall the App, as described in the DPA.
+
+## 8. AI features and Output
+
+**8.1** The App uses artificial intelligence, including Azure OpenAI Service provided by Microsoft, to interpret searches, rank and recommend products, correct spelling and suggest improvements. Section 5 of the Privacy Policy explains what data is sent to Microsoft for this.
+
+**8.2** Output is generated automatically and may be inaccurate, incomplete or unexpected. For example, a search may rank a less relevant product higher, or a suggested synonym may not suit your Store. We do not guarantee any particular Output.
+
+**8.3** You remain responsible for your merchandising decisions and for what appears on your Store. Review suggested changes, such as synonyms, boosts and redirects, using the App's preview before you apply them.
+
+**8.4** You must not try to manipulate the App's AI features to produce unlawful, misleading or harmful results.
+
+## 9. Storefront components
+
+**9.1** The App adds its storefront features using Shopify theme app extensions, so it does not change your theme's code. You choose where to place its blocks in the Shopify theme editor, and our team can help you with setup through [https://www.zhara.io/help](https://zhara.io/help/).
+
+**9.2** Theme changes, custom code or other apps can affect how the App's components display. We will help where we reasonably can, but we are not responsible for problems caused by changes outside the App.
+
+## 10. Third-party services
+
+The App relies on third-party services, including Shopify, Microsoft Azure for hosting, search infrastructure and AI features (through Azure OpenAI Service). The providers that process personal data are listed in the DPA. We choose providers carefully and are responsible for them as set out in the DPA, but we are not liable for outages or changes in third-party services beyond our reasonable control.
+
+## 11. Support, availability and changes
+
+**11.1** Support is available by email at <support@zhara.io>. We aim to reply within 2 business days, Monday to Friday, India Standard Time.
+
+**11.2** We work to keep the App available and fast, but we do not guarantee that it will be uninterrupted or error free. We may carry out maintenance, and will try to schedule planned maintenance at times of low use.
+
+**11.3** We may improve, change or remove features. If a change materially reduces the features of a paid Plan you are on, we will give you at least 30 days' notice.
+
+**11.4** We may offer beta features, clearly labelled. Beta features are provided as they are, may change or be withdrawn at any time, and may have lower reliability.
+
+## 12. Feedback
+
+If you send us suggestions or feedback about the App, we may use them freely, without any obligation to you.
+
+## 13. Intellectual property
+
+**13.1** Zhara owns the App, including its software, models, design, documentation and trademarks. Apart from the licence in section 5, these Terms give you no rights in them.
+
+**13.2** You own your Store, its content and your Merchant Data.
+
+**13.3** We will not use your name or logo, for example as a customer reference, without your prior written consent.
+
+## 14. Confidentiality
+
+**14.1** Each party will keep the other's non-public business, technical and financial information confidential, use it only for the purposes of these Terms, and protect it with at least reasonable care.
+
+**14.2** This does not apply to information that is or becomes public through no fault of the receiving party, was already lawfully known to it, is independently developed, or is lawfully received from a third party. A party may disclose confidential information where the law requires it, after giving the other party notice where lawful.
+
+## 15. Warranties and disclaimers
+
+**15.1** Each party confirms that it has the authority to enter into these Terms.
+
+**15.2** We will provide the App with reasonable skill and care and substantially as described in its App Store listing and documentation.
+
+**15.3** Except as stated in these Terms, the App is provided “as is” and “as available”. To the extent the law allows, we disclaim all other warranties, express or implied, including fitness for a particular purpose and non-infringement. We do not guarantee any level of sales, conversion, revenue, traffic or search ranking.
+
+## 16. Limitation of liability
+
+**16.1** To the extent the law allows, neither party is liable for any indirect, incidental, special or consequential loss, or for loss of profits, revenue, goodwill or business opportunity, even if it was told such loss was possible.
+
+**16.2** To the extent the law allows, each party's total liability arising out of or relating to these Terms and the DPA is limited to the fees you paid to Zhara for the App in the 12 months before the event giving rise to the claim.
+
+**16.3** These limits do not apply to liability for fraud, gross negligence or wilful misconduct, your obligation to pay fees, either party's indemnity obligations under section 17, or any liability that cannot be limited by law.
+
+## 17. Indemnities
+
+**17.1 By you.** You will defend and indemnify Zhara against third-party claims arising from your Store's products or content, your breach of section 5 or 7.6, or your breach of law.
+
+**17.2 By us.** We will defend and indemnify you against third-party claims that the App, as we provide it, infringes that party's intellectual property rights. This does not apply to claims caused by your content, changes not made by us, or use of the App in combination with things we did not provide. If such a claim arises, we may modify the App, obtain the right for you to keep using it, or end your access and refund fees prepaid for the remaining period.
+
+**17.3 Process.** The party seeking indemnity must notify the other promptly, let it control the defence and settlement (though no settlement may impose obligations on the indemnified party without its consent), and give reasonable help at the indemnifying party's cost.
+
+## 18. Term, suspension and termination
+
+**18.1** These Terms start when you install the App and continue until you uninstall it or they are ended under this section.
+
+**18.2** You can end these Terms at any time by uninstalling the App.
+
+**18.3** We may suspend or end your access: if you materially breach these Terms and do not fix the breach within 15 days of our notice; immediately, if your use creates a security risk, is unlawful, or harms the App, other merchants or Shoppers; under section 6.7; or if Shopify requires it. Where we can, we will tell you first and restore access once the issue is resolved.
+
+**18.4** We may discontinue the App by giving you at least 30 days' notice. We will then refund fees you prepaid for the period after the App stops working.
+
+**18.5** When these Terms end, your licence ends, Shopify cancels your subscription, and we delete Merchant Data as described in section 7.7. Sections that by their nature should continue, including sections 7, 12 to 17, 20 and 21, survive.
+
+## 19. Changes to these Terms
+
+We may update these Terms by posting a new version at [https://www.zhara.io/terms](https://zhara.io/terms/). We will give you at least 30 days' notice of material changes by email to your Store's owner email or in the App. Changes required by law may take effect sooner. If you keep using the App after a change takes effect, you accept the updated Terms. If you do not agree, you may uninstall the App before the change takes effect.
+
+## 20. Governing law and disputes
+
+**20.1** These Terms are governed by the laws of India.
+
+**20.2** Before starting any legal proceedings, the parties will try in good faith to resolve the dispute for at least 30 days, starting when one party writes to the other. You can write to us at <support@zhara.io>.
+
+**20.3** Subject to section 20.2, the courts at Ahmedabad, Gujarat, India have exclusive jurisdiction over any dispute arising out of or relating to these Terms. Either party may seek urgent injunctive relief from any competent court.
+
+**20.4** The Standard Contractual Clauses in the DPA are governed as set out in the DPA.
+
+## 21. General
+
+**21.1 Notices.** We send notices to your Store's owner email address or inside the App. You send notices to <support@zhara.io> or to our address in section 22.
+
+**21.2 Assignment.** You may not transfer these Terms without our written consent. We may transfer them to an affiliate or to a successor in a merger, acquisition or sale of assets, with notice to you.
+
+**21.3 Force majeure.** Neither party is liable for delays or failures caused by events beyond its reasonable control, such as natural disasters, war, government action, internet or power failures, or failures of Shopify or other third-party platforms. This does not excuse payment obligations.
+
+**21.4 Entire agreement and precedence.** These Terms, the Privacy Policy and the DPA are the entire agreement about the App. For matters of data protection, the DPA prevails over these Terms.
+
+**21.5 Other terms.** If any provision is found unenforceable, the rest remains in effect. A failure to enforce a right is not a waiver. The parties are independent contractors. No third party has rights under these Terms. These Terms are written in English, and the English version prevails over any translation.
+
+## 22. Contact
+
+| Purpose | Contact |
+|----|----|
+| Support, notices and legal questions | support@zhara.io |
+| Grievance Officer | Prashant Ramani, <support@zhara.io> |
+| Data Protection Officer | Akshil Shah, <techsupport@zhara.io> |
+| Address | Zhara Labs, C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India |
+| Website | https://www.zhara.io |
+
+---
+
+Source: https://zhara.io/privacy/
+
+Title: Privacy Policy — Zhara AI Search & Discovery
+
+## 1. Who we are and what this policy covers
+
+Zhara Labs (“we”, “us”, “our”) is a partnership firm based in India, with its communication address at C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India. We build and operate Zhara AI Search & Discovery (the “App”), an app for Shopify merchants that provides AI search, predictive search suggestions, trending products and product recommendations on the merchant's online store, along with analytics in the Shopify admin.
+
+This policy explains what information we collect, why we collect it, how long we keep it, who we share it with and the choices available to you. It applies to three groups of people:
+
+- **Merchants:** Shopify store owners and their staff who install and use the App.
+- **Shoppers:** visitors to online stores that use the App.
+- **Website visitors:** people who visit our website at [https://www.zhara.io](https://zhara.io/) or contact us.
+
+If you have questions at any time, contact us at <support@zhara.io>.
+
+## 2. Our role: merchant data and shopper data
+
+We handle two kinds of personal information, and our role is different for each.
+
+**Merchant information.** For information about merchants and their staff, such as account contact details, we decide how and why it is used. We are the controller of this information under data protection laws such as the EU and UK General Data Protection Regulation (GDPR).
+
+**Shopper information.** When the App runs on a merchant's store, we process shopper information on behalf of that merchant and only to provide the App's features to that merchant. The merchant is the controller of this information and we act as its processor (called a “service provider” under California law). The merchant's own privacy policy governs how the merchant uses shopper information.
+
+If you are a shopper and want to access, correct or delete your information, the fastest route is to contact the store you visited. You can also contact us and we will pass your request to the right merchant and help them respond.
+
+## 3. Information we collect
+
+### 3.1 Information from merchants and from Shopify
+
+When a merchant installs the App, Shopify gives us access to store data through its APIs, limited to the permissions the merchant approves. We collect:
+
+- **Store and account details:** store name, store domain, Shopify store ID, the access token and permissions Shopify grants the App, install and uninstall dates, store owner name and email address, store currency, languages, markets and time zone.
+- **Catalog data:** products, variants, collections, product types, tags, descriptions, images, prices, inventory levels and publication status. We use this to build the search index that powers the App.
+- **Theme data:** the active theme and whether the App's embed and blocks are installed, so we can show installation status and help with setup.
+- **Order data:** order ID, line items, product and variant IDs, order value, currency and time of purchase. We use this only to measure how search and recommendations contribute to sales. We do not store shopper names, email addresses, phone numbers or postal addresses from orders.
+- **App settings:** synonyms, product boosts, exclusions, redirects, recommendation placements, appearance settings and other configuration you create in the App.
+- **Billing status:** your plan and charge status. Payments are handled by Shopify and we never receive card details.
+- **Support communications:** messages you send us and our replies.
+
+### 3.2 Information from shoppers, collected on the merchant's behalf
+
+When a shopper uses a store that runs the App, we collect the following through the App's storefront components and its Shopify web pixel:
+
+- **Search activity:** the search terms entered, the number of results returned, and whether the results came from AI (semantic) matching.
+- **Interactions with products and recommendations:** which products and recommendation carousels were shown, which were clicked, their position on the page, products added to cart, checkouts started and purchases completed.
+- **Device type:** whether the visit is from a mobile, tablet or desktop device, derived from the browser’s user agent. We do not store the IP address, browser version or location.
+- **Identifiers:** a random anonymous identifier stored on the shopper’s device. If the shopper is signed in to the store and has given the relevant consent, we also receive and store their Shopify customer ID, so personalization works across their devices on that store.
+
+We do not collect payment card details, passwords or special categories of personal data (such as health, religion or ethnicity) through the App. We do not ask shoppers for their name, email address, phone number or postal address.
+
+### 3.3 Information from website visitors
+
+When you visit [https://www.zhara.io](https://zhara.io/), book a demo or contact us, we collect the details you give us, such as your name, email address and company. We do not use third-party analytics or advertising cookies on our website.
+
+## 4. How we use information
+
+We use information only for the following purposes:
+
+- **To provide search and recommendations:** indexing the catalog, returning search results and suggestions, correcting misspelled searches, and choosing which products to show in each recommendation placement.
+- **To personalize results,** where the merchant has turned personalization on and the shopper's consent choices allow it. Personalization is limited to the store the shopper is visiting.
+- **To give merchants analytics:** search and recommendation reports, funnels, revenue attribution and suggested improvements shown in the App's dashboard.
+- **To operate and protect the App:** monitoring performance and uptime, diagnosing errors, preventing abuse and keeping the App secure.
+- **To support merchants:** onboarding, answering questions and sending service messages about the App, such as setup reminders, changes to features or terms, and security notices.
+- **To market to merchants:** telling merchants about new App features, where the law allows. You can unsubscribe at any time using the link in the email.
+- **To meet legal obligations:** complying with laws, responding to lawful requests and enforcing our terms.
+
+### 4.1 Limits we place on ourselves
+
+- We use each merchant's data only to provide the App to that merchant. We do not combine shopper data from different stores to build cross-store profiles.
+- We do not sell personal information, and we do not share it for cross-context behavioral advertising.
+- We do not use shopper information to contact shoppers or to advertise to them.
+- We do not use merchant or shopper data to train, fine-tune or improve AI or machine learning models that serve other merchants or third parties. A model may be tuned for a single store only if that merchant has agreed to it in writing, and only with that store's data.
+- We may use operational metrics that do not identify anyone, such as response times and error rates, to keep the App reliable.
+
+### 4.2 Automated ranking
+
+The App uses automated systems to decide which products appear and in what order. This affects only how products are displayed. It does not make decisions about shoppers that have legal or similarly significant effects, such as pricing, credit or eligibility decisions.
+
+### 4.3 Legal bases (EEA and UK)
+
+For merchant information, we rely on performance of our contract with the merchant, our legitimate interests in running, securing and improving the App, compliance with legal obligations, and consent where required (for example, for certain marketing). For shopper information, the merchant determines the legal basis as controller. Behavioral features such as analytics and personalization run only when the shopper's consent choices permit them.
+
+## 5. How we use third-party AI services
+
+The App uses Azure OpenAI Service, provided by Microsoft, to turn search terms and product details into numerical representations (embeddings), so the App can find products that match what a shopper means even when the exact words differ. To do this, we send Microsoft:
+
+- search terms entered by shoppers; and
+- product catalog content, namely product titles, product types and descriptions.
+
+We do not send shopper identifiers, customer IDs, order details or merchant account details to Microsoft. Under Microsoft’s terms for Azure OpenAI Service, Microsoft does not use this data to train or improve models. Microsoft may keep inputs and outputs for up to 30 days to detect and prevent abuse, then deletes them unless the law requires longer retention. Microsoft Azure is listed as a subprocessor in section 7.
+
+Search terms can occasionally contain personal information if a shopper types it into the search box. We treat search terms as personal information and apply the same retention and deletion rules to them.
+
+## 6. Cookies, local storage and shopper consent
+
+On a merchant's storefront, the App stores a small amount of information on the shopper's device using browser local storage:
+
+| **Item** | **Purpose** | **Consent category** | **How long it lasts** |
+|----|----|----|----|
+| Anonymous visitor ID | Links a shopper's activity within and across visits on the same device, for analytics and attribution | Analytics | 13 months from the shopper’s last visit |
+| Recent searches | Shows the shopper their last six searches when they open search | Preferences | 30 days from the shopper’s last search |
+
+**How consent works.** The App uses Shopify's Customer Privacy API to read the choices a shopper makes in the store's cookie banner. Our behavioral tracking runs through a Shopify web pixel, and Shopify loads it only after the shopper has granted the consent purposes the pixel declares (analytics). Recent searches and personalization run only when the shopper has allowed preferences. If a shopper declines, search and non-personalized recommendations keep working, but we do not store identifiers on their device, record their behavior or personalize their results.
+
+We respect opt-outs of the sale or sharing of personal information, including signals such as Global Privacy Control that Shopify passes to us. Because we do not sell or share personal information, these opt-outs do not reduce the App's core features.
+
+Merchants are responsible for showing a consent banner where the law requires one. Shopify provides a built-in banner for this.
+
+## 7. How we share information
+
+We share information only in these situations:
+
+- **Subprocessors** that help us run the App, under contracts that require them to protect the data and use it only to provide services to us. They are listed below.
+- **Shopify,** as needed to operate the App on the Shopify platform, for example when responding to privacy requests.
+- **Legal reasons,** when we believe disclosure is required by law, a court order or a valid request from a public authority, or is needed to protect the rights, safety or property of merchants, shoppers, us or others.
+- **Business transfers,** if we are involved in a merger, acquisition or sale of assets. We will notify affected merchants before their information becomes subject to a different privacy policy.
+
+### 7.1 Subprocessors
+
+| **Subprocessor** | **Purpose** | **Location** |
+|----|----|----|
+| Microsoft Corporation (Microsoft Azure) | Hosting, storage, databases, search infrastructure and AI embeddings (Azure OpenAI Service, see section 5) | India (Central India and South India regions) |
+| Google LLC (Google Workspace) | Merchant support and service emails (support contact: <support@zhara.io>) | Global |
+
+We keep an up-to-date list at [https://www.zhara.io/legal/subprocessors](https://zhara.io/legal/subprocessors/) and will notify merchants at least 30 days before adding a new subprocessor that processes shopper information.
+
+## 8. How long we keep information
+
+We keep information only as long as we need it for the purposes in this policy. Our standard retention periods are:
+
+| **Information** | **Retention period** |
+|----|----|
+| Merchant account details, settings and catalog index | While the App is installed. Deleted within 30 days of the store uninstalling the App (see section 9). |
+| Shopper event data (searches, clicks, impressions and similar) | 13 months from collection, then deleted or reduced to aggregated statistics that do not identify anyone. |
+| Order attribution records | 25 months, so merchants can compare performance year over year. Deleted sooner on uninstall. |
+| Aggregated analytics that identify no one | While the App is installed. Deleted within 30 days of the store uninstalling the App. |
+| Server and security logs | 30 days. |
+| Backups | Encrypted and kept for 7 days on a rolling basis, then permanently deleted. |
+| Support communications | 24 months after the conversation ends. |
+| Data stored on shoppers' devices | As listed in section 6. |
+
+We may keep information longer where the law requires it, for example billing records needed for tax purposes. In that case we keep only what is required and delete it when the obligation ends.
+
+## 9. Privacy requests and deletion
+
+The App is subscribed to Shopify's mandatory privacy webhooks and handles them as follows:
+
+- **Customer data request:** when a shopper asks a merchant for their data, Shopify notifies us and we provide the merchant with the information we hold about that shopper within 30 days.
+- **Customer deletion request:** when a shopper asks a merchant to delete their data, Shopify notifies us and we delete that shopper's information within 30 days.
+- **Store deletion:** 48 hours after a merchant uninstalls the App, Shopify notifies us and we delete all of that store’s data, including shopper information, so that it is deleted within 30 days of the uninstall.
+
+We only keep information after one of these requests where the law requires it. Merchants can also ask us for a copy of their store's data in a machine-readable format, or ask us to correct it, by contacting <support@zhara.io>.
+
+## 10. Security
+
+We protect information with measures appropriate to its sensitivity, including:
+
+- encryption in transit (TLS) and at rest, including backups;
+- access limited to staff who need it for their role, with strong passwords, multi-factor authentication and access logging;
+- separate test and production environments, with no real shopper data used for testing;
+- regular security updates and review of our systems; and
+- a documented security incident response plan.
+
+If we become aware of a security incident affecting personal information, we will notify affected merchants and Shopify without undue delay, and in any case within the time required by law and by our agreements. No method of transmission or storage is completely secure, but we work to protect information and to fix issues quickly.
+
+## 11. International data transfers
+
+We are based in India and host the App on Microsoft Azure in the Central India region, with AI processing in the South India region. Our subprocessors may process information in other countries as listed in section 7. Where we transfer personal information from the European Economic Area, the United Kingdom or Switzerland to a country without an adequacy decision, we will rely on appropriate safeguards, such as the European Commission’s Standard Contractual Clauses and, where relevant, the UK International Data Transfer Addendum, where required.
+
+## 12. Your privacy rights
+
+Depending on where you live, you may have some or all of the following rights over your personal information:
+
+- to access it and receive a copy;
+- to correct it if it is inaccurate;
+- to delete it;
+- to restrict or object to how it is used;
+- to receive it in a portable format;
+- to withdraw consent at any time, where we rely on consent; and
+- to complain to a data protection authority.
+
+### 12.1 California residents
+
+Under the California Consumer Privacy Act, as amended, California residents have the right to know what personal information is collected about them, to delete it, to correct it and to opt out of its sale or sharing. We do not sell or share personal information, and we do not use or disclose sensitive personal information. The categories we collect are described in section 3, and we collect them for the purposes in section 4. We will not discriminate against anyone for exercising these rights.
+
+### 12.2 Residents of India
+
+Under India's Digital Personal Data Protection Act, 2023 and its rules, you may have the right to obtain a summary of the personal data we process about you, to have it corrected, completed, updated or erased, to withdraw consent where processing is based on consent, to nominate another person to exercise your rights in the event of death or incapacity, and to have your grievances addressed. For shopper data, the merchant is responsible for these requests as the data fiduciary, and we help the merchant respond. If you are not satisfied with our response, you may complain to the Data Protection Board of India.
+
+**Grievance Officer:** Prashant Ramani, <support@zhara.io>. We will acknowledge grievances promptly and resolve them within the time required by law.
+
+### 12.3 How to make a request
+
+Shoppers should contact the store they visited first, because the merchant controls their information. Merchants, website visitors and shoppers who cannot reach the store can email us at <support@zhara.io>. We may need to verify your identity before acting on a request. We respond within one month in the EEA and UK, within 45 days in California, within the time required by Indian law for requests made in India, and within the time required by law elsewhere.
+
+## 13. Merchant responsibilities
+
+Merchants who use the App agree to tell their shoppers about it in their own store privacy policy, to collect shopper consent where the law requires it (for example, by using Shopify's cookie banner), and to pass shopper privacy requests to us through Shopify's standard process. We provide suggested wording for store privacy policies at [https://www.zhara.io/help/store-privacy-policy](https://zhara.io/help/store-privacy-policy/).
+
+## 14. Children
+
+The App and our website are intended for businesses and are not directed at children. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, contact us and we will delete it.
+
+## 15. Changes to this policy
+
+We may update this policy from time to time. We will post the new version on this page and update the “Last updated” date. If we make a material change, we will notify merchants by email or in the App at least 30 days before it takes effect.
+
+## 16. Contact us
+
+For any question about this policy or your personal information, contact us at:
+
+Zhara Labs
+
+C01, The First, B/H ITC Narmada, Nr. Shivalik High Street
+
+Vastrapur, Ahmedabad, Gujarat 380015, India
+
+Website: [https://www.zhara.io](https://zhara.io/)
+
+Email: <support@zhara.io>
+
+Data Protection Officer: Akshil Shah, <techsupport@zhara.io>
+
+---
+
+Source: https://zhara.io/legal/dpa/
+
+Title: Data Processing Addendum — Zhara AI Search & Discovery
+
+This Data Processing Addendum (the “DPA”) forms part of the Zhara AI Search & Discovery Terms of Service available at [https://www.zhara.io/terms](https://zhara.io/terms/) (the “Agreement”) between **Zhara Labs**, a partnership firm based in India, with its communication address at C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India (“Zhara”), and the Shopify merchant that installs and uses Zhara AI Search & Discovery (the “Merchant”).
+
+The Merchant accepts this DPA by installing the App and accepting the Agreement. No separate signature is needed. If the Merchant needs a countersigned copy, it can request one at <support@zhara.io>. This DPA applies whenever Zhara processes Merchant Personal Data that is subject to Data Protection Law.
+
+## 1. Definitions
+
+Terms not defined here have the meaning given in the Agreement. In this DPA:
+
+**1.1 “App”** means Zhara AI Search & Discovery, including its storefront components (the app embed, app blocks and Shopify web pixel), its Shopify admin interface and the services that support them.
+
+**1.2 “Data Protection Law”** means all privacy and data protection laws that apply to the processing of Merchant Personal Data under the Agreement, including, where applicable, the EU General Data Protection Regulation 2016/679 (“GDPR”), the UK GDPR and Data Protection Act 2018, the Swiss Federal Act on Data Protection, the California Consumer Privacy Act as amended by the California Privacy Rights Act (“CCPA”), and India's Digital Personal Data Protection Act, 2023 and its rules (“DPDP Act”).
+
+**1.3 “Merchant Personal Data”** means personal data that Zhara processes on behalf of the Merchant through the App, as described in Annex 1. It does not include Account Data.
+
+**1.4 “Account Data”** means personal data about the Merchant's owners and staff that Zhara collects to manage the Merchant's account, such as names, email addresses, billing status and support messages. Zhara handles Account Data as a controller under its privacy policy.
+
+**1.5 “Shopper”** means a visitor to the Merchant's online store, including a customer who is signed in to the store.
+
+**1.6 “Security Incident”** means a breach of security that leads to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, Merchant Personal Data. It does not include unsuccessful attempts that do not compromise the security of Merchant Personal Data, such as pings, port scans or blocked login attempts.
+
+**1.7 “Subprocessor”** means a third party engaged by Zhara that processes Merchant Personal Data.
+
+**1.8 “SCCs”** means the standard contractual clauses approved by the European Commission in Implementing Decision (EU) 2021/914. **“UK Addendum”** means the International Data Transfer Addendum to the SCCs issued by the UK Information Commissioner.
+
+**1.9 “Controller”, “Processor”, “Data Subject”, “Personal Data”** and **“Processing”** have the meanings given in the GDPR. They include the equivalent terms in other Data Protection Law, such as “business” and “service provider” under the CCPA and “Data Fiduciary”, “Data Processor” and “Data Principal” under the DPDP Act.
+
+## 2. Roles and scope
+
+**2.1** For Merchant Personal Data, the Merchant is the Controller and Zhara is the Processor. Under the CCPA the Merchant is the business and Zhara is its service provider. Under the DPDP Act the Merchant is the Data Fiduciary and Zhara is its Data Processor, and this DPA is the valid contract required by section 8(2) of that Act.
+
+**2.2** If the Merchant is itself acting as a processor for another controller, Zhara acts as the Merchant's subprocessor, and the Merchant confirms that its instructions to Zhara are authorised by that controller.
+
+**2.3** Zhara is a Controller only for Account Data. This DPA does not apply to Account Data.
+
+**2.4** The subject matter, duration, nature and purpose of the processing, the types of personal data and the categories of Data Subjects are set out in Annex 1.
+
+## 3. Processing on the Merchant's instructions
+
+**3.1** Zhara will process Merchant Personal Data only on the Merchant's documented instructions. The Merchant's complete instructions are the Agreement, this DPA, the settings the Merchant chooses in the App (for example, turning personalization on or off, configuring recommendation placements, or setting search rules), and requests sent through Shopify's privacy webhooks.
+
+**3.2** Zhara may process Merchant Personal Data otherwise only where the law requires it. In that case Zhara will tell the Merchant before processing, unless the law prohibits this.
+
+**3.3** Zhara will tell the Merchant promptly if, in its opinion, an instruction breaks Data Protection Law. Zhara may pause the relevant processing until the instruction is confirmed or changed.
+
+## 4. The Merchant's responsibilities
+
+The Merchant confirms that:
+
+**4.1** it has a lawful basis for the processing described in Annex 1 and has given Shoppers the notices Data Protection Law requires, including a store privacy policy that describes its use of the App;
+
+**4.2** where the law requires consent for analytics, personalization or cookies, it collects that consent through Shopify's consent tools, such as the Shopify cookie banner, so that the App can read it through Shopify's Customer Privacy API;
+
+**4.3** it will not use the App to process special categories of personal data, data about children that requires parental consent, or payment card data, and it will not ask Shoppers to enter such data into the App; and
+
+**4.4** its instructions to Zhara comply with Data Protection Law.
+
+## 5. Zhara's obligations
+
+### 5.1 Purpose limitation
+
+Zhara will use Merchant Personal Data only to provide the App to that Merchant. In particular, Zhara will not:
+
+- sell Merchant Personal Data, or share it for cross-context behavioural advertising;
+- combine Merchant Personal Data with data from other merchants' stores, or build cross-store profiles of Shoppers;
+- use Merchant Personal Data to contact or advertise to Shoppers; or
+- retain, use or disclose Merchant Personal Data for any purpose other than the business purposes in the Agreement and Annex 1.
+
+### 5.2 AI services and model training
+
+**5.2.1** Zhara will not use Merchant Personal Data, or any other data from the Merchant's store, to train, fine-tune or improve AI or machine learning models that serve other merchants or any third party. Zhara may tune a model for the Merchant's store alone only with the Merchant's prior written consent, and only with that store's data.
+
+**5.2.2** Zhara uses Azure OpenAI Service, provided by Microsoft as part of Microsoft Azure, to turn search terms and product content into embeddings so search terms can be matched to products. Zhara sends Microsoft only search terms and product titles, types and descriptions. It does not send Shopper identifiers, customer IDs, order details or Account Data. Under Microsoft's terms for Azure OpenAI Service, Microsoft does not use this data to train or improve models.
+
+### 5.3 Consent signals
+
+Zhara will respect the consent choices Shoppers make through the Merchant's store, as reported by Shopify's Customer Privacy API. The App's web pixel loads only when the Shopper has granted the consent purposes it declares. Where the Shopper has not given the required consent, the App provides search and non-personalized recommendations without storing identifiers on the Shopper's device, recording behavioural events or personalizing results.
+
+### 5.4 Confidentiality
+
+Zhara will ensure that everyone it authorises to process Merchant Personal Data is bound by a duty of confidentiality, whether by contract or by law, and has access only to the extent needed for their role.
+
+### 5.5 Security
+
+Zhara will implement and maintain the technical and organisational measures in Annex 2 to protect Merchant Personal Data, taking into account the state of the art, the cost of implementation, the nature of the processing and the risks to Data Subjects. Zhara may update these measures over time, provided the overall level of protection is not reduced.
+
+## 6. Subprocessors
+
+**6.1** The Merchant gives Zhara general authorisation to engage Subprocessors. The Subprocessors in use on the effective date are listed in Annex 3 and at [https://www.zhara.io/legal/subprocessors](https://zhara.io/legal/subprocessors/).
+
+**6.2** Zhara will impose on each Subprocessor, by written contract, data protection obligations that are no less protective than those in this DPA. Zhara remains responsible to the Merchant for each Subprocessor's performance of those obligations.
+
+**6.3** Zhara will notify the Merchant at least 30 days before a new Subprocessor begins processing Merchant Personal Data, by email to the store owner's email address or by a notice in the App.
+
+**6.4** The Merchant may object to a new Subprocessor on reasonable data protection grounds by emailing <support@zhara.io> during the notice period. The parties will discuss the objection in good faith. If Zhara cannot reasonably address it, the Merchant may stop using the affected part of the App or uninstall the App, and Zhara will refund any prepaid fees for the unused part of the current billing period. If the Merchant does not object during the notice period, the new Subprocessor is treated as approved.
+
+## 7. Data Subject requests and Shopify privacy webhooks
+
+**7.1** The App subscribes to Shopify's mandatory privacy webhooks. Zhara will act on them as follows:
+
+- **Customer data request:** within 30 days of receiving it, Zhara will provide the Merchant with the Merchant Personal Data it holds about that Shopper.
+- **Customer deletion request:** within 30 days of receiving it, Zhara will delete the Merchant Personal Data it holds about that Shopper.
+- **Store deletion request:** Shopify sends this 48 hours after the Merchant uninstalls the App. Zhara will delete all Merchant Personal Data for that store within the period in section 10.2.
+
+**7.2** If a Shopper contacts Zhara directly to exercise their rights, Zhara will pass the request to the Merchant without undue delay and will not respond to the Shopper itself, except to tell them that the request has been passed on, unless the Merchant asks Zhara to do so.
+
+**7.3** Zhara will give the Merchant other reasonable assistance, taking into account the nature of the processing, so the Merchant can respond to Data Subject requests under Data Protection Law. Where the requested help goes beyond the App's standard features, Zhara may charge a reasonable fee agreed with the Merchant in advance.
+
+## 8. Impact assessments and regulators
+
+Taking into account the nature of the processing and the information available to it, Zhara will give the Merchant reasonable assistance with data protection impact assessments and prior consultations with supervisory authorities that relate to the Merchant's use of the App. Zhara will usually meet this by providing this DPA, its security documentation and written answers to reasonable questions.
+
+## 9. Security incidents
+
+**9.1** Zhara will notify the Merchant without undue delay, and where feasible within 48 hours, after becoming aware of a Security Incident. Zhara will also report the Security Incident to Shopify as Shopify's API Terms require.
+
+**9.2** The notice will describe, as far as the information is available: the nature of the Security Incident; the categories and approximate number of Data Subjects and records affected; the likely consequences; the measures taken or proposed to address it; and a contact for more information. Where not all information is available at once, Zhara will provide it in stages.
+
+**9.3** Zhara will take reasonable steps to contain and investigate the Security Incident and reduce its effects, and will give the Merchant reasonable help to meet its own obligations, such as notifying regulators or affected individuals, including the Data Protection Board of India where the DPDP Act applies.
+
+**9.4** Notice of a Security Incident is not an admission of fault or liability by Zhara.
+
+## 10. Return and deletion
+
+**10.1** While the App is installed, the Merchant can request a copy of its Merchant Personal Data in a machine-readable format by emailing <support@zhara.io>. The Merchant should request any copy it needs before uninstalling the App.
+
+**10.2** When the Merchant uninstalls the App, Zhara will delete all Merchant Personal Data within 30 days after uninstallation. During the term, Zhara deletes Merchant Personal Data at the end of the retention periods in Annex 1.
+
+**10.3** Encrypted backups are overwritten on a rolling cycle set out in Annex 1. Merchant Personal Data in backups remains protected by this DPA, is not used for any other purpose, and is deleted when the backup is overwritten.
+
+**10.4** Zhara may keep Merchant Personal Data after uninstallation only where the law requires it, in which case this DPA continues to apply to that data until it is deleted.
+
+**10.5** On request, Zhara will confirm to the Merchant in writing that deletion has been completed.
+
+## 11. Information and audits
+
+**11.1** Zhara will make available the information reasonably needed to demonstrate its compliance with this DPA. This includes answering the Merchant's reasonable written security questionnaire once in any 12 month period, and sharing summaries of any independent security assessments or certifications Zhara holds.
+
+**11.2** If that information is not enough to show compliance, or a supervisory authority requires it, or after a Security Incident, the Merchant may carry out an audit, including an inspection, subject to the following conditions:
+
+- the Merchant gives at least 30 days' written notice and agrees the scope in advance;
+- the audit takes place during business hours, no more than once in any 12 month period (unless required by a supervisory authority or after a Security Incident), and without unreasonably disrupting Zhara's operations;
+- the auditor is bound by confidentiality and is not a competitor of Zhara; and
+- the Merchant bears its own costs of the audit.
+
+## 12. International transfers
+
+**12.1** Zhara is established in India. The App is hosted on Microsoft Azure in the Central India region, with AI processing in the South India region, and Subprocessors process data in the locations listed in Annex 3.
+
+**12.2 EEA transfers.** Where Merchant Personal Data is transferred from the European Economic Area to Zhara in a country without an adequacy decision, the parties agree to the SCCs, which are incorporated into this DPA by reference, as follows:
+
+- Module 2 (controller to processor) applies where the Merchant is a Controller, and Module 3 (processor to processor) applies where the Merchant is a processor;
+- the optional docking clause in Clause 7 applies;
+- under Clause 9, Option 2 (general written authorisation) applies, with the notice period set out in section 6.3 of this DPA;
+- the optional wording in Clause 11 does not apply;
+- under Clause 13, the competent supervisory authority is the one for the EU Member State where the Merchant is established or, if the Merchant is not established in the EU, the Irish Data Protection Commission;
+- under Clauses 17 and 18, the SCCs are governed by the law of Ireland and disputes are resolved by the courts of Ireland; and
+- Annexes I, II and III of the SCCs are completed by Annexes 1, 2 and 3 of this DPA.
+
+**12.3 UK transfers.** Where Merchant Personal Data is transferred from the United Kingdom, the UK Addendum applies and is incorporated by reference. Its tables are completed with the information in this DPA and its annexes, and either party may end it as allowed by its Section 19.
+
+**12.4 Swiss transfers.** Where Merchant Personal Data is transferred from Switzerland, the SCCs apply as set out in section 12.2, with references to the GDPR read as references to the Swiss Federal Act on Data Protection, and the Swiss Federal Data Protection and Information Commissioner as the competent supervisory authority.
+
+**12.5 Onward transfers.** Zhara will ensure that any transfer of Merchant Personal Data to a Subprocessor in another country is protected by appropriate safeguards required by Data Protection Law, such as the SCCs.
+
+## 13. California terms
+
+Where the CCPA applies, Zhara acts as the Merchant's service provider and:
+
+- will not sell or share Merchant Personal Data;
+- will not retain, use or disclose Merchant Personal Data outside the direct business relationship with the Merchant, or for any purpose other than the business purposes in the Agreement and this DPA;
+- will not combine Merchant Personal Data with personal information it receives from or on behalf of anyone else, except as the CCPA permits;
+- will comply with the CCPA and provide the same level of privacy protection the CCPA requires of the Merchant; and
+- will notify the Merchant if it can no longer meet these obligations.
+
+The Merchant may take reasonable and appropriate steps to stop and remedy any unauthorised use of Merchant Personal Data. Zhara certifies that it understands and will comply with these restrictions.
+
+## 14. India terms
+
+Where the DPDP Act applies, Zhara processes Merchant Personal Data only on the Merchant's behalf and under this DPA, maintains the reasonable security safeguards in Annex 2, erases Merchant Personal Data when the Merchant instructs or when the purpose is complete as set out in section 10, and helps the Merchant meet its obligations as Data Fiduciary, including breach notifications under section 9. Zhara's Grievance Officer is Prashant Ramani (<support@zhara.io>).
+
+## 15. Liability
+
+Each party's liability arising out of or relating to this DPA, including the SCCs, is subject to the limitations and exclusions of liability in the Agreement. Those limits apply in aggregate to all claims under the Agreement and this DPA, but they do not limit either party's liability to Data Subjects where Data Protection Law or the SCCs do not allow it.
+
+## 16. Term, precedence and changes
+
+**16.1** This DPA applies for as long as Zhara processes Merchant Personal Data and ends automatically once all Merchant Personal Data has been deleted.
+
+**16.2** If there is a conflict, the SCCs (where they apply) prevail over this DPA, and this DPA prevails over the rest of the Agreement.
+
+**16.3** Zhara may update this DPA by posting a new version at [https://www.zhara.io/legal/dpa](https://zhara.io/legal/dpa/) and notifying the Merchant at least 30 days before a material change takes effect. Changes required by law may take effect sooner. If the Merchant does not agree to a material change, it may uninstall the App before the change takes effect. Zhara will not make a change that reduces the overall protection given to Merchant Personal Data.
+
+**16.4** Except for the SCCs, which are governed as set out in section 12, this DPA is governed by the laws of India, and the courts at Ahmedabad, Gujarat, India have exclusive jurisdiction, as set out in the Agreement.
+
+## 17. Contacts
+
+| Role | Contact |
+|----|----|
+| Data Protection Officer | Akshil Shah, <techsupport@zhara.io> |
+| Privacy questions and Grievance Officer | Prashant Ramani, <support@zhara.io> |
+| Security incident notices and objections to Subprocessors | support@zhara.io |
+| Registered office | Zhara Labs, C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India |
+
+## Annex 1: Description of the processing
+
+### A. Parties
+
+|  | Data exporter | Data importer |
+|----|----|----|
+| Name | The Merchant, as identified by its Shopify store account | Zhara Labs |
+| Address | The address in the Merchant's Shopify store account | C01, The First, B/H ITC Narmada, Nr. Shivalik High Street, Vastrapur, Ahmedabad, Gujarat 380015, India |
+| Contact | The store owner email in the Merchant's Shopify store account | Akshil (Data Protection Officer), Akshil@zhara.io |
+| Role | Controller (or processor, where section 2.2 applies) | Processor (or subprocessor, where section 2.2 applies) |
+| Activities | Use of the App on the Merchant's online store | Providing the App to the Merchant |
+| Signature and date | Given by installing the App and accepting the Agreement | Given by providing the App under the Agreement |
+
+### B. Description of the processing and transfer
+
+| Item | Description |
+|----|----|
+| Categories of Data Subjects | Shoppers who visit the Merchant's online store, including customers who are signed in to it. |
+| Frequency of transfer | Continuous, for as long as the App is installed. |
+| Nature of the processing | Collection through the App's storefront components and Shopify web pixel; reading order data through Shopify's APIs; storage; indexing; ranking; analysis; aggregation into reports; creating embeddings of search terms and product content through Azure OpenAI Service, without identifiers; and deletion. |
+| Purposes of the processing | Providing search, predictive suggestions, spelling correction, no results recovery and product recommendations; personalizing results for the Merchant's own store where the Merchant enables it and the Shopper's consent allows it; giving the Merchant analytics and revenue attribution; and operating, securing and fixing the App. |
+| Duration | For the term of the Agreement, then until deletion under section 10. |
+| Special categories of data | None intended. Search terms may occasionally contain personal information typed in by a Shopper. They are treated as Merchant Personal Data and protected in the same way. |
+| Transfers to Subprocessors | As listed in Annex 3, for the purposes stated there. |
+
+### Categories of personal data
+
+| Category | Data |
+|----|----|
+| Search activity | Search terms entered, the number of results returned, and whether the results came from AI (semantic) matching. |
+| Interaction events | Products and recommendation carousels shown, clicks, positions on the page, products added to cart, checkouts started and purchases completed. |
+| Identifiers | A random anonymous visitor ID stored on the Shopper's device, a search session ID and, only where the Shopper is signed in and has consented, the Shopify customer ID. |
+| Device and technical data | Device type (mobile, tablet or desktop), derived from the browser's user agent. The IP address, browser version and location are not stored. |
+| Consent status | The Shopper's privacy choices as reported by Shopify's Customer Privacy API. |
+| Order data | Order ID, line items, product and variant IDs, order value, currency and time of purchase. No names, email addresses, phone numbers or postal addresses. |
+| Data stored on the Shopper's device | The anonymous visitor ID (only with analytics consent) and the Shopper's last six searches (only with preferences consent). |
+
+### Retention periods
+
+| Data | Retention |
+|----|----|
+| Shopper event data | 13 months from collection, then deleted or reduced to aggregated statistics that identify no one. |
+| Order attribution records | 25 months. Deleted sooner on uninstall. |
+| Aggregated analytics that identify no one | While the App is installed. |
+| Server and security logs | 30 days. |
+| Backups | Encrypted and kept for 7 days on a rolling basis, then permanently deleted. |
+| All Merchant Personal Data after uninstall | Deleted within 30 days after uninstallation. |
+
+### C. Competent supervisory authority
+
+As set out in section 12.2 of this DPA.
+
+## Annex 2: Technical and organisational security measures
+
+| Area | Measures |
+|----|----|
+| Encryption | TLS for all data in transit. Encryption at rest for databases, storage and backups using Microsoft Azure's storage encryption. |
+| Data minimisation | Only the data in Annex 1 is collected. IP addresses are not stored. No Shopper names, email addresses, phone numbers or postal addresses are collected. No Shopper identifiers are sent to the AI Subprocessor. Behavioural tracking and personalization run only with Shopper consent. |
+| Store separation | Each Merchant's data is logically separated by Shopify store ID, and queries are scoped to a single store. Data from different stores is not combined. |
+| Access control | Access limited to staff who need it for their role. Strong passwords and multi-factor authentication for staff access to production systems and cloud accounts. Server and database access restricted to approved network addresses. Access removed promptly when staff leave. |
+| Logging and monitoring | Access to production systems is logged. Server and security logs are kept for 30 days. |
+| Environments | Test and production environments are separate. Real Shopper data is not used for development or testing. |
+| Availability and backups | Hosting in Microsoft Azure data centres with Azure's physical security controls. Encrypted backups kept for 7 days on a rolling basis. |
+| Secure development | Code review before changes reach production. Security updates applied promptly and systems reviewed regularly. |
+| Personnel | Confidentiality obligations for all staff and contractors with access to Merchant Personal Data. |
+| Incident response | A documented incident response plan covering detection, containment, investigation, notification (to Merchants without undue delay and where feasible within 48 hours, and to Shopify as its API Terms require) and follow up. |
+| Deletion | Automated handling of Shopify's privacy webhooks. Deletion of all store data within 30 days after uninstallation. Backups expire after 7 days. |
+| Subprocessor management | Security and privacy review before engaging a Subprocessor, and written data protection terms with each one. |
+
+## Annex 3: Subprocessors
+
+| Subprocessor | Purpose | Location | Data processed |
+|----|----|----|----|
+| Microsoft Corporation (Microsoft Azure) | Hosting, storage, databases and search infrastructure; AI embeddings through Azure OpenAI Service | India (Central India and South India regions) | All categories in Annex 1. For embeddings, only search terms and product titles, types and descriptions, with no identifiers |
+
+Tools that process only Account Data, such as email and support tools, are not Subprocessors under this DPA and are described in Zhara's privacy policy.
+
+---
+
+Source: https://zhara.io/legal/subprocessors/
+
+Title: Subprocessors — Zhara AI Search & Discovery
+
+Zhara Labs uses the subprocessors below to provide the App. Each one is bound by a contract that requires it to protect the data and use it only to provide services to us. For how we collect and use information, see our [privacy policy](https://zhara.io/privacy/).
+
+## Current subprocessors
+
+| Subprocessor | Purpose | Data processed | Location |
+|----|----|----|----|
+| **Microsoft Corporation** (Microsoft Azure) | Hosting, storage, databases and search infrastructure; AI embeddings through Azure OpenAI Service | Store and catalog data, App settings, shopper search and interaction events; search terms and product titles, types and descriptions for embeddings | India (Central India and South India regions) |
+| **Google LLC** (Google Workspace) | Merchant support and service emails | Merchant contact details and support conversations | Global |
+
+Microsoft does not use data sent to Azure OpenAI Service to train or improve models. It may keep inputs and outputs for up to 30 days to detect and prevent abuse, then deletes them unless the law requires longer retention.
+
+## Changes to this list
+
+We will notify merchants at least 30 days before adding a new subprocessor that processes shopper information, by email or in the App. The “Last updated” date above shows when this list last changed.
+
+## Questions
+
+Contact us at <support@zhara.io>.

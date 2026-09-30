@@ -1,19 +1,40 @@
-zhara.io, www.zhara.io {
+# Canonical host is the apex; www redirects so crawlers index one copy of each page
+www.zhara.io {
+	redir https://zhara.io{uri} permanent
+}
+
+zhara.io {
 	root * /home/ubuntu/project-zhara.io
 	encode gzip zstd
 
-	# Allowlist: page, assets, and production meta files — 404 everything else
-	@denied {
-		not path / /index.html /assets/* /robots.txt /sitemap.xml /llms.txt /favicon.ico /site.webmanifest /privacy /privacy/* /terms /legal/* /help /help/*
+	# Everything public is served. Only repo/internal files are hidden.
+	@internal path /Caddyfile /DESIGN.md /tools/* /change-request/* /logo-v2/* /screenshots/*
+	respond @internal 404
+
+	# Dotfiles and dot-directories (.env, .git, .gstack, .DS_Store), except .well-known
+	@dotfiles {
+		path_regexp /\.
+		not path /.well-known/*
 	}
-	respond @denied 404
+	respond @dotfiles 404
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
 
 	# Assets have stable filenames — cache 1 day, not immutable
 	header /assets/* Cache-Control "public, max-age=86400"
 
-	@html {
-		path / /index.html /privacy/* /legal/* /help /help/*
+	# Crawler and AI-agent files: open to any origin, short cache
+	@meta path /robots.txt /llms.txt /llms-full.txt /sitemap.xml
+	header @meta {
+		Cache-Control "public, max-age=3600"
+		Access-Control-Allow-Origin *
 	}
+
+	@html path / *.html */
 	header @html Cache-Control "public, max-age=3600"
 
 	file_server
