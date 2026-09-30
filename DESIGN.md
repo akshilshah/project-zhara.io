@@ -64,8 +64,8 @@ deep navy (`#091A41`). Fixed image asset, not a generated design.
 
 ## Product visuals (2026-09-28)
 
-- The hero uses a lightweight native motion walkthrough with real demo-store product photos. Its browser frame is an editorial adaptation of the search UI, labeled as an animated walkthrough.
-- Scenes: discovery before typing → `t sh` autocomplete → `blue t shirt` results. Manual scene selection pauses autoplay; offscreen, hidden-tab, and reduced-motion handling keep animation controlled.
+- The hero is a square, muted, looping video of the real Zhara widget on the demo store, answering shopper-style queries (`shirts for a goa trip` → `comfy stuff to lounge at home` → `something warm for winter`). Hero queries must read like a shopper talking, never bare keywords like `t sh`.
+- It plays only while visible and the tab is active. A pause button is always shown. Reduced motion shows the poster frame. It's captioned as recorded on the live demo store.
 - Discovery cards use matching miniature product visuals. Merchant controls use the supplied screenshots. Analytics and overview use captures of the real dashboard renderers with a consistent illustrative dataset. Both use WebP, keyboard-accessible tabs, and expanded views.
 - Keep app screenshots and catalog photos local under `assets/demo/`. Source details live in `assets/demo/README.md`. Never include store credentials in site assets.
 - On mobile, show each complete screenshot at the card width without offsets or nested scrolling. Expanded screenshots open in a full-screen viewer, fit to width, with an explicit zoom control and a persistent close button.
