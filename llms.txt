@@ -1,24 +1,32 @@
 # Zhara AI Search & Discovery
 
-> Zhara AI Search & Discovery adds AI-powered product search, predictive autocomplete, trending searches and products, and personalized product recommendations to Shopify storefronts — with search analytics that connect discovery to revenue.
+> Zhara AI Search & Discovery is a Shopify app that adds AI-powered product search, predictive autocomplete, trending searches and products, and personalized product recommendations to Shopify storefronts, with search analytics that connect discovery to revenue. It is built by Zhara Labs in Ahmedabad, India.
 
-Zhara combines a smart search bar (instant, typo-tolerant results in ~50ms) with semantic AI search as a fallback, so shoppers find products even when their words don't match the catalog. Merchants keep full control with merchandising rules and see exactly how search converts to sales.
+Zhara pairs fast keyword search (typo-tolerant, with synonyms) with semantic AI search as a fallback, so shoppers find products even when their words don't match the catalog, for example "something warm for winter". Merchants control results with merchandising rules and see how search and recommendations turn into sales. It installs through Shopify theme app extensions, so it does not change the merchant's theme code.
 
-## What Zhara does
+## Product
 
-- AI product search: intent-based, natural-language search that understands typos, spell errors, and synonyms (e.g. "chaddi" → boxers), plus queries like "something warm for winter"
-- Predictive search: instant autocomplete, search suggestions, and live results as shoppers type
-- Zero-character discovery: trending searches, popular products, and suggested prompts before a shopper types anything
-- Product recommender: personalized and trending recommendations in the search dropdown, home page, and product pages, plus no-results recommendations
-- Search merchandising: synonym groups, product boosts, pin/bury/hide products, exclusions, keyword redirects, and custom ranking rules
-- Search analytics: total searches, top search terms, searched categories, no-result searches, search conversion rate, and search-attributed revenue
+- [Home](https://zhara.io/): overview of search, discovery, merchandising and analytics
+- [AI product search](https://zhara.io/#product): intent-based natural-language search with typo tolerance, synonyms and contextual ranking
+- [Discovery and recommendations](https://zhara.io/#discovery): trending searches and products before a shopper types, predictive autocomplete, and personalized recommendations in search, on the home page and on product pages
+- [Merchandising](https://zhara.io/#features): boost and pin products, synonym groups, keyword redirects, exclusions, no-result recovery, and appearance settings matched to the store's theme
+- [Search analytics](https://zhara.io/#analytics): searches, top terms, no-result searches, click-through, add-to-cart, conversion and search-attributed revenue
+- [Getting started](https://zhara.io/#how): install the app, index the catalog, activate on the storefront
 
-## Who it's for
+## Help
 
-Shopify merchants who want storefront search that converts — especially stores with large catalogs, diverse customer vocabulary, or international shoppers. No-code installation, theme-compatible, mobile responsive, live in minutes.
+- [FAQ](https://zhara.io/faq/): answers on setup, supported themes, pricing (free), search behaviour, merchandising rules, analytics, privacy and uninstalling
+- [Help and support](https://zhara.io/help/): contact form and support email (support@zhara.io)
+- [Store privacy policy wording](https://zhara.io/help/store-privacy-policy/): suggested text merchants can add to their own store privacy policy
 
-## Links
+## Legal
 
-- Website: https://zhara.io/
-- Shopify App Store listing: Zhara AI Search & Discovery
-- Contact: hello@zhara.app
+- [Terms of Service](https://zhara.io/terms/): agreement between Zhara Labs and Shopify merchants, including plans, billing and liability
+- [Privacy Policy](https://zhara.io/privacy/): what merchant and shopper data the app collects, how it is used, retention and privacy rights
+- [Data Processing Addendum](https://zhara.io/legal/dpa/): processor terms for shopper personal data, including EU Standard Contractual Clauses
+- [Subprocessors](https://zhara.io/legal/subprocessors/): third parties that process data (Microsoft Azure, including Azure OpenAI Service, in India)
+
+## Optional
+
+- [Full text of every page](https://zhara.io/llms-full.txt): all of the pages above as one plain-text file
+- [Sitemap](https://zhara.io/sitemap.xml)

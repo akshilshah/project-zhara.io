@@ -64,6 +64,7 @@ nav {
 .doc-head h1 { max-width: 760px; font-size: clamp(34px, 5vw, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -.035em; }
 .doc-head h1 em { font-family: var(--serif); font-weight: 500; font-style: italic; letter-spacing: -.02em; }
 .doc-head .lede { max-width: 640px; margin-top: 18px; color: var(--ink-2); font-size: 17px; }
+.doc-head .lede a { color: var(--orange-deep); text-decoration: underline; text-decoration-color: rgba(217, 75, 11, .35); text-underline-offset: 3px; }
 .doc-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 24px; color: var(--muted); font-size: 13px; }
 .doc-meta b { color: var(--ink-2); font-weight: 600; }
 
@@ -95,6 +96,10 @@ nav {
 .prose tr:last-child td { border-bottom: 0; }
 
 .note { padding: 18px 20px; border: 1px solid var(--line); border-left: 3px solid var(--orange); border-radius: 12px; background: var(--paper-2); font-size: 14px; }
+
+/* FAQ: questions sit under section headings */
+.faq h2 + h3 { margin-top: 20px; }
+.faq h3 { line-height: 1.4; }
 
 /* Copyable snippet (help page) */
 .snippet { position: relative; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--paper-2); }
