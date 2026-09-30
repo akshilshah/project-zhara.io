@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWNTYSQV7Q"></script>
+  <!-- Google tag (gtag.js) with Consent Mode: analytics cookies stay off in the EEA, UK and Switzerland until the visitor accepts (see /assets/consent.js) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+    });
+    try {
+      var consent = localStorage.getItem('zhara-consent');
+      if (consent === 'granted' || consent === 'denied') gtag('consent', 'update', { analytics_storage: consent });
+    } catch (e) {}
     gtag('js', new Date());
-
     gtag('config', 'G-CWNTYSQV7Q');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWNTYSQV7Q"></script>
+  <script src="/assets/consent.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subprocessors — Zhara AI Search &amp; Discovery</title>
   <meta name="description" content="Third parties that Zhara Labs uses to operate Zhara AI Search &amp; Discovery, what they do and where they process data.">
@@ -92,7 +101,7 @@
         <div class="footer-brand"><img src="/assets/logo/zhara-logo-on-dark.svg" alt="Zhara" width="1302" height="209"><p>AI search and discovery for Shopify stores that care about relevance, control, and measurable revenue.</p></div>
         <div class="footer-col"><b>PRODUCT</b><a href="/#product">AI product search</a><a href="/#discovery">Recommendations</a><a href="/#features">Merchandising</a><a href="/#analytics">Search analytics</a></div>
         <div class="footer-col"><b>COMPANY</b><a href="mailto:hello@zhara.app">Contact</a><a href="/help/">Help &amp; support</a><a href="/faq/">FAQ</a><a href="/#get-started">Request access</a></div>
-        <div class="footer-col"><b>LEGAL</b><a href="/terms/">Terms of service</a><a href="/privacy/">Privacy policy</a><a href="/legal/dpa/">Data processing addendum</a><a href="/legal/subprocessors/">Subprocessors</a><a href="/help/store-privacy-policy/">Store privacy wording</a></div>
+        <div class="footer-col"><b>LEGAL</b><a href="/terms/">Terms of service</a><a href="/privacy/">Privacy policy</a><a href="/legal/dpa/">Data processing addendum</a><a href="/legal/subprocessors/">Subprocessors</a><a href="/help/store-privacy-policy/">Store privacy wording</a><a href="#" data-cookie-settings>Cookie settings</a></div>
       </div>
       <div class="footer-bottom"><span>© 2026 Zhara Labs. All rights reserved.</span><span>Built for better discovery.</span></div>
     </div>
