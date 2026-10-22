@@ -2,7 +2,7 @@
 
 > Zhara AI Search & Discovery is a Shopify app that adds AI-powered product search, predictive autocomplete, trending searches and products, and personalized product recommendations to Shopify storefronts, with search analytics that connect discovery to revenue. It is built by Zhara Labs in Ahmedabad, India.
 
-Zhara pairs fast keyword search (typo-tolerant, with synonyms) with semantic AI search as a fallback, so shoppers find products even when their words don't match the catalog, for example "something warm for winter". Merchants control results with merchandising rules and see how search and recommendations turn into sales. It installs through Shopify theme app extensions, so it does not change the merchant's theme code.
+Zhara pairs fast keyword search (typo-tolerant, with synonyms) with semantic AI search as a fallback, so shoppers find products even when their words don't match the catalog, for example "something warm for winter". Merchants control results with merchandising rules and see how search and recommendations turn into sales. It installs through Shopify theme app extensions, so it does not change the merchant's theme code. It is available, free, on the Shopify App Store: https://apps.shopify.com/zhara-ai-search-discovery
 
 ## Product
 
@@ -11,6 +11,7 @@ Zhara pairs fast keyword search (typo-tolerant, with synonyms) with semantic AI 
 - [Discovery and recommendations](https://zhara.io/#discovery): trending searches and products before a shopper types, predictive autocomplete, and personalized recommendations in search, on the home page and on product pages
 - [Merchandising](https://zhara.io/#features): boost and pin products, synonym groups, keyword redirects, exclusions, no-result recovery, and appearance settings matched to the store's theme
 - [Search analytics](https://zhara.io/#analytics): searches, top terms, no-result searches, click-through, add-to-cart, conversion and search-attributed revenue
+- [Shopify App Store listing](https://apps.shopify.com/zhara-ai-search-discovery): install Zhara (free)
 - [Getting started](https://zhara.io/#how): install the app, index the catalog, activate on the storefront
 
 ## Help

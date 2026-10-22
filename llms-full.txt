@@ -14,7 +14,7 @@ AI search, discovery & recommendations for Shopify
 
 Help shoppers find what they mean. Bring AI search, relevant recommendations, and measurable discovery to your Shopify store.
 
-[Request access →](https://zhara.io/#get-started) [See the product](https://zhara.io/#product)
+[Install free on Shopify →](https://apps.shopify.com/zhara-ai-search-discovery) [See the product](https://zhara.io/#product)
 
 *✓* No code *✓* Matches your theme *✓* Live in minutes
 
@@ -190,7 +190,7 @@ Enable search and recommendations in your theme, then manage performance from on
 
 Show us the searches your store gets wrong. We will show you how AI-powered search can turn missed searches into sales.
 
-[Request access →](mailto:hello@zhara.app?subject=I%27d%20like%20to%20try%20Zhara) [Book a demo](mailto:hello@zhara.app?subject=Zhara%20product%20demo)
+[Install free on Shopify →](https://apps.shopify.com/zhara-ai-search-discovery) [Book a demo](mailto:hello@zhara.app?subject=Zhara%20product%20demo)
 
 ---
 
@@ -203,6 +203,10 @@ Title: FAQ — Zhara AI Search & Discovery
 ### What does Zhara do?
 
 Zhara replaces your theme's search with AI search. Before shoppers type, it shows example prompts, popular searches, category shortcuts and trending products. As they type, it suggests searches and products, corrects typos and understands plain language such as *boxer shorts under 500 rupees*. In your Shopify admin you can pin, bury, hide or redirect results, add synonyms and see which searches lead to sales.
+
+### Where do I install Zhara?
+
+From the [Shopify App Store](https://apps.shopify.com/zhara-ai-search-discovery). Click **Install**, approve the permissions, and Zhara opens in your Shopify admin and starts syncing your catalog.
 
 ### How much does it cost?
 
